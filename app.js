@@ -37,7 +37,7 @@ const CONFIG = {
       nome: "Representantes",
       meta: "online (WhatsApp) + offline",
       descricao: "Não são criadoras de conteúdo: vendem tanto no online quanto no offline. O foco de venda online é o WhatsApp, com um grupo que parte de uma lista de clientes.",
-      link: null,
+      link: "https://vick-one.github.io/Cliente-Embaixadora/",
       documentos: [
         { titulo: "PLANILHA REPRESENTANTES", url: "https://docs.google.com/spreadsheets/d/1meS79ak-P-aAG9NBOTDbEdgL03LyGmANMpeRxnqNXIs/edit?gid=927081837#gid=927081837" },
       ],
@@ -79,42 +79,40 @@ function renderTeam() {
   }
 
   document.getElementById("team-caption").textContent =
-    `${CONFIG.team.length} ${CONFIG.team.length === 1 ? "pessoa" : "pessoas"} no time`;
+    `${CONFIG.team.length} ${CONFIG.team.length === 1 ? "pessoa" : "pessoas"} no time · ${CONFIG.team.map(p => p.nome.toLowerCase()).join(" · ")}`;
 }
 
 function renderFrentes() {
   const el = document.getElementById("frentes-list");
   el.innerHTML = CONFIG.frentes.map((f, i) => `
-    <div class="frente" id="frente-${i}">
-      <button class="frente-head" data-toggle="${i}">
-        <span>
-          <div class="frente-name">${f.nome}</div>
-          <div class="frente-meta">${f.meta}</div>
-        </span>
-        <span class="frente-toggle">+</span>
-      </button>
-      <div class="frente-body">
-        <div class="frente-body-inner">
-          <p class="frente-desc">${f.descricao}</p>
-          ${f.link
-            ? `<a class="frente-link" href="${f.link}" target="_blank" rel="noopener">ver página principal &rarr;</a>`
-            : `<span class="frente-link disabled">página principal em breve</span>`
-          }
-          ${f.documentos && f.documentos.length ? `
-          <div class="docs-box">
-            <div class="docs-label">Docs importantes</div>
-            ${f.documentos.map(d => `<a class="docs-link" href="${d.url}" target="_blank" rel="noopener">${d.titulo} &rarr;</a>`).join("")}
-          </div>` : ""}
-        </div>
-      </div>
-    </div>
+    <button class="frente" data-frente="${i}">
+      <span>
+        <div class="frente-name">${f.nome}</div>
+        <div class="frente-meta">${f.meta}</div>
+      </span>
+      <span class="frente-arrow">&rarr;</span>
+    </button>
   `).join("");
 
-  el.querySelectorAll("[data-toggle]").forEach(btn => {
-    btn.addEventListener("click", () => {
-      document.getElementById(`frente-${btn.dataset.toggle}`).classList.toggle("open");
-    });
+  el.querySelectorAll("[data-frente]").forEach(btn => {
+    btn.addEventListener("click", () => openFrenteDetail(Number(btn.dataset.frente)));
   });
+}
+
+function openFrenteDetail(i) {
+  const f = CONFIG.frentes[i];
+  document.getElementById("frente-detail-meta").textContent = f.meta;
+  document.getElementById("frente-detail-nome").textContent = f.nome;
+  document.getElementById("frente-detail-desc").textContent = f.descricao;
+  document.getElementById("frente-detail-link").innerHTML = f.link
+    ? `<a class="frente-link" href="${f.link}" target="_blank" rel="noopener">ver página principal &rarr;</a>`
+    : `<span class="frente-link disabled">página principal em breve</span>`;
+  document.getElementById("frente-detail-docs").innerHTML = (f.documentos && f.documentos.length) ? `
+    <div class="docs-box">
+      <div class="docs-label">Docs importantes</div>
+      ${f.documentos.map(d => `<a class="docs-link" href="${d.url}" target="_blank" rel="noopener">${d.titulo} &rarr;</a>`).join("")}
+    </div>` : "";
+  openView("frente");
 }
 
 function renderArtigos() {
