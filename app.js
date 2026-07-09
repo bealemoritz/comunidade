@@ -6,7 +6,7 @@ const CONFIG = {
   // (na frente), os seguintes vêm "por trás". "foto" é opcional (path pra imagem
   // em assets/avatars/); sem foto, mostra as iniciais.
   team: [
-    { nome: "Bea", foto: null },
+    { nome: "Bea", foto: "assets/avatars/bea.jpg" },
     { nome: "Vitória", foto: "assets/avatars/vitoria.jpg" },
     { nome: "Letícia", foto: "assets/avatars/leticia.jpg" },
     { nome: "Maria", foto: "assets/avatars/maria.jpg" },
