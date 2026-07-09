@@ -265,13 +265,30 @@ body {
 /* ARTICLE LIST */
 .article-list { margin-top: 22px; display: flex; flex-direction: column; gap: 0; }
 .article-card {
-  display: block;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
   padding: 22px 2px;
   border-top: 1px solid var(--rule);
   text-decoration: none;
   color: inherit;
 }
 .article-list .article-card:last-child { border-bottom: 1px solid var(--rule); }
+.article-thumb {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid var(--rule);
+}
+.article-thumb svg, .article-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.article-content { flex: 1; min-width: 0; }
 .article-date {
   font-family: var(--label-font);
   font-size: 11px;
@@ -301,3 +318,99 @@ body {
   font-size: 14px;
 }
 .article-list .article-placeholder:last-child { border-bottom: 1px solid var(--rule); }
+
+/* ROTINA */
+.rotina-section-title {
+  font-family: var(--label-font);
+  font-size: 11.5px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 40px 0 14px;
+}
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin-top: 18px;
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13.5px;
+  color: var(--muted);
+}
+.legend-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.cadencia-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.cadencia-item {
+  background: var(--paper);
+  border-left: 3px solid var(--rule);
+  border-radius: 3px;
+  padding: 14px 16px;
+}
+.cadencia-dia {
+  font-family: var(--label-font);
+  font-size: 11px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.cadencia-nome {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--ink);
+  margin-top: 3px;
+}
+.cadencia-desc {
+  font-size: 14px;
+  color: var(--muted);
+  margin-top: 3px;
+}
+
+.freq-section { margin-bottom: 26px; }
+.freq-title {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 17px;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+.tarefa-item {
+  border-left: 3px solid var(--rule);
+  padding: 10px 14px;
+  margin-bottom: 6px;
+}
+.tarefa-nome {
+  font-size: 15px;
+  color: var(--ink);
+  line-height: 1.35;
+}
+
+.pessoa-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+.pessoa-tag {
+  font-family: var(--label-font);
+  font-size: 10.5px;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--rule);
+  border-radius: 20px;
+  padding: 2px 9px;
+}

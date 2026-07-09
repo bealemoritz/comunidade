@@ -10,7 +10,48 @@ const CONFIG = {
     { nome: "Vitória", foto: "assets/avatars/vitoria.jpg" },
     { nome: "Letícia", foto: "assets/avatars/leticia.jpg" },
     { nome: "Maria", foto: "assets/avatars/maria.jpg" },
-    { nome: "Sofia", foto: null },
+    { nome: "Sofia", foto: "assets/avatars/sofia.jpg" },
+  ],
+
+  // esquema de cores por frente (usado na rotina). precisa bater com as
+  // variáveis definidas em styles.css (--gold, --terracotta, --green, --blue).
+  frenteCores: {
+    embaixadoras: { label: "Embaixadoras", cor: "var(--gold)" },
+    afiliadas: { label: "Afiliadas do TikTok", cor: "var(--terracotta)" },
+    representantes: { label: "Representantes", cor: "var(--green)" },
+    time: { label: "Time", cor: "var(--blue)" },
+  },
+
+  // cadência semanal: o ritmo fixo da semana.
+  cadencia: [
+    { dia: "Todos os dias", nome: "Daily", frente: "time", desc: "Time + Le Moritz", pessoas: ["Time"] },
+    { dia: "Segunda", nome: "Weekly", frente: "time", desc: "Time, uma frente de cada vez", pessoas: ["Time"] },
+    { dia: "Terça", nome: "Treinamento embaixadoras", frente: "embaixadoras", desc: null, pessoas: ["Bea", "Sofia", "Vitória"] },
+    { dia: "Sexta", nome: "Fechamento", frente: "time", desc: "Time, todas juntas", pessoas: ["Time"] },
+  ],
+
+  // tarefas por frequência.
+  tarefas: [
+    { freq: "Diário", nome: "Aprovação de embaixadoras", frente: "embaixadoras", pessoas: ["Sofia", "Maria"] },
+    { freq: "Diário", nome: "Aprovação de afiliadas", frente: "afiliadas", pessoas: ["Letícia"] },
+    { freq: "Diário", nome: "Conversão de representantes", frente: "representantes", pessoas: ["Vitória"] },
+    { freq: "Diário", nome: "Responder grupo e chat afiliadas", frente: "afiliadas", pessoas: ["Bea", "Letícia"] },
+    { freq: "Diário", nome: "Responder grupo representantes", frente: "representantes", pessoas: ["Vitória"] },
+    { freq: "Diário", nome: "Checar métricas-chave", frente: "time", pessoas: ["Bea"] },
+
+    { freq: "Semanal", nome: "Produção de materiais para representantes", frente: "representantes", pessoas: ["Vitória"] },
+    { freq: "Semanal", nome: "Desenvolvimento e acompanhamento dos desafios semanais das representantes", frente: "representantes", pessoas: ["Vitória"] },
+    { freq: "Semanal", nome: "Atualizar banco de refs afiliadas", frente: "afiliadas", pessoas: ["Bea"] },
+    { freq: "Semanal", nome: "Fechamento semanal das 3 frentes", frente: "time", pessoas: ["Bea"] },
+
+    { freq: "Quinzenal", nome: "1x1 (intercalando)", frente: "time", pessoas: ["Bea", "Time"] },
+    { freq: "Quinzenal", nome: "Treinamento afiliadas", frente: "afiliadas", pessoas: ["Bea"] },
+
+    { freq: "Mensal", nome: "Pagamento de comissões", frente: "time", pessoas: ["Bea"] },
+    { freq: "Mensal", nome: "Report mensal", frente: "time", pessoas: ["Bea"] },
+    { freq: "Mensal", nome: "Desafio embaixadoras", frente: "embaixadoras", pessoas: ["Bea", "Sofia"] },
+    { freq: "Mensal", nome: "Desafio afiliadas (MVM e internas)", frente: "afiliadas", pessoas: ["Bea", "Letícia"] },
+    { freq: "Mensal", nome: "Review de OKRs do trimestre", frente: "time", pessoas: ["Time"] },
   ],
 
   // documentos: lista opcional de links por frente (planilhas, docs, etc.)
@@ -115,6 +156,18 @@ function openFrenteDetail(i) {
   openView("frente");
 }
 
+// miniatura genérica (3 círculos sobrepostos, ecoando os avatares do time)
+// usada ao lado de cada artigo pra chamar mais atenção na lista.
+const ARTICLE_THUMB_SVG = `
+  <svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
+    <rect width="56" height="56" fill="#F1ECE1"/>
+    <circle cx="19" cy="31" r="13" fill="none" stroke="#1C1A15" stroke-opacity="0.5" stroke-width="1.3"/>
+    <circle cx="31" cy="21" r="13" fill="none" stroke="#1C1A15" stroke-opacity="0.5" stroke-width="1.3"/>
+    <circle cx="34" cy="37" r="13" fill="none" stroke="#1C1A15" stroke-opacity="0.5" stroke-width="1.3"/>
+    <circle cx="31" cy="21" r="2" fill="#C9A227"/>
+  </svg>
+`;
+
 function renderArtigos() {
   const el = document.getElementById("article-list");
   if (CONFIG.artigos.length === 0) {
@@ -123,11 +176,64 @@ function renderArtigos() {
   }
   el.innerHTML = CONFIG.artigos.map(a => `
     <a class="article-card" href="${a.arquivo}" target="_blank" rel="noopener">
-      <div class="article-date">${a.data}</div>
-      <div class="article-title">${a.titulo}</div>
-      <div class="article-sub">${a.subtitulo}</div>
+      <div class="article-thumb">${a.thumb ? `<img src="${a.thumb}" alt="">` : ARTICLE_THUMB_SVG}</div>
+      <div class="article-content">
+        <div class="article-date">${a.data}</div>
+        <div class="article-title">${a.titulo}</div>
+        <div class="article-sub">${a.subtitulo}</div>
+      </div>
     </a>
   `).join("");
+}
+
+// ===== Rotina =====
+
+function pessoaTags(pessoas) {
+  return `<div class="pessoa-tags">${pessoas.map(p => `<span class="pessoa-tag">${p}</span>`).join("")}</div>`;
+}
+
+function renderRotina() {
+  const legendEl = document.getElementById("rotina-legend");
+  legendEl.innerHTML = Object.values(CONFIG.frenteCores).map(f => `
+    <div class="legend-item">
+      <span class="legend-dot" style="background:${f.cor}"></span>
+      ${f.label}
+    </div>
+  `).join("");
+
+  const cadEl = document.getElementById("cadencia-list");
+  cadEl.innerHTML = CONFIG.cadencia.map(c => {
+    const cor = CONFIG.frenteCores[c.frente].cor;
+    return `
+      <div class="cadencia-item" style="border-left-color:${cor}">
+        <div class="cadencia-dia">${c.dia}</div>
+        <div class="cadencia-nome">${c.nome}</div>
+        ${c.desc ? `<div class="cadencia-desc">${c.desc}</div>` : ""}
+        ${pessoaTags(c.pessoas)}
+      </div>
+    `;
+  }).join("");
+
+  const freqOrder = ["Diário", "Semanal", "Quinzenal", "Mensal"];
+  const tarefasEl = document.getElementById("tarefas-list");
+  tarefasEl.innerHTML = freqOrder.map(freq => {
+    const itens = CONFIG.tarefas.filter(t => t.freq === freq);
+    if (!itens.length) return "";
+    return `
+      <div class="freq-section">
+        <div class="freq-title">${freq}</div>
+        ${itens.map(t => {
+          const cor = CONFIG.frenteCores[t.frente].cor;
+          return `
+            <div class="tarefa-item" style="border-left-color:${cor}">
+              <div class="tarefa-nome">${t.nome}</div>
+              ${pessoaTags(t.pessoas)}
+            </div>
+          `;
+        }).join("")}
+      </div>
+    `;
+  }).join("");
 }
 
 // ===== View switching =====
@@ -153,3 +259,4 @@ document.querySelectorAll("[data-close]").forEach(btn => {
 renderTeam();
 renderFrentes();
 renderArtigos();
+renderRotina();
