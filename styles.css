@@ -146,40 +146,11 @@ body {
 
 /* FRENTES */
 .frentes { margin-top: 40px; }
-.frentes-list { margin-top: 14px; border-top: 1px solid var(--rule); }
-.frente {
+.frentes-list {
+  margin-top: 14px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  background: none;
-  border: none;
-  border-bottom: 1px solid var(--rule);
-  padding: 18px 2px;
-  cursor: pointer;
-  text-align: left;
-  font-family: inherit;
-}
-.frente:hover .frente-name { color: var(--terracotta); }
-.frente-name {
-  font-family: var(--serif);
-  font-weight: 500;
-  font-size: 20px;
-  color: var(--ink);
-}
-.frente-meta {
-  font-family: var(--label-font);
-  font-size: 11px;
-  letter-spacing: .06em;
-  color: var(--muted);
-  text-transform: uppercase;
-  margin-top: 3px;
-}
-.frente-arrow {
-  font-size: 18px;
-  color: var(--muted);
-  flex-shrink: 0;
-  margin-left: 12px;
+  flex-direction: column;
+  gap: 12px;
 }
 .frente-detail-desc {
   font-size: 16.5px;

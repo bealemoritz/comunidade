@@ -57,6 +57,7 @@ const CONFIG = {
   // documentos: lista opcional de links por frente (planilhas, docs, etc.)
   frentes: [
     {
+      chave: "embaixadoras",
       nome: "Embaixadoras",
       meta: "+300 criadoras · 45+ · Instagram",
       descricao: "Criadoras de conteúdo, hoje mais de 300 mulheres, em sua maioria 45+. O foco da criação delas é o Instagram.",
@@ -66,6 +67,7 @@ const CONFIG = {
       ],
     },
     {
+      chave: "afiliadas",
       nome: "Afiliadas do TikTok",
       meta: "internas + MVM · perfil mais jovem · TikTok",
       descricao: "Criadoras de conteúdo que recebem comissão por venda dentro do próprio TikTok. Temos as afiliadas internas e as afiliadas da MVM. Em maioria, são mais jovens, com foco total em produção pro TikTok.",
@@ -75,6 +77,7 @@ const CONFIG = {
       ],
     },
     {
+      chave: "representantes",
       nome: "Representantes",
       meta: "online (WhatsApp) + offline",
       descricao: "Não são criadoras de conteúdo: vendem tanto no online quanto no offline. O foco de venda online é o WhatsApp, com um grupo que parte de uma lista de clientes.",
@@ -120,20 +123,52 @@ function renderTeam() {
   }
 
   document.getElementById("team-caption").textContent =
-    `${CONFIG.team.length} ${CONFIG.team.length === 1 ? "pessoa" : "pessoas"} no time · ${CONFIG.team.map(p => p.nome.toLowerCase()).join(" · ")}`;
+    `${CONFIG.team.length} ${CONFIG.team.length === 1 ? "pessoa" : "pessoas"} no time | ${CONFIG.team.map(p => p.nome.toLowerCase()).join(" · ")}`;
 }
+
+// ícones das frentes: mesmo traço fino em tinta dos ícones de rotina/leitura,
+// com um ponto de destaque na cor da própria frente.
+const FRENTE_ICONS = {
+  embaixadoras: (cor) => `
+    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="8" y="8" width="32" height="32" rx="8" stroke="#1C1A15" stroke-width="1.6"/>
+      <circle cx="24" cy="25" r="8" stroke="#1C1A15" stroke-width="1.6"/>
+      <circle cx="24" cy="25" r="2.6" fill="${cor}"/>
+      <circle cx="32" cy="17" r="1.6" fill="#1C1A15"/>
+    </svg>
+  `,
+  afiliadas: (cor) => `
+    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M27 8v20.5a6.5 6.5 0 1 1-5-6.32" stroke="#1C1A15" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M27 8c0 5.2 3.8 9 9 9.4" stroke="#1C1A15" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="22" cy="28.5" r="2.6" fill="${cor}"/>
+    </svg>
+  `,
+  representantes: (cor) => `
+    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M8 20l4-9h24l4 9" stroke="#1C1A15" stroke-width="1.6" stroke-linejoin="round"/>
+      <path d="M8 20v13a2 2 0 0 0 2 2h28a2 2 0 0 0 2-2V20" stroke="#1C1A15" stroke-width="1.6" stroke-linejoin="round"/>
+      <line x1="8" y1="20" x2="40" y2="20" stroke="#1C1A15" stroke-width="1.6"/>
+      <circle cx="24" cy="28" r="2.6" fill="${cor}"/>
+    </svg>
+  `,
+};
 
 function renderFrentes() {
   const el = document.getElementById("frentes-list");
-  el.innerHTML = CONFIG.frentes.map((f, i) => `
-    <button class="frente" data-frente="${i}">
-      <span>
-        <div class="frente-name">${f.nome}</div>
-        <div class="frente-meta">${f.meta}</div>
+  el.innerHTML = CONFIG.frentes.map((f, i) => {
+    const cor = CONFIG.frenteCores[f.chave].cor;
+    return `
+    <button class="nav-card" data-frente="${i}">
+      <span class="nav-icon">${FRENTE_ICONS[f.chave](cor)}</span>
+      <span class="nav-text">
+        <span class="nav-title">${f.nome}</span>
+        <span class="nav-sub">${f.meta}</span>
       </span>
-      <span class="frente-arrow">&rarr;</span>
+      <span class="nav-arrow">&rarr;</span>
     </button>
-  `).join("");
+  `;
+  }).join("");
 
   el.querySelectorAll("[data-frente]").forEach(btn => {
     btn.addEventListener("click", () => openFrenteDetail(Number(btn.dataset.frente)));
