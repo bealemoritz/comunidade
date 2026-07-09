@@ -22,13 +22,19 @@ const CONFIG = {
     time: { label: "Time", cor: "var(--blue)" },
   },
 
-  // cadência semanal: o ritmo fixo da semana.
-  cadencia: [
-    { dia: "Todos os dias", nome: "Daily", frente: "time", desc: "Time + Le Moritz", pessoas: ["Time"] },
-    { dia: "Segunda", nome: "Weekly", frente: "time", desc: "Time, uma frente de cada vez", pessoas: ["Time"] },
-    { dia: "Terça", nome: "Treinamento embaixadoras", frente: "embaixadoras", desc: null, pessoas: ["Bea", "Sofia", "Vitória"] },
-    { dia: "Sexta", nome: "Fechamento", frente: "time", desc: "Time, todas juntas", pessoas: ["Time"] },
-  ],
+  // cadência semanal, em formato calendário. "daily" acontece todo dia (mostrado
+  // como uma faixa fixa); "dias" mapeia cada dia útil ao evento marcante dele
+  // (dias sem entrada aqui ficam só com a daily).
+  semana: {
+    daily: { nome: "Daily", frente: "time", desc: "Time + Le Moritz", pessoas: ["Time"] },
+    dias: {
+      "Segunda": { nome: "Weekly", frente: "time", desc: "Time, uma frente de cada vez", pessoas: ["Time"] },
+      "Terça": { nome: "Treinamento embaixadoras", frente: "embaixadoras", pessoas: ["Bea", "Sofia", "Vitória"] },
+      "Quarta": null,
+      "Quinta": null,
+      "Sexta": { nome: "Fechamento", frente: "time", desc: "Time, todas juntas", pessoas: ["Time"] },
+    },
+  },
 
   // tarefas por frequência.
   tarefas: [
@@ -42,6 +48,7 @@ const CONFIG = {
     { freq: "Semanal", nome: "Produção de materiais para representantes", frente: "representantes", pessoas: ["Vitória"] },
     { freq: "Semanal", nome: "Desenvolvimento e acompanhamento dos desafios semanais das representantes", frente: "representantes", pessoas: ["Vitória"] },
     { freq: "Semanal", nome: "Atualizar banco de refs afiliadas", frente: "afiliadas", pessoas: ["Bea"] },
+    { freq: "Semanal", nome: "Posts no TikTok feed", frente: "afiliadas", pessoas: ["Letícia"] },
     { freq: "Semanal", nome: "Fechamento semanal das 3 frentes", frente: "time", pessoas: ["Bea"] },
 
     { freq: "Quinzenal", nome: "1x1 (intercalando)", frente: "time", pessoas: ["Bea", "Time"] },
@@ -223,8 +230,8 @@ function renderArtigos() {
 
 // ===== Rotina =====
 
-function pessoaTags(pessoas) {
-  return `<div class="pessoa-tags">${pessoas.map(p => `<span class="pessoa-tag">${p}</span>`).join("")}</div>`;
+function pessoasTexto(pessoas) {
+  return pessoas.map(p => p.toUpperCase()).join(" · ");
 }
 
 function renderRotina() {
@@ -236,19 +243,39 @@ function renderRotina() {
     </div>
   `).join("");
 
-  const cadEl = document.getElementById("cadencia-list");
-  cadEl.innerHTML = CONFIG.cadencia.map(c => {
-    const cor = CONFIG.frenteCores[c.frente].cor;
+  // faixa fixa da daily, acima do calendário da semana
+  const daily = CONFIG.semana.daily;
+  document.getElementById("week-daily").innerHTML = `
+    <span class="week-daily-tag">Daily</span> ${daily.desc}
+  `;
+
+  // grade da semana: um card por dia útil (vazio quando não há evento fixo)
+  const diasOrdem = Object.keys(CONFIG.semana.dias);
+  const weekEl = document.getElementById("week-grid");
+  weekEl.innerHTML = diasOrdem.map(dia => {
+    const ev = CONFIG.semana.dias[dia];
+    if (!ev) {
+      return `
+        <div class="week-day">
+          <div class="week-day-label">${dia}</div>
+          <div class="week-event empty">—</div>
+        </div>
+      `;
+    }
+    const cor = CONFIG.frenteCores[ev.frente].cor;
     return `
-      <div class="cadencia-item" style="border-left-color:${cor}">
-        <div class="cadencia-dia">${c.dia}</div>
-        <div class="cadencia-nome">${c.nome}</div>
-        ${c.desc ? `<div class="cadencia-desc">${c.desc}</div>` : ""}
-        ${pessoaTags(c.pessoas)}
+      <div class="week-day">
+        <div class="week-day-label">${dia}</div>
+        <div class="week-event" style="border-left-color:${cor}">
+          <div class="week-event-nome">${ev.nome}</div>
+          ${ev.desc ? `<div class="week-event-desc">${ev.desc}</div>` : ""}
+          <div class="week-event-pessoas">${pessoasTexto(ev.pessoas)}</div>
+        </div>
       </div>
     `;
   }).join("");
 
+  // tarefas por frequência, em linhas compactas (dot colorido + nome + pessoas)
   const freqOrder = ["Diário", "Semanal", "Quinzenal", "Mensal"];
   const tarefasEl = document.getElementById("tarefas-list");
   tarefasEl.innerHTML = freqOrder.map(freq => {
@@ -260,9 +287,10 @@ function renderRotina() {
         ${itens.map(t => {
           const cor = CONFIG.frenteCores[t.frente].cor;
           return `
-            <div class="tarefa-item" style="border-left-color:${cor}">
-              <div class="tarefa-nome">${t.nome}</div>
-              ${pessoaTags(t.pessoas)}
+            <div class="tarefa-row">
+              <span class="tarefa-dot" style="background:${cor}"></span>
+              <span class="tarefa-nome">${t.nome}</span>
+              <span class="tarefa-pessoas">${pessoasTexto(t.pessoas)}</span>
             </div>
           `;
         }).join("")}
