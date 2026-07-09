@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comunidade Le Moritz · Time</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- HEADER -->
+  <header class="top">
+    <div class="label">LE MORITZ · TIME DE COMUNIDADE</div>
+    <h1 class="title">Comunidade</h1>
+    <p class="subtitle">Esse é um espaço pra gente se organizar. Vocês vão encontrar indicações de leituras, rotinas do time, principais informações sobre as 3 frentes da vertical e documentos relacionados a cada uma delas.</p>
+  </header>
+
+  <!-- TEAM AVATARS -->
+  <section class="team" id="team-section">
+    <div class="avatars" id="avatars"></div>
+    <p class="team-caption" id="team-caption"></p>
+  </section>
+
+  <!-- MAIN NAV BUTTONS -->
+  <section class="nav-buttons">
+    <button class="nav-card" data-view="rotina">
+      <span class="nav-icon">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="7" y="9" width="34" height="32" rx="3" stroke="#1C1A15" stroke-width="1.6"/>
+          <line x1="7" y1="18" x2="41" y2="18" stroke="#1C1A15" stroke-width="1.6"/>
+          <line x1="14" y1="5" x2="14" y2="13" stroke="#1C1A15" stroke-width="1.6" stroke-linecap="round"/>
+          <line x1="34" y1="5" x2="34" y2="13" stroke="#1C1A15" stroke-width="1.6" stroke-linecap="round"/>
+          <circle cx="15" cy="25" r="1.6" fill="#C9A227"/>
+          <circle cx="24" cy="25" r="1.6" fill="#1C1A15"/>
+          <circle cx="33" cy="25" r="1.6" fill="#1C1A15"/>
+          <circle cx="15" cy="32" r="1.6" fill="#1C1A15"/>
+          <circle cx="24" cy="32" r="1.6" fill="#1C1A15"/>
+        </svg>
+      </span>
+      <span class="nav-text">
+        <span class="nav-title">Rotina do time</span>
+        <span class="nav-sub">o que fazemos, quando</span>
+      </span>
+      <span class="nav-arrow">&rarr;</span>
+    </button>
+
+    <button class="nav-card" data-view="leitura">
+      <span class="nav-icon">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="14" cy="26" r="8" stroke="#1C1A15" stroke-width="1.6"/>
+          <circle cx="34" cy="26" r="8" stroke="#1C1A15" stroke-width="1.6"/>
+          <line x1="22" y1="24" x2="26" y2="24" stroke="#1C1A15" stroke-width="1.6"/>
+          <path d="M6 24c0-4 2-7 4-8" stroke="#1C1A15" stroke-width="1.6" stroke-linecap="round"/>
+          <path d="M42 24c0-4-2-7-4-8" stroke="#1C1A15" stroke-width="1.6" stroke-linecap="round"/>
+          <circle cx="14" cy="26" r="2" fill="#C9A227"/>
+        </svg>
+      </span>
+      <span class="nav-text">
+        <span class="nav-title">Para ler</span>
+        <span class="nav-sub">artigos e referências</span>
+      </span>
+      <span class="nav-arrow">&rarr;</span>
+    </button>
+  </section>
+
+  <!-- FRENTES -->
+  <section class="frentes">
+    <div class="label">NOSSAS FRENTES</div>
+    <div class="frentes-list" id="frentes-list"></div>
+  </section>
+
+</div>
+
+<!-- LEITURA VIEW -->
+<div class="view-overlay" id="view-leitura">
+  <div class="wrap">
+    <button class="back-btn" data-close>&larr; voltar</button>
+    <div class="label">PARA LER</div>
+    <h2 class="title view-title">Artigos</h2>
+    <div class="article-list" id="article-list"></div>
+  </div>
+</div>
+
+<!-- ROTINA VIEW -->
+<div class="view-overlay" id="view-rotina">
+  <div class="wrap">
+    <button class="back-btn" data-close>&larr; voltar</button>
+    <div class="label">ROTINA DO TIME</div>
+    <h2 class="title view-title">Em breve</h2>
+    <p class="empty-state">Essa página ainda está vazia. A rotina de cada frente entra aqui em seguida.</p>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
