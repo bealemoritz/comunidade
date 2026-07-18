@@ -22,18 +22,43 @@ const CONFIG = {
     time: { label: "Time", cor: "var(--blue)" },
   },
 
-  // cadência semanal, em formato calendário. "daily" acontece todo dia (mostrado
-  // como uma faixa fixa); "dias" mapeia cada dia útil ao evento marcante dele
-  // (dias sem entrada aqui ficam só com a daily).
+  // cadência semanal, em formato calendário. cada dia é uma lista de calls —
+  // a daily entra automaticamente em todos os dias úteis (definida em
+  // "dailyInfo"), o resto é específico do dia.
   semana: {
-    daily: { nome: "Daily", frente: "time", desc: "+ Le Moritz", pessoas: ["Time"] },
+    dailyInfo: { nome: "Daily", hora: "09h15", frente: "time", desc: "Le Moritz", pessoas: ["Time"] },
     dias: {
-      "Segunda": { nome: "Weekly", frente: "time", desc: "(uma frente por vez)", pessoas: ["Time"] },
-      "Terça": { nome: "Treinamento embaixadoras", frente: "embaixadoras", pessoas: ["Bea", "Sofia", "Vitória"] },
-      "Quarta": null,
-      "Quinta": null,
-      "Sexta": { nome: "Fechamento", frente: "time", desc: "(todas juntas)", pessoas: ["Time"] },
+      "Segunda": [
+        { daily: true },
+        { nome: "Weekly", hora: "10h", frente: "time", desc: "(uma frente por vez)", pessoas: ["Time"] },
+      ],
+      "Terça": [
+        { daily: true },
+        { nome: "Treinamento embaixadoras", hora: "17h", frente: "embaixadoras", pessoas: ["Bea", "Sofia", "Vitória"] },
+        { nome: "Envio de material para representantes", frente: "representantes", pessoas: ["Vitória"] },
+        { nome: "Abertura do desafio para representantes", frente: "representantes", pessoas: ["Vitória"] },
+      ],
+      "Quarta": [
+        { daily: true },
+      ],
+      "Quinta": [
+        { daily: true },
+      ],
+      "Sexta": [
+        { daily: true },
+        { nome: "Fechamento", hora: "11h", frente: "time", desc: "(todas juntas)", pessoas: ["Time"] },
+      ],
     },
+  },
+
+  // foco do mês por frente — destaque curto mostrado na página de rotina.
+  focoDoMes: {
+    mes: "Julho",
+    itens: [
+      { frente: "embaixadoras", texto: "Estabelecer rotina e conexão com as embaixadoras + buscar formas de analisar os dados delas pra novas implementações." },
+      { frente: "afiliadas", texto: "Estruturar nossa comunidade interna + desafio com MVM e internas." },
+      { frente: "representantes", texto: "Estruturar prospecção + estabelecer rotina com o grupo + criação do nosso catálogo." },
+    ],
   },
 
   // tarefas por frequência.
@@ -51,7 +76,7 @@ const CONFIG = {
     { freq: "Semanal", nome: "Posts no TikTok feed", frente: "afiliadas", pessoas: ["Letícia"] },
     { freq: "Semanal", nome: "Fechamento semanal das 3 frentes", frente: "time", pessoas: ["Bea"] },
 
-    { freq: "Quinzenal", nome: "1x1 (intercalando)", frente: "time", pessoas: ["Bea", "Time"] },
+    { freq: "Quinzenal", nome: "1x1", hora: "10h ou 11h", desc: "(individual, intercalado)", frente: "time", pessoas: ["Bea", "Vitória", "Letícia", "Maria", "Sofia"] },
     { freq: "Quinzenal", nome: "Treinamento afiliadas", frente: "afiliadas", pessoas: ["Bea"] },
 
     { freq: "Mensal", nome: "Pagamento de comissões", frente: "time", pessoas: ["Bea"] },
@@ -242,8 +267,28 @@ function envolve(pessoas, filtro) {
 function pessoasHTML(pessoas) {
   return pessoas.map(p => {
     const destaque = rotinaFiltro && p === rotinaFiltro;
-    return `<span class="${destaque ? "pessoa-match" : ""}">${p.toUpperCase()}</span>`;
-  }).join(" · ");
+    return `<span class="pessoa-pill ${destaque ? "match" : ""}">${p.toUpperCase()}</span>`;
+  }).join("");
+}
+
+function renderFocoMes() {
+  const el = document.getElementById("foco-mes");
+  const f = CONFIG.focoDoMes;
+  el.innerHTML = `
+    <div class="foco-mes-title">Foco de ${f.mes}</div>
+    <div class="foco-mes-list">
+      ${f.itens.map(it => {
+        const cor = CONFIG.frenteCores[it.frente].cor;
+        const label = CONFIG.frenteCores[it.frente].label;
+        return `
+          <div class="foco-item" style="border-left-color:${cor}">
+            <div class="foco-item-label"><span class="legend-dot" style="background:${cor}"></span>${label}</div>
+            <p class="foco-item-texto">${it.texto}</p>
+          </div>
+        `;
+      }).join("")}
+    </div>
+  `;
 }
 
 function renderLegenda() {
@@ -274,32 +319,26 @@ function renderFiltro() {
 }
 
 function renderSemana() {
-  const daily = CONFIG.semana.daily;
-  document.getElementById("week-daily").innerHTML = `
-    <span class="week-daily-tag">Daily</span> ${daily.desc}
-  `;
-
   const diasOrdem = Object.keys(CONFIG.semana.dias);
   const weekEl = document.getElementById("week-grid");
   weekEl.innerHTML = diasOrdem.map(dia => {
-    const ev = CONFIG.semana.dias[dia];
-    if (!ev) {
-      return `
-        <div class="week-day">
-          <div class="week-day-label">${dia}</div>
-          <div class="week-event empty">—</div>
-        </div>
-      `;
-    }
-    const cor = CONFIG.frenteCores[ev.frente].cor;
-    const dimmed = !envolve(ev.pessoas, rotinaFiltro);
+    const eventos = CONFIG.semana.dias[dia].map(e => e.daily ? CONFIG.semana.dailyInfo : e);
     return `
       <div class="week-day">
         <div class="week-day-label">${dia}</div>
-        <div class="week-event ${dimmed ? "dimmed" : ""}" style="border-left-color:${cor}">
-          <div class="week-event-nome">${ev.nome}</div>
-          ${ev.desc ? `<div class="week-event-desc">${ev.desc}</div>` : ""}
-          <div class="week-event-pessoas">${pessoasHTML(ev.pessoas)}</div>
+        <div class="week-events">
+          ${eventos.map(ev => {
+            const cor = CONFIG.frenteCores[ev.frente].cor;
+            const dimmed = !envolve(ev.pessoas, rotinaFiltro);
+            return `
+              <div class="week-event ${dimmed ? "dimmed" : ""}" style="border-left-color:${cor}">
+                ${ev.hora ? `<div class="week-event-hora">${ev.hora}</div>` : ""}
+                <div class="week-event-nome">${ev.nome}</div>
+                ${ev.desc ? `<div class="week-event-desc">${ev.desc}</div>` : ""}
+                <div class="week-event-pessoas">${pessoasHTML(ev.pessoas)}</div>
+              </div>
+            `;
+          }).join("")}
         </div>
       </div>
     `;
@@ -323,7 +362,11 @@ function renderTarefas() {
           return `
             <div class="tarefa-row">
               <span class="tarefa-dot" style="background:${cor}"></span>
-              <span class="tarefa-nome">${t.nome}</span>
+              <span class="tarefa-nome">
+                ${t.nome}
+                ${t.hora ? `<span class="tarefa-hora">${t.hora}</span>` : ""}
+                ${t.desc ? `<span class="tarefa-desc">${t.desc}</span>` : ""}
+              </span>
               <span class="tarefa-pessoas">${pessoasHTML(t.pessoas)}</span>
             </div>
           `;
@@ -339,6 +382,7 @@ function renderTarefas() {
 
 function renderRotina() {
   renderLegenda();
+  renderFocoMes();
   renderFiltro();
   renderSemana();
   renderTarefas();
