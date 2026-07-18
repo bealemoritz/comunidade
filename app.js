@@ -22,30 +22,20 @@ const CONFIG = {
     time: { label: "Time", cor: "var(--blue)" },
   },
 
-  // cadência semanal, em formato calendário. cada dia é uma lista de calls —
-  // a daily entra automaticamente em todos os dias úteis (definida em
-  // "dailyInfo"), o resto é específico do dia.
+  // cadência semanal, em formato calendário. a daily é fixa (mostrada à parte,
+  // acontece todo dia útil); "dias" traz só a call específica de cada dia.
   semana: {
-    dailyInfo: { nome: "Daily", hora: "09h15", frente: "time", desc: "Le Moritz", pessoas: ["Time"] },
+    daily: { nome: "Daily", hora: "09h15", frente: "time", desc: "Le Moritz", pessoas: ["Time"] },
     dias: {
       "Segunda": [
-        { daily: true },
         { nome: "Weekly", hora: "10h", frente: "time", desc: "(uma frente por vez)", pessoas: ["Time"] },
       ],
       "Terça": [
-        { daily: true },
         { nome: "Treinamento embaixadoras", hora: "17h", frente: "embaixadoras", pessoas: ["Bea", "Sofia", "Vitória"] },
-        { nome: "Envio de material para representantes", frente: "representantes", pessoas: ["Vitória"] },
-        { nome: "Abertura do desafio para representantes", frente: "representantes", pessoas: ["Vitória"] },
       ],
-      "Quarta": [
-        { daily: true },
-      ],
-      "Quinta": [
-        { daily: true },
-      ],
+      "Quarta": [],
+      "Quinta": [],
       "Sexta": [
-        { daily: true },
         { nome: "Fechamento", hora: "11h", frente: "time", desc: "(todas juntas)", pessoas: ["Time"] },
       ],
     },
@@ -77,7 +67,7 @@ const CONFIG = {
     { freq: "Semanal", nome: "Fechamento semanal das 3 frentes", frente: "time", pessoas: ["Bea"] },
 
     { freq: "Quinzenal", nome: "1x1", hora: "10h ou 11h", desc: "(individual, intercalado)", frente: "time", pessoas: ["Bea", "Vitória", "Letícia", "Maria", "Sofia"] },
-    { freq: "Quinzenal", nome: "Treinamento afiliadas", frente: "afiliadas", pessoas: ["Bea"] },
+    { freq: "Quinzenal", nome: "Treinamento afiliadas", frente: "afiliadas", pessoas: ["Bea", "Letícia"] },
 
     { freq: "Mensal", nome: "Pagamento de comissões", frente: "time", pessoas: ["Bea"] },
     { freq: "Mensal", nome: "Report mensal", frente: "time", pessoas: ["Bea"] },
@@ -319,10 +309,28 @@ function renderFiltro() {
 }
 
 function renderSemana() {
+  // faixa fixa da daily, à parte, acontece todo dia útil
+  const daily = CONFIG.semana.daily;
+  const dailyDimmed = !envolve(daily.pessoas, rotinaFiltro);
+  document.getElementById("week-daily").innerHTML = `
+    <span class="week-daily-tag">${daily.hora}</span>
+    <strong>${daily.nome}</strong> · ${daily.desc}
+    <span class="week-event-pessoas week-daily-pessoas">${pessoasHTML(daily.pessoas)}</span>
+  `;
+  document.getElementById("week-daily").classList.toggle("dimmed", dailyDimmed);
+
   const diasOrdem = Object.keys(CONFIG.semana.dias);
   const weekEl = document.getElementById("week-grid");
   weekEl.innerHTML = diasOrdem.map(dia => {
-    const eventos = CONFIG.semana.dias[dia].map(e => e.daily ? CONFIG.semana.dailyInfo : e);
+    const eventos = CONFIG.semana.dias[dia];
+    if (!eventos.length) {
+      return `
+        <div class="week-day">
+          <div class="week-day-label">${dia}</div>
+          <div class="week-event empty">—</div>
+        </div>
+      `;
+    }
     return `
       <div class="week-day">
         <div class="week-day-label">${dia}</div>
