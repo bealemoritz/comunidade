@@ -26,13 +26,13 @@ const CONFIG = {
   // como uma faixa fixa); "dias" mapeia cada dia útil ao evento marcante dele
   // (dias sem entrada aqui ficam só com a daily).
   semana: {
-    daily: { nome: "Daily", frente: "time", desc: "Time + Le Moritz", pessoas: ["Time"] },
+    daily: { nome: "Daily", frente: "time", desc: "+ Le Moritz", pessoas: ["Time"] },
     dias: {
-      "Segunda": { nome: "Weekly", frente: "time", desc: "Time, uma frente de cada vez", pessoas: ["Time"] },
+      "Segunda": { nome: "Weekly", frente: "time", desc: "(uma frente por vez)", pessoas: ["Time"] },
       "Terça": { nome: "Treinamento embaixadoras", frente: "embaixadoras", pessoas: ["Bea", "Sofia", "Vitória"] },
       "Quarta": null,
       "Quinta": null,
-      "Sexta": { nome: "Fechamento", frente: "time", desc: "Time, todas juntas", pessoas: ["Time"] },
+      "Sexta": { nome: "Fechamento", frente: "time", desc: "(todas juntas)", pessoas: ["Time"] },
     },
   },
 
@@ -230,11 +230,23 @@ function renderArtigos() {
 
 // ===== Rotina =====
 
-function pessoasTexto(pessoas) {
-  return pessoas.map(p => p.toUpperCase()).join(" · ");
+// null = vendo o time todo. quando setado, filtra a agenda e as tarefas pra
+// mostrar só o que envolve essa pessoa (itens marcados "Time" aparecem sempre,
+// já que valem pra todo mundo).
+let rotinaFiltro = null;
+
+function envolve(pessoas, filtro) {
+  return !filtro || pessoas.includes(filtro) || pessoas.includes("Time");
 }
 
-function renderRotina() {
+function pessoasHTML(pessoas) {
+  return pessoas.map(p => {
+    const destaque = rotinaFiltro && p === rotinaFiltro;
+    return `<span class="${destaque ? "pessoa-match" : ""}">${p.toUpperCase()}</span>`;
+  }).join(" · ");
+}
+
+function renderLegenda() {
   const legendEl = document.getElementById("rotina-legend");
   legendEl.innerHTML = Object.values(CONFIG.frenteCores).map(f => `
     <div class="legend-item">
@@ -242,14 +254,31 @@ function renderRotina() {
       ${f.label}
     </div>
   `).join("");
+}
 
-  // faixa fixa da daily, acima do calendário da semana
+function renderFiltro() {
+  const el = document.getElementById("rotina-filtro");
+  const chips = [{ nome: null, label: "Todo o time" }, ...CONFIG.team.map(p => ({ nome: p.nome, label: p.nome }))];
+  el.innerHTML = chips.map(c => `
+    <button class="filtro-chip ${rotinaFiltro === c.nome ? "active" : ""}" data-pessoa="${c.nome ?? ""}">${c.label}</button>
+  `).join("");
+
+  el.querySelectorAll("[data-pessoa]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      rotinaFiltro = btn.dataset.pessoa || null;
+      renderFiltro();
+      renderSemana();
+      renderTarefas();
+    });
+  });
+}
+
+function renderSemana() {
   const daily = CONFIG.semana.daily;
   document.getElementById("week-daily").innerHTML = `
     <span class="week-daily-tag">Daily</span> ${daily.desc}
   `;
 
-  // grade da semana: um card por dia útil (vazio quando não há evento fixo)
   const diasOrdem = Object.keys(CONFIG.semana.dias);
   const weekEl = document.getElementById("week-grid");
   weekEl.innerHTML = diasOrdem.map(dia => {
@@ -263,40 +292,56 @@ function renderRotina() {
       `;
     }
     const cor = CONFIG.frenteCores[ev.frente].cor;
+    const dimmed = !envolve(ev.pessoas, rotinaFiltro);
     return `
       <div class="week-day">
         <div class="week-day-label">${dia}</div>
-        <div class="week-event" style="border-left-color:${cor}">
+        <div class="week-event ${dimmed ? "dimmed" : ""}" style="border-left-color:${cor}">
           <div class="week-event-nome">${ev.nome}</div>
           ${ev.desc ? `<div class="week-event-desc">${ev.desc}</div>` : ""}
-          <div class="week-event-pessoas">${pessoasTexto(ev.pessoas)}</div>
+          <div class="week-event-pessoas">${pessoasHTML(ev.pessoas)}</div>
         </div>
       </div>
     `;
   }).join("");
+}
 
-  // tarefas por frequência, em linhas compactas (dot colorido + nome + pessoas)
+function renderTarefas() {
   const freqOrder = ["Diário", "Semanal", "Quinzenal", "Mensal"];
   const tarefasEl = document.getElementById("tarefas-list");
-  tarefasEl.innerHTML = freqOrder.map(freq => {
-    const itens = CONFIG.tarefas.filter(t => t.freq === freq);
+  const secoes = freqOrder.map(freq => {
+    const itens = CONFIG.tarefas.filter(t => t.freq === freq && envolve(t.pessoas, rotinaFiltro));
     if (!itens.length) return "";
     return `
-      <div class="freq-section">
-        <div class="freq-title">${freq}</div>
+      <div class="freq-card">
+        <div class="freq-header">
+          <span class="freq-title">${freq}</span>
+          <span class="freq-count">${itens.length}</span>
+        </div>
         ${itens.map(t => {
           const cor = CONFIG.frenteCores[t.frente].cor;
           return `
             <div class="tarefa-row">
               <span class="tarefa-dot" style="background:${cor}"></span>
               <span class="tarefa-nome">${t.nome}</span>
-              <span class="tarefa-pessoas">${pessoasTexto(t.pessoas)}</span>
+              <span class="tarefa-pessoas">${pessoasHTML(t.pessoas)}</span>
             </div>
           `;
         }).join("")}
       </div>
     `;
   }).join("");
+
+  tarefasEl.innerHTML = secoes.trim()
+    ? secoes
+    : `<p class="empty-state">${rotinaFiltro} não tem tarefas mapeadas ainda.</p>`;
+}
+
+function renderRotina() {
+  renderLegenda();
+  renderFiltro();
+  renderSemana();
+  renderTarefas();
 }
 
 // ===== View switching =====
