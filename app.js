@@ -112,17 +112,34 @@ const CONFIG = {
     {
       chave: "embaixadoras",
       nome: "Embaixadoras",
-      meta: "+300 criadoras · 45+ · Instagram",
-      descricao: "Criadoras de conteúdo, hoje mais de 300 mulheres, em sua maioria 45+. O foco da criação delas é o Instagram.",
+      meta: "260 embaixadoras &nbsp;·&nbsp; 45+ &nbsp;·&nbsp; Instagram",
+      descricao: "São criadoras de conteúdo, hoje mais de 260 mulheres, com mais de 45 anos. O foco da criação hoje é o Instagram.",
       link: null,
       documentos: [
         { titulo: "PLANILHA EMBAIXADORAS", url: "https://docs.google.com/spreadsheets/d/1tsYSeFviASGWHm30XAGjChOe5kOvg-7T0rE2jQcYsJM/edit?gid=1323823578#gid=1323823578" },
       ],
+      whatsapp: "https://chat.whatsapp.com/IC4RoP6130W1rJ4lHm6cCC",
+      faturamento: {
+        titulo: "Forma de faturamento",
+        itens: [
+          { titulo: "Comissionamento de 10% via cupom de desconto", texto: "Cada embaixadora tem seu próprio cupom: ele dá desconto pras seguidoras/clientes dela e gera 10% de comissão pra ela em cada venda." },
+          { titulo: "Desafios mensais", texto: "Dá pra faturar extra completando as missões dos desafios de cada mês." },
+        ],
+      },
+      rotinaPrograma: {
+        titulo: "Rotina do programa",
+        itens: [
+          { titulo: "Treinamentos semanais", texto: "Toda terça-feira." },
+          { titulo: "Desafios mensais", texto: "Todo mês tem um desafio novo pra elas." },
+        ],
+        resultadosLink: "https://bealemoritz.github.io/desafios-embaixadoras/",
+        resultadosLabel: "Resultados dos desafios anteriores",
+      },
     },
     {
       chave: "afiliadas",
       nome: "Afiliadas do TikTok",
-      meta: "internas + MVM · perfil mais jovem · TikTok",
+      meta: "internas + MVM &nbsp;·&nbsp; perfil mais jovem &nbsp;·&nbsp; TikTok",
       descricao: "Criadoras de conteúdo que recebem comissão por venda dentro do próprio TikTok. Temos as afiliadas internas e as afiliadas da MVM. Em maioria, são mais jovens, com foco total em produção pro TikTok.",
       link: "https://www.lemoritz.com/afiliadas",
       documentos: [
@@ -132,7 +149,7 @@ const CONFIG = {
     {
       chave: "representantes",
       nome: "Representantes",
-      meta: "online (WhatsApp) + offline",
+      meta: "não criam conteúdo &nbsp;·&nbsp; WhatsApp + offline",
       descricao: "Não são criadoras de conteúdo: vendem tanto no online quanto no offline. O foco de venda online é o WhatsApp, com um grupo que parte de uma lista de clientes.",
       link: "https://vick-one.github.io/Cliente-Embaixadora/",
       documentos: [
@@ -176,7 +193,7 @@ function renderTeam() {
   }
 
   document.getElementById("team-caption").textContent =
-    `${CONFIG.team.length} ${CONFIG.team.length === 1 ? "pessoa" : "pessoas"} no time | ${CONFIG.team.map(p => p.nome.toLowerCase()).join(" · ")}`;
+    CONFIG.team.map(p => p.nome.toLowerCase()).join(" · ");
 }
 
 // ícones das frentes: mesmo traço fino em tinta dos ícones de rotina/leitura,
@@ -207,6 +224,17 @@ const FRENTE_ICONS = {
   `,
 };
 
+// ícones pequenos usados nos botões de docs/whatsapp (herdam a cor do texto)
+const SHEET_ICON = `<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" width="14" height="14">
+  <rect x="3" y="3" width="14" height="14" rx="1.5" stroke="currentColor" stroke-width="1.4"/>
+  <line x1="3" y1="8" x2="17" y2="8" stroke="currentColor" stroke-width="1.4"/>
+  <line x1="3" y1="13" x2="17" y2="13" stroke="currentColor" stroke-width="1.4"/>
+  <line x1="9" y1="3" x2="9" y2="17" stroke="currentColor" stroke-width="1.4"/>
+</svg>`;
+const CHAT_ICON = `<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" width="14" height="14">
+  <path d="M10 3a7 7 0 0 0-6 10.5L3 17l3.7-1A7 7 0 1 0 10 3z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+</svg>`;
+
 function renderFrentes() {
   const el = document.getElementById("frentes-list");
   el.innerHTML = CONFIG.frentes.map((f, i) => {
@@ -230,17 +258,43 @@ function renderFrentes() {
 
 function openFrenteDetail(i) {
   const f = CONFIG.frentes[i];
-  document.getElementById("frente-detail-meta").textContent = f.meta;
+  const cor = CONFIG.frenteCores[f.chave].cor;
+
+  document.getElementById("frente-detail-meta").innerHTML = f.meta;
   document.getElementById("frente-detail-nome").textContent = f.nome;
   document.getElementById("frente-detail-desc").textContent = f.descricao;
   document.getElementById("frente-detail-link").innerHTML = f.link
     ? `<a class="frente-link" href="${f.link}" target="_blank" rel="noopener">ver página principal &rarr;</a>`
     : `<span class="frente-link disabled">página principal em breve</span>`;
+
   document.getElementById("frente-detail-docs").innerHTML = (f.documentos && f.documentos.length) ? `
     <div class="docs-box">
       <div class="docs-label">Docs importantes</div>
-      ${f.documentos.map(d => `<a class="docs-link" href="${d.url}" target="_blank" rel="noopener">${d.titulo} &rarr;</a>`).join("")}
+      <div class="docs-btns">
+        ${f.documentos.map(d => `<a class="docs-btn" href="${d.url}" target="_blank" rel="noopener">${SHEET_ICON}${d.titulo}</a>`).join("")}
+      </div>
     </div>` : "";
+
+  document.getElementById("frente-detail-whatsapp").innerHTML = f.whatsapp ? `
+    <div class="whatsapp-section">
+      <a class="docs-btn" href="${f.whatsapp}" target="_blank" rel="noopener">${CHAT_ICON}Grupo no WhatsApp</a>
+    </div>` : "";
+
+  const infoCard = (bloco) => bloco ? `
+    <div class="info-card">
+      <div class="info-card-title">${bloco.titulo}</div>
+      ${bloco.itens.map(it => `
+        <div class="info-item" style="border-left-color:${cor}">
+          <div class="info-item-titulo">${it.titulo}</div>
+          <p class="info-item-texto">${it.texto}</p>
+        </div>
+      `).join("")}
+      ${bloco.resultadosLink ? `<a class="btn-secundario" href="${bloco.resultadosLink}" target="_blank" rel="noopener">${bloco.resultadosLabel} &rarr;</a>` : ""}
+    </div>` : "";
+
+  document.getElementById("frente-detail-faturamento").innerHTML = infoCard(f.faturamento);
+  document.getElementById("frente-detail-rotina-programa").innerHTML = infoCard(f.rotinaPrograma);
+
   openView("frente");
 }
 

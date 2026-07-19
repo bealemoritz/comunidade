@@ -158,7 +158,7 @@ body {
   font-size: 16.5px;
   line-height: 1.55;
   color: var(--ink);
-  margin-top: 18px;
+  margin-top: 10px;
 }
 .frente-link {
   display: inline-block;
@@ -189,18 +189,79 @@ body {
   letter-spacing: .08em;
   text-transform: uppercase;
   color: var(--muted);
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
-.docs-link {
-  display: block;
-  font-family: var(--label-font);
-  font-size: 12.5px;
-  letter-spacing: .02em;
+.docs-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.whatsapp-section { margin-top: 14px; }
+.docs-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 8px 14px;
+  background: var(--paper);
   color: var(--time-cor);
   text-decoration: none;
-  padding: 5px 0;
+  font-family: var(--label-font);
+  font-size: 12px;
+  letter-spacing: .02em;
+  transition: border-color .15s ease, background .15s ease;
 }
-.docs-link:hover { color: var(--ink); }
+.docs-btn:hover { border-color: var(--time-cor); background: var(--bg); }
+
+/* CARDS DE INFO (faturamento, rotina do programa) */
+.info-card {
+  margin-top: 24px;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 18px 20px;
+  background: var(--paper);
+}
+.info-card-title {
+  font-family: var(--accent-font);
+  font-weight: 800;
+  font-size: 15px;
+  color: var(--ink);
+  margin-bottom: 14px;
+}
+.info-item {
+  border-left: 2px solid var(--rule);
+  padding-left: 14px;
+  margin-bottom: 14px;
+}
+.info-item:last-child { margin-bottom: 0; }
+.info-item-titulo {
+  font-weight: 700;
+  font-size: 14.5px;
+  color: var(--ink);
+  margin-bottom: 3px;
+}
+.info-item-texto {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.btn-secundario {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 18px;
+  border: 1px solid var(--ink);
+  border-radius: 20px;
+  padding: 9px 18px;
+  font-family: var(--label-font);
+  font-size: 12px;
+  letter-spacing: .02em;
+  color: var(--ink);
+  text-decoration: none;
+  transition: background .15s ease, color .15s ease;
+}
+.btn-secundario:hover { background: var(--ink); color: var(--bg); }
 
 /* VIEW OVERLAYS */
 .view-overlay {
