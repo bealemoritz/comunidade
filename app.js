@@ -124,6 +124,7 @@ const CONFIG = {
         itens: [
           { titulo: "Comissionamento de 10% via cupom de desconto", texto: "Cada embaixadora tem seu próprio cupom: ele dá desconto pras seguidoras/clientes dela e gera 10% de comissão pra ela em cada venda." },
           { titulo: "Desafios mensais", texto: "Dá pra faturar extra completando as missões dos desafios de cada mês." },
+          { titulo: "Pagamento", texto: "A comissão é recebida por transferência até o dia 10 do mês seguinte." },
         ],
       },
       rotinaPrograma: {
@@ -150,11 +151,10 @@ const CONFIG = {
       whatsapp: "https://chat.whatsapp.com/FyZgzhBV5OEHzeU23LbeDE",
       faturamento: {
         titulo: "Forma de faturamento",
-        intro: "Comissionam por venda de produto com link em vídeo ou live no TikTok.",
+        intro: "Comissionam por venda de produto com link em vídeo ou live no TikTok. O TikTok repassa a comissão delas automaticamente.",
         itens: [
           { titulo: "Afiliadas internas", texto: "12% caso tenham nos procurado pedindo amostra grátis · 15% caso a gente tenha feito prospecção ativa · 20% caso sejam nossas top afiliadas." },
-          { titulo: "Afiliadas MVM — Orgânico (total 25%)", texto: "Top Afiliado: 20% (MVM 4% + Gerente 1%) · Afiliado Qualificado: 19% (MVM 4% + Gerente 2%) · Afiliado Normal: 18% (MVM 5% + Gerente 2%) · Aberto: 12%." },
-          { titulo: "Afiliadas MVM — Ads", texto: "5%, total de 7,5%." },
+          { titulo: "Afiliadas MVM", texto: "Orgânico (total 25%): Top Afiliado 20% (MVM 4% + Gerente 1%) · Afiliado Qualificado 19% (MVM 4% + Gerente 2%) · Afiliado Normal 18% (MVM 5% + Gerente 2%) · Aberto 12%. Ads: 5%, total de 7,5%." },
         ],
       },
       rotinaPrograma: {
@@ -253,6 +253,9 @@ const SHEET_ICON = `<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.or
 const CHAT_ICON = `<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" width="14" height="14">
   <path d="M10 3a7 7 0 0 0-6 10.5L3 17l3.7-1A7 7 0 1 0 10 3z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
 </svg>`;
+const CURSOR_ICON = `<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" width="14" height="14">
+  <path d="M4 2.5l4.8 13 1.7-5 5-1.7L4 2.5z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+</svg>`;
 
 function renderFrentes() {
   const el = document.getElementById("frentes-list");
@@ -283,8 +286,8 @@ function openFrenteDetail(i) {
   document.getElementById("frente-detail-nome").textContent = f.nome;
   document.getElementById("frente-detail-desc").textContent = f.descricao;
   document.getElementById("frente-detail-link").innerHTML = f.link
-    ? `<a class="frente-link" href="${f.link}" target="_blank" rel="noopener">ver página principal &rarr;</a>`
-    : `<span class="frente-link disabled">página principal em breve</span>`;
+    ? `<a class="docs-btn pagina-principal-btn" href="${f.link}" target="_blank" rel="noopener">${CURSOR_ICON}Ver página principal</a>`
+    : `<span class="docs-btn pagina-principal-btn disabled">${CURSOR_ICON}Página principal em breve</span>`;
 
   document.getElementById("frente-detail-docs").innerHTML = (f.documentos && f.documentos.length) ? `
     <div class="docs-box">

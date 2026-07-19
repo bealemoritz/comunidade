@@ -160,23 +160,7 @@ body {
   color: var(--ink);
   margin-top: 16px;
 }
-.frente-link {
-  display: inline-block;
-  margin-top: 12px;
-  font-family: var(--label-font);
-  font-size: 12.5px;
-  letter-spacing: .04em;
-  color: var(--time-cor);
-  text-decoration: none;
-  border-bottom: 1px solid currentColor;
-}
-.frente-link:hover { opacity: .7; }
-.frente-link.disabled {
-  color: var(--muted);
-  border-bottom: 1px dashed var(--muted);
-  cursor: default;
-  pointer-events: none;
-}
+.pagina-principal-btn { margin-top: 16px; }
 
 .docs-box {
   margin-top: 18px;
@@ -214,6 +198,12 @@ body {
   transition: border-color .15s ease, background .15s ease;
 }
 .docs-btn:hover { border-color: var(--time-cor); background: var(--bg); }
+.docs-btn.disabled {
+  color: var(--muted);
+  border-style: dashed;
+  cursor: default;
+  pointer-events: none;
+}
 
 /* CARDS DE INFO (faturamento, rotina do programa) */
 .info-card {
