@@ -14,12 +14,13 @@ const CONFIG = {
   ],
 
   // esquema de cores por frente (usado na rotina). precisa bater com as
-  // variáveis definidas em styles.css (--gold, --terracotta, --green, --blue).
+  // variáveis definidas em styles.css (--representantes-cor, --embaixadoras-cor,
+  // --afiliadas-cor, --time-cor).
   frenteCores: {
-    embaixadoras: { label: "Embaixadoras", cor: "var(--gold)" },
-    afiliadas: { label: "Afiliadas do TikTok", cor: "var(--terracotta)" },
-    representantes: { label: "Representantes", cor: "var(--green)" },
-    time: { label: "Time", cor: "var(--blue)" },
+    embaixadoras: { label: "Embaixadoras", cor: "var(--embaixadoras-cor)" },
+    afiliadas: { label: "Afiliadas do TikTok", cor: "var(--afiliadas-cor)" },
+    representantes: { label: "Representantes", cor: "var(--representantes-cor)" },
+    time: { label: "Time", cor: "var(--time-cor)" },
   },
 
   // cadência semanal, em formato calendário. a daily é fixa (mostrada à parte,
@@ -153,7 +154,7 @@ const CONFIG = {
 
 // ===== Render =====
 
-const avatarColors = ["var(--gold)", "var(--terracotta)", "var(--blue)", "var(--green)", "#8a6d3b"];
+const avatarColors = ["var(--embaixadoras-cor)", "var(--afiliadas-cor)", "var(--time-cor)", "var(--representantes-cor)", "#8a6d3b"];
 
 function renderTeam() {
   const el = document.getElementById("avatars");
