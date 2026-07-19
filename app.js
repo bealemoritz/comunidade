@@ -129,11 +129,13 @@ const CONFIG = {
       rotinaPrograma: {
         titulo: "Rotina do programa",
         itens: [
-          { titulo: "Treinamentos semanais", texto: "Toda terça-feira." },
+          { titulo: "Treinamentos semanais", texto: "Às 17h, toda terça-feira." },
           { titulo: "Desafios mensais", texto: "Todo mês tem um desafio novo pra elas." },
         ],
-        resultadosLink: "https://bealemoritz.github.io/desafios-embaixadoras/",
-        resultadosLabel: "Resultados dos desafios anteriores",
+        links: [
+          { label: "Resultados dos desafios anteriores", url: "https://bealemoritz.github.io/desafios-embaixadoras/" },
+          { label: "Registro dos treinamentos já realizados", url: "https://app.clickup.com/3109207/v/dc/2ywaq-77153/2ywaq-389713" },
+        ],
       },
     },
     {
@@ -145,6 +147,23 @@ const CONFIG = {
       documentos: [
         { titulo: "PLANILHA AFILIADAS", url: "https://docs.google.com/spreadsheets/d/1oIkuAawgRyK2ZPOU7tEcAVTCYAXVEikgXRKc0V-OZY0/edit?gid=1832247659#gid=1832247659" },
       ],
+      whatsapp: "https://chat.whatsapp.com/FyZgzhBV5OEHzeU23LbeDE",
+      faturamento: {
+        titulo: "Forma de faturamento",
+        intro: "Comissionam por venda de produto com link em vídeo ou live no TikTok.",
+        itens: [
+          { titulo: "Afiliadas internas", texto: "12% caso tenham nos procurado pedindo amostra grátis · 15% caso a gente tenha feito prospecção ativa · 20% caso sejam nossas top afiliadas." },
+          { titulo: "Afiliadas MVM — Orgânico (total 25%)", texto: "Top Afiliado: 20% (MVM 4% + Gerente 1%) · Afiliado Qualificado: 19% (MVM 4% + Gerente 2%) · Afiliado Normal: 18% (MVM 5% + Gerente 2%) · Aberto: 12%." },
+          { titulo: "Afiliadas MVM — Ads", texto: "5%, total de 7,5%." },
+        ],
+      },
+      rotinaPrograma: {
+        titulo: "Rotina do programa",
+        itens: [
+          { titulo: "Treinamentos quinzenais", texto: null },
+          { titulo: "Desafios mensais", texto: null },
+        ],
+      },
     },
     {
       chave: "representantes",
@@ -283,13 +302,17 @@ function openFrenteDetail(i) {
   const infoCard = (bloco) => bloco ? `
     <div class="info-card">
       <div class="info-card-title">${bloco.titulo}</div>
+      ${bloco.intro ? `<p class="info-card-intro">${bloco.intro}</p>` : ""}
       ${bloco.itens.map(it => `
         <div class="info-item" style="border-left-color:${cor}">
           <div class="info-item-titulo">${it.titulo}</div>
-          <p class="info-item-texto">${it.texto}</p>
+          ${it.texto ? `<p class="info-item-texto">${it.texto}</p>` : ""}
         </div>
       `).join("")}
-      ${bloco.resultadosLink ? `<a class="btn-secundario" href="${bloco.resultadosLink}" target="_blank" rel="noopener">${bloco.resultadosLabel} &rarr;</a>` : ""}
+      ${bloco.links && bloco.links.length ? `
+        <div class="info-card-links">
+          ${bloco.links.map(l => `<a class="btn-secundario" href="${l.url}" target="_blank" rel="noopener">${l.label} &rarr;</a>`).join("")}
+        </div>` : ""}
     </div>` : "";
 
   document.getElementById("frente-detail-faturamento").innerHTML = infoCard(f.faturamento);
