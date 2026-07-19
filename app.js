@@ -145,6 +145,7 @@ const CONFIG = {
       meta: "internas + MVM &nbsp;·&nbsp; perfil mais jovem &nbsp;·&nbsp; TikTok",
       descricao: "Criadoras de conteúdo que recebem comissão por venda dentro do próprio TikTok. Temos as afiliadas internas e as afiliadas da MVM. Em maioria, são mais jovens, com foco total em produção pro TikTok.",
       link: "https://www.lemoritz.com/afiliadas",
+      linkLabel: "Ver página das afiliadas",
       documentos: [
         { titulo: "PLANILHA AFILIADAS", url: "https://docs.google.com/spreadsheets/d/1oIkuAawgRyK2ZPOU7tEcAVTCYAXVEikgXRKc0V-OZY0/edit?gid=1832247659#gid=1832247659" },
       ],
@@ -171,6 +172,7 @@ const CONFIG = {
       meta: "não criam conteúdo &nbsp;·&nbsp; WhatsApp + offline",
       descricao: "Não são criadoras de conteúdo: vendem tanto no online quanto no offline. O foco de venda online é o WhatsApp, com um grupo que parte de uma lista de clientes.",
       link: "https://vick-one.github.io/Cliente-Embaixadora/",
+      linkLabel: "Ver página das representantes",
       documentos: [
         { titulo: "PLANILHA REPRESENTANTES", url: "https://docs.google.com/spreadsheets/d/1meS79ak-P-aAG9NBOTDbEdgL03LyGmANMpeRxnqNXIs/edit?gid=927081837#gid=927081837" },
       ],
@@ -286,7 +288,7 @@ function openFrenteDetail(i) {
   document.getElementById("frente-detail-nome").textContent = f.nome;
   document.getElementById("frente-detail-desc").textContent = f.descricao;
   document.getElementById("frente-detail-link").innerHTML = f.link
-    ? `<a class="docs-btn pagina-principal-btn" href="${f.link}" target="_blank" rel="noopener">${CURSOR_ICON}Ver página principal</a>`
+    ? `<a class="docs-btn pagina-principal-btn" href="${f.link}" target="_blank" rel="noopener">${CURSOR_ICON}${f.linkLabel || "Ver página principal"}</a>`
     : `<span class="docs-btn pagina-principal-btn disabled">${CURSOR_ICON}Página principal em breve</span>`;
 
   document.getElementById("frente-detail-docs").innerHTML = (f.documentos && f.documentos.length) ? `
