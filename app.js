@@ -130,19 +130,21 @@ const CONFIG = {
       rotinaPrograma: {
         titulo: "Rotina do programa",
         itens: [
-          { titulo: "Treinamentos semanais", texto: "Às 17h, toda terça-feira." },
-          { titulo: "Desafios mensais", texto: "Todo mês tem um desafio novo pra elas." },
-        ],
-        links: [
-          { label: "Resultados dos desafios anteriores", url: "https://bealemoritz.github.io/desafios-embaixadoras/" },
-          { label: "Registro dos treinamentos já realizados", url: "https://app.clickup.com/3109207/v/dc/2ywaq-77153/2ywaq-389713" },
+          {
+            titulo: "Treinamentos semanais", texto: "Às 17h, toda terça-feira.",
+            link: { label: "Resultados dos treinamentos já realizados", url: "https://app.clickup.com/3109207/v/dc/2ywaq-77153/2ywaq-389713" },
+          },
+          {
+            titulo: "Desafios mensais", texto: "Todo mês tem um desafio novo pra elas.",
+            link: { label: "Resultados dos desafios anteriores", url: "https://bealemoritz.github.io/desafios-embaixadoras/" },
+          },
         ],
       },
     },
     {
       chave: "afiliadas",
       nome: "Afiliadas do TikTok",
-      meta: "internas + MVM &nbsp;·&nbsp; perfil mais jovem &nbsp;·&nbsp; TikTok",
+      meta: "120 afiliadas internas + MVM &nbsp;·&nbsp; perfil mais jovem &nbsp;·&nbsp; TikTok",
       descricao: "Criadoras de conteúdo que recebem comissão por venda dentro do próprio TikTok. Temos as afiliadas internas e as afiliadas da MVM. Em maioria, são mais jovens, com foco total em produção pro TikTok.",
       link: "https://www.lemoritz.com/afiliadas",
       linkLabel: "Ver página das afiliadas",
@@ -169,13 +171,28 @@ const CONFIG = {
     {
       chave: "representantes",
       nome: "Representantes",
-      meta: "não criam conteúdo &nbsp;·&nbsp; WhatsApp + offline",
+      meta: "60 representantes &nbsp;·&nbsp; não criam conteúdo &nbsp;·&nbsp; WhatsApp + Off",
       descricao: "Não são criadoras de conteúdo: vendem tanto no online quanto no offline. O foco de venda online é o WhatsApp, com um grupo que parte de uma lista de clientes.",
       link: "https://vick-one.github.io/Cliente-Embaixadora/",
       linkLabel: "Ver página das representantes",
       documentos: [
         { titulo: "PLANILHA REPRESENTANTES", url: "https://docs.google.com/spreadsheets/d/1meS79ak-P-aAG9NBOTDbEdgL03LyGmANMpeRxnqNXIs/edit?gid=927081837#gid=927081837" },
       ],
+      faturamento: {
+        titulo: "Forma de faturamento",
+        itens: [
+          { titulo: "Comissionamento de 10% via cupom de desconto", texto: "Cada representante tem seu próprio cupom: ele dá desconto pras clientes dela e gera 10% de comissão pra ela em cada venda." },
+          { titulo: "Desafios mensais", texto: "Faturam R$50 em voucher no site por meta do desafio atingida. Podem deixar o voucher acumular para sacar. Se acumularem R$1.000 em voucher podem optar por R$500 em voucher + R$500 em pix." },
+          { titulo: "Pagamento", texto: "A comissão é recebida por transferência até o dia 10 do mês seguinte." },
+        ],
+      },
+      rotinaPrograma: {
+        titulo: "Rotina do programa",
+        itens: [
+          { titulo: "Desafios semanais", texto: "Sempre por meta de venda, lançados toda terça-feira." },
+          { titulo: "Materiais compartilhados", texto: "Modelos de mensagens, estáticos, vídeos para compartilhar, etc., toda terça-feira." },
+        ],
+      },
     },
   ],
 
@@ -312,12 +329,9 @@ function openFrenteDetail(i) {
         <div class="info-item" style="border-left-color:${cor}">
           <div class="info-item-titulo">${it.titulo}</div>
           ${it.texto ? `<p class="info-item-texto">${it.texto}</p>` : ""}
+          ${it.link ? `<a class="docs-btn info-item-btn" href="${it.link.url}" target="_blank" rel="noopener">${it.link.label} &rarr;</a>` : ""}
         </div>
       `).join("")}
-      ${bloco.links && bloco.links.length ? `
-        <div class="info-card-links">
-          ${bloco.links.map(l => `<a class="btn-secundario" href="${l.url}" target="_blank" rel="noopener">${l.label} &rarr;</a>`).join("")}
-        </div>` : ""}
     </div>` : "";
 
   document.getElementById("frente-detail-faturamento").innerHTML = infoCard(f.faturamento);

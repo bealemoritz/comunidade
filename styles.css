@@ -197,7 +197,7 @@ body {
   text-transform: uppercase;
   transition: border-color .15s ease, background .15s ease;
 }
-.docs-btn:hover { border-color: var(--time-cor); background: var(--bg); }
+.docs-btn:hover { border-color: var(--time-cor); background: var(--time-cor); color: var(--bg); }
 .docs-btn.disabled {
   color: var(--muted);
   border-style: dashed;
@@ -243,27 +243,7 @@ body {
   line-height: 1.5;
   color: var(--muted);
 }
-.info-card-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 18px;
-}
-.btn-secundario {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  border: 1px solid var(--ink);
-  border-radius: 20px;
-  padding: 9px 18px;
-  font-family: var(--label-font);
-  font-size: 12px;
-  letter-spacing: .02em;
-  color: var(--ink);
-  text-decoration: none;
-  transition: background .15s ease, color .15s ease;
-}
-.btn-secundario:hover { background: var(--ink); color: var(--bg); }
+.info-item-btn { margin-top: 10px; }
 
 /* VIEW OVERLAYS */
 .view-overlay {
