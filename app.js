@@ -132,11 +132,11 @@ const CONFIG = {
         itens: [
           {
             titulo: "Treinamentos semanais", texto: "Às 17h, toda terça-feira.",
-            link: { label: "Resultados dos treinamentos já realizados", url: "https://app.clickup.com/3109207/v/dc/2ywaq-77153/2ywaq-389713" },
+            link: { label: "Registro dos treinamentos já realizados", url: "https://app.clickup.com/3109207/v/dc/2ywaq-77153/2ywaq-389713", icon: "MIC_ICON" },
           },
           {
             titulo: "Desafios mensais", texto: "Todo mês tem um desafio novo pra elas.",
-            link: { label: "Resultados dos desafios anteriores", url: "https://bealemoritz.github.io/desafios-embaixadoras/" },
+            link: { label: "Resultados dos desafios já realizados", url: "https://bealemoritz.github.io/desafios-embaixadoras/", icon: "TROPHY_ICON" },
           },
         ],
       },
@@ -275,6 +275,22 @@ const CHAT_ICON = `<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org
 const CURSOR_ICON = `<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" width="14" height="14">
   <path d="M4 2.5l4.8 13 1.7-5 5-1.7L4 2.5z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
 </svg>`;
+const MIC_ICON = `<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" width="14" height="14">
+  <rect x="6.5" y="2" width="7" height="10" rx="3.5" stroke="currentColor" stroke-width="1.3"/>
+  <line x1="6.5" y1="5.3" x2="13.5" y2="5.3" stroke="currentColor" stroke-width="1"/>
+  <line x1="6.5" y1="8.7" x2="13.5" y2="8.7" stroke="currentColor" stroke-width="1"/>
+  <line x1="10" y1="12" x2="10" y2="15.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+  <line x1="6" y1="17.5" x2="14" y2="17.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+</svg>`;
+const TROPHY_ICON = `<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" width="14" height="14">
+  <path d="M6 3h8v4a4 4 0 0 1-8 0V3z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+  <path d="M6 4H3.5a1 1 0 0 0-1 1.2c.3 1.6 1.4 2.8 3 3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+  <path d="M14 4h2.5a1 1 0 0 1 1 1.2c-.3 1.6-1.4 2.8-3 3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="10" y1="11" x2="10" y2="16" stroke="currentColor" stroke-width="1.3"/>
+  <line x1="7" y1="17.5" x2="13" y2="17.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+</svg>`;
+// mapa usado nos botões de link dos cards de info (faturamento/rotina do programa)
+const ICONS = { SHEET_ICON, CHAT_ICON, CURSOR_ICON, MIC_ICON, TROPHY_ICON };
 
 function renderFrentes() {
   const el = document.getElementById("frentes-list");
@@ -329,7 +345,7 @@ function openFrenteDetail(i) {
         <div class="info-item" style="border-left-color:${cor}">
           <div class="info-item-titulo">${it.titulo}</div>
           ${it.texto ? `<p class="info-item-texto">${it.texto}</p>` : ""}
-          ${it.link ? `<a class="docs-btn info-item-btn" href="${it.link.url}" target="_blank" rel="noopener">${it.link.label} &rarr;</a>` : ""}
+          ${it.link ? `<a class="docs-btn info-item-btn" href="${it.link.url}" target="_blank" rel="noopener">${ICONS[it.link.icon] || ""}${it.link.label}</a>` : ""}
         </div>
       `).join("")}
     </div>` : "";
