@@ -189,8 +189,8 @@ const CONFIG = {
       rotinaPrograma: {
         titulo: "Rotina do programa",
         itens: [
-          { titulo: "Desafios semanais", texto: "Sempre por meta de venda, lançados toda terça-feira." },
-          { titulo: "Materiais compartilhados", texto: "Modelos de mensagens, estáticos, vídeos para compartilhar, etc., toda terça-feira." },
+          { titulo: "Materiais compartilhados", texto: "Modelos de mensagens, estáticos, vídeos para compartilhar, etc. Enviados terça-feira, às 15h." },
+          { titulo: "Desafios semanais", texto: "Sempre por meta de venda!<br>Lançados: terça, às 15h. Válido até segunda, 00h.<br>Resultado: terça, às 9h." },
         ],
       },
     },
