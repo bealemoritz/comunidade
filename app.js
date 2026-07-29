@@ -32,11 +32,10 @@ const CONFIG = {
         { nome: "Weekly", hora: "10h", frente: "time", desc: "(uma frente por vez)", pessoas: ["Time"] },
       ],
       "Terça": [
-        { nome: "Treinamento embaixadoras", hora: "17h", frente: "embaixadoras", pessoas: ["Bea", "Sofia", "Maria"] },
+        { nome: "Refs e feedbacks", hora: "14h", frente: "time", pessoas: ["Bea", "Letícia", "Vitória", "Maria"] },
+        { nome: "Treinamento embaixadoras", hora: "17h", frente: "embaixadoras", pessoas: ["Bea"] },
       ],
-      "Quarta": [
-        { nome: "Refs e feedbacks", hora: "14h", frente: "time", pessoas: ["Bea", "Letícia", "Vitória"] },
-      ],
+      "Quarta": [],
       "Quinta": [],
       "Sexta": [
         { nome: "Fechamento", hora: "11h", frente: "time", desc: "(todas juntas)", pessoas: ["Time"] },
@@ -57,10 +56,11 @@ const CONFIG = {
   // tarefas por frequência.
   tarefas: [
     // --- Diário ---
-    { freq: "Diário", nome: "Aprovação de embaixadoras", frente: "embaixadoras", pessoas: ["Sofia", "Maria"] },
-    { freq: "Diário", nome: "Chat e suporte de embaixadoras", frente: "embaixadoras", pessoas: ["Sofia", "Maria"] },
-    { freq: "Diário", nome: "Checar métricas e conteúdos postados embaixadoras", frente: "embaixadoras", pessoas: ["Bea", "Sofia", "Maria"] },
-    { freq: "Diário", nome: "Mensagem 1x1 aniversariantes embaixadoras + voucher", frente: "embaixadoras", pessoas: ["Sofia"] },
+    { freq: "Diário", nome: "Aprovação de embaixadoras", frente: "embaixadoras", pessoas: ["Maria"] },
+    { freq: "Diário", nome: "Chat e suporte de embaixadoras", frente: "embaixadoras", pessoas: ["Maria"] },
+    { freq: "Diário", nome: "Checar métricas e conteúdos postados embaixadoras", frente: "embaixadoras", pessoas: ["Bea", "Maria"] },
+    { freq: "Diário", nome: "Mensagem 1x1 aniversariantes embaixadoras + voucher", frente: "embaixadoras", pessoas: ["Maria"] },
+    { freq: "Diário", nome: "Cadastrar afiliadas que entraram no grupo na planilha", frente: "afiliadas", pessoas: ["Maria"] },
     { freq: "Diário", nome: "Aprovação de afiliadas que solicitaram amostra", frente: "afiliadas", pessoas: ["Letícia"] },
     { freq: "Diário", nome: "Engajar comunidade das afiliadas", frente: "afiliadas", pessoas: ["Letícia"] },
     { freq: "Diário", nome: "Responder chat TikTok e WhatsApp privado afiliadas", frente: "afiliadas", pessoas: ["Letícia"] },
@@ -74,9 +74,11 @@ const CONFIG = {
     { freq: "Diário", nome: "Checar métricas representantes", frente: "representantes", pessoas: ["Bea"] },
 
     // --- Semanal ---
-    { freq: "Semanal", nome: "Treinamento embaixadoras", frente: "embaixadoras", pessoas: ["Bea", "Maria", "Sofia"] },
-    { freq: "Semanal", nome: "Envio de kit boas vindas para embaixadoras", frente: "embaixadoras", pessoas: ["Maria", "Sofia"] },
+    { freq: "Semanal", nome: "Treinamento embaixadoras", frente: "embaixadoras", pessoas: ["Bea", "Maria"] },
+    { freq: "Semanal", nome: "Envio de kit boas vindas para embaixadoras", frente: "embaixadoras", pessoas: ["Maria"] },
     { freq: "Semanal", nome: "Time to think: embaixadoras", frente: "embaixadoras", pessoas: ["Bea"] },
+    { freq: "Semanal", nome: "Trazer vídeos de embaixadoras que se destacaram na semana para call de refs e feedbacks", hora: "terça de manhã", frente: "embaixadoras", pessoas: ["Maria"] },
+    { freq: "Semanal", nome: "Enviar materiais pós-treinamento para embaixadoras", hora: "quarta de manhã", frente: "embaixadoras", pessoas: ["Maria"] },
     { freq: "Semanal", nome: "Atualizar banco de refs afiliadas", frente: "afiliadas", pessoas: ["Bea"] },
     { freq: "Semanal", nome: "Posts no TikTok feed", frente: "afiliadas", pessoas: ["Letícia"] },
     { freq: "Semanal", nome: "Referências de conteúdo para banco de refs", frente: "afiliadas", pessoas: ["Letícia"] },
@@ -89,15 +91,15 @@ const CONFIG = {
     { freq: "Semanal", nome: "Fechamento semanal das 3 frentes", frente: "time", pessoas: ["Bea"] },
 
     // --- Quinzenal ---
-    { freq: "Quinzenal", nome: "1x1", hora: "10h ou 11h", desc: "(individual, intercalado)", frente: "time", pessoas: ["Bea", "Vitória", "Letícia", "Maria", "Sofia"] },
+    { freq: "Quinzenal", nome: "1x1", hora: "10h ou 11h", desc: "(individual, intercalado)", frente: "time", pessoas: ["Bea", "Vitória", "Letícia", "Maria"] },
     { freq: "Quinzenal", nome: "Treinamento afiliadas", frente: "afiliadas", pessoas: ["Bea", "Letícia"] },
 
     // --- Mensal ---
-    { freq: "Mensal", nome: "Desafio embaixadoras", frente: "embaixadoras", pessoas: ["Bea", "Sofia"] },
+    { freq: "Mensal", nome: "Desafio embaixadoras", frente: "embaixadoras", pessoas: ["Bea", "Maria"] },
     { freq: "Mensal", nome: "Definir os press kits trimestrais para embaixadoras", frente: "embaixadoras", pessoas: ["Maria"] },
-    { freq: "Mensal", nome: "Contato 1x1 com embaixadoras inativas", frente: "embaixadoras", pessoas: ["Maria", "Sofia"] },
-    { freq: "Mensal", nome: "Escolha de embaixadora destaque do mês", frente: "embaixadoras", pessoas: ["Sofia"] },
-    { freq: "Mensal", nome: "Calendário de aniversários do mês embaixadoras", frente: "embaixadoras", pessoas: ["Sofia"] },
+    { freq: "Mensal", nome: "Contato 1x1 com embaixadoras inativas", frente: "embaixadoras", pessoas: ["Maria"] },
+    { freq: "Mensal", nome: "Escolha de embaixadora destaque do mês", frente: "embaixadoras", pessoas: ["Maria"] },
+    { freq: "Mensal", nome: "Calendário de aniversários do mês embaixadoras", frente: "embaixadoras", pessoas: ["Maria"] },
     { freq: "Mensal", nome: "Desafio afiliadas (MVM e internas)", frente: "afiliadas", pessoas: ["Bea", "Letícia"] },
     { freq: "Mensal", nome: "Calendário de desafios das representantes", frente: "representantes", pessoas: ["Vitória"] },
     { freq: "Mensal", nome: "Calendário de qualificação das representantes", frente: "representantes", pessoas: ["Vitória"] },
