@@ -32,7 +32,7 @@ const CONFIG = {
         { nome: "Weekly", hora: "10h", frente: "time", desc: "(uma frente por vez)", pessoas: ["Time"] },
       ],
       "Terça": [
-        { nome: "Refs e feedbacks", hora: "14h", frente: "time", pessoas: ["Bea", "Letícia", "Vitória", "Maria"] },
+        { nome: "Refs e feedbacks", hora: "14h", frente: "time", pessoas: ["Time"] },
         { nome: "Treinamento embaixadoras", hora: "17h", frente: "embaixadoras", pessoas: ["Bea"] },
       ],
       "Quarta": [],
