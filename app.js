@@ -10,7 +10,6 @@ const CONFIG = {
     { nome: "Vitória", foto: "assets/avatars/vitoria.jpg" },
     { nome: "Letícia", foto: "assets/avatars/leticia.jpg" },
     { nome: "Maria", foto: "assets/avatars/maria.jpg" },
-    { nome: "Sofia", foto: "assets/avatars/sofia.jpg" },
   ],
 
   // esquema de cores por frente (usado na rotina). precisa bater com as
@@ -33,10 +32,11 @@ const CONFIG = {
       ],
       "Terça": [
         { nome: "Refs e feedbacks", hora: "14h", frente: "time", pessoas: ["Time"] },
-        { nome: "Treinamento embaixadoras", hora: "17h", frente: "embaixadoras", pessoas: ["Bea"] },
       ],
       "Quarta": [],
-      "Quinta": [],
+      "Quinta": [
+        { nome: "Treinamento embaixadoras", hora: "17h", frente: "embaixadoras", pessoas: ["Bea"] },
+      ],
       "Sexta": [
         { nome: "Fechamento", hora: "11h", frente: "time", desc: "(todas juntas)", pessoas: ["Time"] },
       ],
