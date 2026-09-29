@@ -195,6 +195,7 @@ const CONFIG = {
       documentos: [
         { titulo: "PLANILHA REPRESENTANTES", url: "https://docs.google.com/spreadsheets/d/1meS79ak-P-aAG9NBOTDbEdgL03LyGmANMpeRxnqNXIs/edit?gid=927081837#gid=927081837" },
         { titulo: "ONBOARDING + ATIVAÇÃO", url: "https://bealemoritz.github.io/onboarding-representantes", icon: "CURSOR_ICON" },
+        { titulo: "BOAS-VINDAS REPRESENTANTES", url: "assets/docs/boas-vindas-representantes.pdf", icon: "DOC_ICON", download: true },
       ],
       faturamento: {
         titulo: "Forma de faturamento",
@@ -315,8 +316,14 @@ const TROPHY_ICON = `<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.o
   <line x1="10" y1="11" x2="10" y2="16" stroke="currentColor" stroke-width="1.3"/>
   <line x1="7" y1="17.5" x2="13" y2="17.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
 </svg>`;
+const DOC_ICON = `<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" width="14" height="14">
+  <path d="M5.5 2.5h6l3 3v11a.6.6 0 0 1-.6.6H5.5a.6.6 0 0 1-.6-.6v-13.4a.6.6 0 0 1 .6-.6z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+  <path d="M11.5 2.5v3h3" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+  <line x1="7" y1="10.5" x2="13" y2="10.5" stroke="currentColor" stroke-width="1.1"/>
+  <line x1="7" y1="13.3" x2="13" y2="13.3" stroke="currentColor" stroke-width="1.1"/>
+</svg>`;
 // mapa usado nos botões de link dos cards de info (faturamento/rotina do programa)
-const ICONS = { SHEET_ICON, CHAT_ICON, CURSOR_ICON, MIC_ICON, TROPHY_ICON };
+const ICONS = { SHEET_ICON, CHAT_ICON, CURSOR_ICON, MIC_ICON, TROPHY_ICON, DOC_ICON };
 
 function renderFrentes() {
   const el = document.getElementById("frentes-list");
@@ -354,7 +361,7 @@ function openFrenteDetail(i) {
     <div class="docs-box">
       <div class="docs-label">Docs importantes</div>
       <div class="docs-btns">
-        ${f.documentos.map(d => `<a class="docs-btn" href="${d.url}" target="_blank" rel="noopener">${ICONS[d.icon] || SHEET_ICON}${d.titulo}</a>`).join("")}
+        ${f.documentos.map(d => `<a class="docs-btn" href="${d.url}" ${d.download ? "download" : 'target="_blank" rel="noopener"'}>${ICONS[d.icon] || SHEET_ICON}${d.titulo}</a>`).join("")}
       </div>
     </div>` : "";
 
