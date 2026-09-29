@@ -208,7 +208,7 @@ const CONFIG = {
     },
     {
       titulo: "O ciclo feliz: onboarding e ativação rápida decide se ela fica",
-      subtitulo: "O ciclo feliz :) Cria conteúdo, vende, ganha comissão, fica feliz, cria mais. Por que os primeiros dias pesam mais que os primeiros resultados.",
+      subtitulo: "Cria conteúdo, vende, ganha comissão, fica feliz, cria mais. Por que os primeiros dias pesam mais que os primeiros resultados.",
       data: "28 de set de 2026 · 6 min de leitura",
       arquivo: "leitura/artigo-2-ciclo-feliz-ativacao.html",
       thumbSvg: "cycle",
