@@ -194,6 +194,7 @@ const CONFIG = {
       linkLabel: "Ver página das representantes",
       documentos: [
         { titulo: "PLANILHA REPRESENTANTES", url: "https://docs.google.com/spreadsheets/d/1meS79ak-P-aAG9NBOTDbEdgL03LyGmANMpeRxnqNXIs/edit?gid=927081837#gid=927081837" },
+        { titulo: "ONBOARDING + ATIVAÇÃO", url: "https://bealemoritz.github.io/onboarding-representantes", icon: "CURSOR_ICON" },
       ],
       faturamento: {
         titulo: "Forma de faturamento",
@@ -353,7 +354,7 @@ function openFrenteDetail(i) {
     <div class="docs-box">
       <div class="docs-label">Docs importantes</div>
       <div class="docs-btns">
-        ${f.documentos.map(d => `<a class="docs-btn" href="${d.url}" target="_blank" rel="noopener">${SHEET_ICON}${d.titulo}</a>`).join("")}
+        ${f.documentos.map(d => `<a class="docs-btn" href="${d.url}" target="_blank" rel="noopener">${ICONS[d.icon] || SHEET_ICON}${d.titulo}</a>`).join("")}
       </div>
     </div>` : "";
 
