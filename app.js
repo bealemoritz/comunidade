@@ -215,6 +215,8 @@ const CONFIG = {
     },
   ],
 
+  // artigos: adicione os novos sempre no final da lista — a página exibe
+  // automaticamente do mais recente pro mais antigo (ordem invertida).
   artigos: [
     {
       titulo: "Como construir uma comunidade que as pessoas nunca superam",
@@ -434,7 +436,7 @@ function renderArtigos() {
     el.innerHTML = `<div class="article-placeholder">Nenhum artigo ainda.</div>`;
     return;
   }
-  el.innerHTML = CONFIG.artigos.map(a => `
+  el.innerHTML = CONFIG.artigos.slice().reverse().map(a => `
     <a class="article-card" href="${a.arquivo}" target="_blank" rel="noopener">
       <div class="article-thumb">${a.thumb ? `<img src="${a.thumb}" alt="">` : (ARTICLE_THUMBS[a.thumbSvg] || ARTICLE_THUMB_SVG)}</div>
       <div class="article-content">
