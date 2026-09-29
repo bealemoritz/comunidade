@@ -207,8 +207,8 @@ const CONFIG = {
       thumbSvg: "network",
     },
     {
-      titulo: "O ciclo feliz :)",
-      subtitulo: "Cria conteúdo, vende, ganha comissão, fica feliz, cria mais. Por que os primeiros dias pesam mais que os primeiros resultados.",
+      titulo: "O ciclo feliz: onboarding e ativação rápida decide se ela fica",
+      subtitulo: "O ciclo feliz :) Cria conteúdo, vende, ganha comissão, fica feliz, cria mais. Por que os primeiros dias pesam mais que os primeiros resultados.",
       data: "28 de set de 2026 · 6 min de leitura",
       arquivo: "leitura/artigo-2-ciclo-feliz-ativacao.html",
       thumbSvg: "cycle",
@@ -383,7 +383,7 @@ const ARTICLE_THUMB_CYCLE = `
     <rect width="56" height="56" fill="#F1ECE1"/>
     <path d="M41 30a13 13 0 1 1-4.3-9.7" fill="none" stroke="#1C1A15" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round"/>
     <path d="M34.5 15.5l3.3 5-5.6 1.3z" fill="#1C1A15" fill-opacity="0.6"/>
-    <text x="28" y="34" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="13" fill="#C9A227">:)</text>
+    <text x="27" y="33" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="9" fill="#C9A227">:)</text>
   </svg>
 `;
 // miniatura do artigo 1, ecoando a rede de pontos conectados do hero dele
