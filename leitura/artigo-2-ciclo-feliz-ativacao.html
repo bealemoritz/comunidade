@@ -27,6 +27,29 @@
     -webkit-font-smoothing: antialiased;
   }
   .wrap { max-width: 640px; margin: 0 auto; padding: 48px 24px 100px; }
+  #progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: var(--ink);
+    z-index: 60;
+    transition: width .08s linear;
+  }
+  .back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--label-font);
+    font-size: 11.5px;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    margin-bottom: 20px;
+  }
+  .back-btn:hover { color: var(--ink); }
   .label {
     font-family: var(--label-font);
     font-size: 11.5px;
@@ -170,7 +193,10 @@
 </style>
 </head>
 <body>
+<div id="progress-bar"></div>
 <div class="wrap">
+
+  <a class="back-btn" href="../index.html">&larr; Comunidade</a>
 
   <div class="label">ESCRITO POR BEA GONÇALVES</div>
   <h1>O ciclo feliz: onboarding e ativação rápida decide se ela fica</h1>
@@ -219,7 +245,7 @@
     </svg>
   </figure>
 
-  <p>Quase ninguém desiste de trabalhar com uma marca porque a oportunidade é ruim. Desiste porque nada aconteceu rápido o suficiente pra parecer real.</p>
+  <p>Quase ninguém desiste de trabalhar com uma marca porque a oportunidade é ruim. Desiste porque nada aconteceu rápido o suficiente para parecer real.</p>
 
   <p>Toda embaixadora, afiliada ou representante que entra carrega uma pergunta silenciosa: será que isso funciona mesmo? E o nosso trabalho aqui é, o mais rápido possível, quebrar esse questionamento. A resposta não vem de um treinamento bem explicado, nem da promessa de uma comissão generosa. Vem da conexão e, consequentemente, de uma primeira prova concreta de que o ciclo gira. Quando essa prova demora demais, ela sai antes de descobrir que valia a pena ficar.</p>
 
@@ -243,7 +269,7 @@
 
   <p>Dada a faísca, cada etapa só existe porque a anterior aconteceu. Sem faísca não tem o primeiro conteúdo. Sem conteúdo, não tem venda. Sem venda, não tem comissão. Sem comissão, não tem a alegria que faz ela postar de novo amanhã. É um ciclo, não uma lista: uma vez que começa a girar, ele se sustenta sozinho, mas alguém precisa dar a primeira volta com ela.</p>
 
-  <p>É exatamente aí que a maioria dos programas de criadoras perde gente: no intervalo entre entrar e girar o ciclo inteiro pela primeira vez. Quanto mais longo esse intervalo, maior a chance de ela sumir antes da primeira comissão cair, e uma criadora que nunca sentiu o ciclo girar não tem nenhuma razão real pra continuar tentando.</p>
+  <p>É exatamente aí que a maioria dos programas de criadoras perde gente: no intervalo entre entrar e girar o ciclo inteiro pela primeira vez. Quanto mais longo esse intervalo, maior a chance de ela sumir antes da primeira comissão cair, e uma criadora que nunca sentiu o ciclo girar não tem nenhuma razão real para continuar tentando.</p>
 
   <h2>Como se acende uma fogueira</h2>
 
@@ -251,9 +277,9 @@
     <img src="https://media.giphy.com/media/D3qzfcBKemK7J97OJV/giphy.gif" alt="GIF de fogueira acendendo" loading="lazy">
   </figure>
 
-  <p>Ninguém joga fogo direto numa tora grande e espera ela pegar. Primeiro vem o graveto seco, a folha, o papel: alguma coisa pequena e fácil de queimar, só pra criar a primeira chama. Essa chama inicial é frágil, então não podemos depender só dela. Por isso, nos primeiros minutos, alguém fica ali do lado, soprando, alimentando aos poucos com gravetos cada vez maiores.</p>
+  <p>Ninguém joga fogo direto numa tora grande e espera ela pegar. Primeiro vem o graveto seco, a folha, o papel: alguma coisa pequena e fácil de queimar, só para criar a primeira chama. Essa chama inicial é frágil, então não podemos depender só dela. Por isso, nos primeiros minutos, alguém fica ali do lado, soprando, alimentando aos poucos com gravetos cada vez maiores.</p>
 
-  <p>Só depois que o fogo pega, ele passa a se sustentar sozinho. Aí sim dá pra sair, voltar depois.</p>
+  <p>Só depois que o fogo pega, ele passa a se sustentar sozinho. Aí sim dá para sair, voltar depois.</p>
 
   <p>O onboarding funciona do mesmo jeito. O nosso kit inicial ou roteiro com direcionamento é a faísca. O primeiro conteúdo ou tentativa dela é o gravetinho seco, não o resultado final. É só a prova de que o fogo pode pegar. Os primeiros dias são o momento de fazer a chama crescer, até a primeira venda ser efetivada.</p>
 
@@ -267,7 +293,11 @@
 
   <h2>Quando ela entra</h2>
 
-  <p>Ativação rápida não é sorte, é rotina. É o kit de boas-vindas chegando o mais rápido possível. É alguém do time aparecendo no chat privado dela com uma explicação rápida e completa sobre o programa, é o acompanhamento após alguns dias, não pra cobrar resultado, mas pra perguntar se surgiu alguma dúvida, se o cupom já está funcionando, se o material que mandamos ajudou. É entregar o material pronto, a referência validada, o roteiro, a referência, pra ela não travar na hora de criar só porque não sabe por onde começar. É, nesses primeiros dias, compartilhar cases de dentro da nossa própria comunidade que mudaram a vida depois de se tornarem parte da marca, para que elas possam se inspirar, criar objetivos junto com a gente.</p>
+  <p>Ativação rápida não é sorte, é rotina. É o kit de boas-vindas chegando o mais rápido possível. É alguém do time aparecendo no chat privado dela com uma explicação rápida e completa sobre o programa, é o acompanhamento após alguns dias, não para cobrar resultado, mas para perguntar se surgiu alguma dúvida, se o cupom está funcionando, se o material que mandamos ajudou.</p>
+
+  <p>É entregar o material pronto, a referência validada, o roteiro para ela não travar na hora de criar só porque não sabe por onde começar.</p>
+
+  <p>Nesses primeiros dias também, compartilhar cases de dentro da nossa própria comunidade, para que elas possam se inspirar e criar objetivos junto com a gente.</p>
 
   <p>Esse acompanhamento de perto nos primeiros dias tem um único objetivo: encurtar a distância entre ela entrar e ela ver o ciclo girar pela primeira vez. Depois disso, o ciclo começa a se sustentar sozinho, porque ela já sabe, na prática, que funciona.</p>
 
@@ -281,7 +311,7 @@
     <li>O relógio começa a contar no momento em que ela entra, não no dia da primeira venda.</li>
     <li>Ela já recebe a notícia com material explicativo sobre o programa (quanto menos dúvidas ela tiver, melhor).</li>
     <li>Toda dúvida respondida rápido no chat privado é combustível pro ciclo. Toda dúvida sem resposta é uma chance de ela desistir antes de girar uma vez.</li>
-    <li>Material pronto na mão dela reduz o tempo até o primeiro post, e o primeiro post é o que dá partida em tudo o resto.</li>
+    <li>Material pronto na mão dela reduz o tempo até o primeiro post, e o primeiro post é o que dá partida em todo o resto.</li>
     <li>Acompanhamento no privado durante os 14 primeiros dias, de forma espaçada, para criar uma aliança e comprometimento (tanto nosso com ela, quanto dela com a gente).</li>
     <li>Comemorar a primeira venda, por menor que seja, importa tanto quanto ensinar a fazer a segunda.</li>
   </ul>
@@ -296,8 +326,19 @@
     <div class="timeline-item"><span class="timeline-day">D+</span><span class="timeline-desc">Interrompe o ciclo quando a primeira venda acontece + parabéns</span></div>
   </div>
 
-  <p class="closing">Ninguém entra numa comunidade pra ficar seis meses esperando ela funcionar. Entra querendo sentir, o quanto antes, que o ciclo é de verdade. Nosso trabalho nos primeiros dias não é ensinar tudo, é proteger a chama até ela pegar sozinha.</p>
+  <p class="closing">Ninguém entra numa comunidade para ficar seis meses esperando ela funcionar. Entra querendo sentir, o quanto antes, que o ciclo é de verdade. Nosso trabalho nos primeiros dias não é ensinar tudo, é proteger a chama até ela pegar sozinha.</p>
 
 </div>
+<script>
+  const progressBar = document.getElementById('progress-bar');
+  function updateProgress() {
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0;
+    progressBar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress);
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+</script>
 </body>
 </html>

@@ -210,6 +210,7 @@ const CONFIG = {
       subtitulo: "Cria conteúdo, vende, ganha comissão, fica feliz, cria mais. Por que os primeiros dias pesam mais que os primeiros resultados.",
       data: "28 de set de 2026 · 6 min de leitura",
       arquivo: "leitura/artigo-2-ciclo-feliz-ativacao.html",
+      thumbSvg: "cycle",
     },
   ],
 
@@ -364,8 +365,9 @@ function openFrenteDetail(i) {
   openView("frente");
 }
 
-// miniatura genérica (3 círculos sobrepostos, ecoando os avatares do time)
-// usada ao lado de cada artigo pra chamar mais atenção na lista.
+// miniaturas dos artigos, usadas ao lado da prévia na lista "Para ler".
+// "default" ecoa os avatares do time (3 círculos sobrepostos); "cycle" ecoa
+// o diagrama do ciclo feliz (uma seta circular).
 const ARTICLE_THUMB_SVG = `
   <svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
     <rect width="56" height="56" fill="#F1ECE1"/>
@@ -375,6 +377,15 @@ const ARTICLE_THUMB_SVG = `
     <circle cx="31" cy="21" r="2" fill="#C9A227"/>
   </svg>
 `;
+const ARTICLE_THUMB_CYCLE = `
+  <svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
+    <rect width="56" height="56" fill="#F1ECE1"/>
+    <path d="M41 30a13 13 0 1 1-4.3-9.7" fill="none" stroke="#1C1A15" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M34.5 15.5l3.3 5-5.6 1.3z" fill="#1C1A15" fill-opacity="0.6"/>
+    <circle cx="28" cy="30" r="2.4" fill="#C9A227"/>
+  </svg>
+`;
+const ARTICLE_THUMBS = { default: ARTICLE_THUMB_SVG, cycle: ARTICLE_THUMB_CYCLE };
 
 function renderArtigos() {
   const el = document.getElementById("article-list");
@@ -384,7 +395,7 @@ function renderArtigos() {
   }
   el.innerHTML = CONFIG.artigos.map(a => `
     <a class="article-card" href="${a.arquivo}" target="_blank" rel="noopener">
-      <div class="article-thumb">${a.thumb ? `<img src="${a.thumb}" alt="">` : ARTICLE_THUMB_SVG}</div>
+      <div class="article-thumb">${a.thumb ? `<img src="${a.thumb}" alt="">` : (ARTICLE_THUMBS[a.thumbSvg] || ARTICLE_THUMB_SVG)}</div>
       <div class="article-content">
         <div class="article-date">${a.data}</div>
         <div class="article-title">${a.titulo}</div>
