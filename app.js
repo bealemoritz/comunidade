@@ -205,6 +205,12 @@ const CONFIG = {
       data: "09 de jul de 2026 · 6 min de leitura",
       arquivo: "leitura/artigo-1-comunidade-que-ninguem-supera.html",
     },
+    {
+      titulo: "O ciclo feliz: por que a ativação rápida decide se ela fica",
+      subtitulo: "Cria conteúdo, vende, ganha comissão, fica feliz, cria mais. Por que os primeiros dias pesam mais que os primeiros resultados.",
+      data: "28 de set de 2026 · 6 min de leitura",
+      arquivo: "leitura/artigo-2-ciclo-feliz-ativacao.html",
+    },
   ],
 
 };

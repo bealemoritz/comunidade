@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O ciclo feliz — Le Moritz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1C1A15;
+    --muted: #6B6455;
+    --paper: #F1ECE1;
+    --bg: #FAF7F0;
+    --rule: #DED7C7;
+    --gold: #C9A227;
+    --serif: 'Newsreader', serif;
+    --body-font: 'Source Sans 3', system-ui, sans-serif;
+    --label-font: 'IBM Plex Mono', monospace;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--body-font);
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 640px; margin: 0 auto; padding: 48px 24px 100px; }
+  .label {
+    font-family: var(--label-font);
+    font-size: 11.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  h1 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(32px, 6vw, 44px);
+    line-height: 1.1;
+    letter-spacing: -.02em;
+    margin: 16px 0 0;
+  }
+  .subtitle {
+    font-size: 19px;
+    line-height: 1.45;
+    color: var(--muted);
+    margin: 16px 0 0;
+  }
+  .meta {
+    font-family: var(--label-font);
+    font-size: 11.5px;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 24px;
+    padding-bottom: 26px;
+    border-bottom: 1px solid var(--rule);
+  }
+  figure.hero {
+    margin: 34px 0 10px;
+    border: 1px solid var(--rule);
+    background: var(--paper);
+    padding: 20px 10px;
+    border-radius: 4px;
+  }
+  figure.hero svg { display: block; width: 100%; height: auto; }
+  .cycle-flow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 10px;
+    font-family: var(--label-font);
+    font-size: 12.5px;
+    letter-spacing: .02em;
+    color: var(--ink);
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 16px 18px;
+    margin: 22px 0 30px;
+  }
+  .cycle-flow .arrow { color: var(--gold); font-weight: 600; }
+  p {
+    font-size: 17.5px;
+    line-height: 1.65;
+    margin-top: 20px;
+  }
+  h2 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 1.2;
+    margin-top: 46px;
+  }
+  ul.checklist {
+    margin-top: 20px;
+    padding-left: 0;
+    list-style: none;
+  }
+  ul.checklist li {
+    font-size: 17px;
+    line-height: 1.55;
+    padding: 14px 0 14px 26px;
+    border-top: 1px solid var(--rule);
+    position: relative;
+  }
+  ul.checklist li:last-child { border-bottom: 1px solid var(--rule); }
+  ul.checklist li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-weight: 600;
+  }
+  .closing {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 21px;
+    line-height: 1.5;
+    color: var(--ink);
+    margin-top: 44px;
+    padding-top: 30px;
+    border-top: 1px solid var(--rule);
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="label">PARA LER · LE MORITZ</div>
+  <h1>O ciclo feliz: por que a ativação rápida decide se ela fica</h1>
+  <p class="subtitle">Cria conteúdo, vende, ganha comissão, fica feliz, cria mais. O motor que sustenta as três frentes da comunidade só gira sozinho depois que alguém dá a primeira volta por ela.</p>
+  <div class="meta">28 de set de 2026 · 6 min de leitura</div>
+
+  <!-- HERO: diagrama do ciclo -->
+  <figure class="hero">
+    <svg viewBox="0 0 640 440" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M0,0 L10,5 L0,10 z" fill="#1C1A15"/>
+        </marker>
+      </defs>
+
+      <!-- setas do ciclo (pentágono) -->
+      <path d="M363.7,81.8 L438,135.7" stroke="#1C1A15" stroke-width="1.4" marker-end="url(#arrow)"/>
+      <path d="M465,218.9 L436.7,306.1" stroke="#1C1A15" stroke-width="1.4" marker-end="url(#arrow)"/>
+      <path d="M366,357.5 L274,357.5" stroke="#1C1A15" stroke-width="1.4" marker-end="url(#arrow)"/>
+      <path d="M203.3,306.1 L175,218.9" stroke="#1C1A15" stroke-width="1.4" marker-end="url(#arrow)"/>
+      <path d="M202,135.7 L276.3,81.8" stroke="#1C1A15" stroke-width="1.4" marker-end="url(#arrow)"/>
+
+      <!-- nós -->
+      <circle cx="320" cy="50" r="46" fill="#F1ECE1" stroke="#1C1A15" stroke-width="1.4"/>
+      <circle cx="481.7" cy="167.5" r="46" fill="#F1ECE1" stroke="#1C1A15" stroke-width="1.4"/>
+      <circle cx="420" cy="357.5" r="46" fill="#F1ECE1" stroke="#1C1A15" stroke-width="1.4"/>
+      <circle cx="220" cy="357.5" r="46" fill="#C9A227" stroke="#1C1A15" stroke-width="1.4"/>
+      <circle cx="158.3" cy="167.5" r="46" fill="#F1ECE1" stroke="#1C1A15" stroke-width="1.4"/>
+
+      <!-- labels -->
+      <g font-family="IBM Plex Mono, monospace" font-size="13" text-anchor="middle" fill="#1C1A15">
+        <text x="320" y="46">Cria</text>
+        <text x="320" y="62">conteúdo</text>
+
+        <text x="481.7" y="172">Vende</text>
+
+        <text x="420" y="353.5">Ganha</text>
+        <text x="420" y="369.5">comissão</text>
+
+        <text x="220" y="353.5">Fica</text>
+        <text x="220" y="369.5">feliz</text>
+
+        <text x="158.3" y="163.5">Cria</text>
+        <text x="158.3" y="179.5">mais</text>
+      </g>
+    </svg>
+  </figure>
+
+  <p>Quase ninguém desiste porque a oportunidade é ruim. Desiste porque nada aconteceu rápido o suficiente pra parecer real.</p>
+
+  <p>Toda embaixadora, afiliada ou representante que entra na comunidade carrega a mesma pergunta silenciosa nos primeiros dias: "isso funciona mesmo?". A resposta não vem de um treinamento bem explicado, nem de uma tabela de comissão generosa. Vem da primeira prova concreta de que o ciclo gira. E se essa prova demora demais, ela sai antes de descobrir que valia a pena ficar.</p>
+
+  <h2>O ciclo feliz</h2>
+
+  <p>Existe um motor simples por trás de qualquer frente da nossa comunidade. Chamo de ciclo feliz:</p>
+
+  <div class="cycle-flow">
+    <span>Cria conteúdo</span><span class="arrow">→</span>
+    <span>Vende</span><span class="arrow">→</span>
+    <span>Ganha comissão</span><span class="arrow">→</span>
+    <span>Fica feliz</span><span class="arrow">→</span>
+    <span>Cria mais conteúdo</span><span class="arrow">↻</span>
+  </div>
+
+  <p>Cada etapa só existe porque a anterior aconteceu. Sem conteúdo, não tem venda. Sem venda, não tem comissão. Sem comissão, não tem a alegria que faz ela postar de novo amanhã. É um ciclo, não uma lista: uma vez que começa a girar, ele se sustenta sozinho — mas alguém precisa dar a primeira volta por ela.</p>
+
+  <p>É exatamente aí que a maioria dos programas de criadoras perde gente: no intervalo entre "entrei" e "girei o ciclo inteiro uma vez". Quanto mais longo esse intervalo, maior a chance de ela sumir antes da primeira comissão cair — e uma criadora que nunca sentiu o ciclo girar não tem nenhuma razão real pra continuar tentando.</p>
+
+  <h2>Por que rápido importa mais que perfeito</h2>
+
+  <p>Isso muda o que a gente deveria otimizar nos primeiros dias. Não é "qual o melhor treinamento" ou "qual a comissão mais competitiva" — no primeiro momento, o que importa é a menor coisa possível: qual é o caminho mais curto até a primeira venda dela.</p>
+
+  <p>Um primeiro post que sai no dia 2, mesmo torto, vale mais do que um post perfeito que só sai no dia 12. Porque o que ativa alguém não é fazer certo — é sentir na pele que o ciclo é real. Cada dia de atraso entre a entrada dela e essa primeira prova é um dia a mais em que a dúvida ("será que vale a pena?") tem chance de vencer.</p>
+
+  <h2>O mimo de quando ela entra</h2>
+
+  <p>Ativação rápida não é sorte, é rotina. É o kit de boas-vindas chegando no mesmo dia em que ela entra. É alguém do time aparecendo no chat privado dela logo nos primeiros dias — não pra cobrar resultado, mas pra perguntar se surgiu alguma dúvida, se o cupom já está funcionando, se o material que mandamos ajudou. É entregar o material pronto — o post, o roteiro, a referência — pra ela não travar na hora de criar só porque não sabe por onde começar.</p>
+
+  <p>Esse acompanhamento de perto nos primeiros dias tem um único objetivo: encurtar a distância entre "ela entrou" e "ela viu o ciclo girar pela primeira vez". Depois disso, o ciclo começa a se sustentar sozinho — ela já sabe, na prática, que funciona.</p>
+
+  <h2>O mesmo ciclo, três frentes diferentes</h2>
+
+  <p>O ciclo é o mesmo pras embaixadoras, pras afiliadas e pras representantes — só muda o que puxa a comissão. Pra embaixadora é o cupom. Pra afiliada é o link no vídeo ou na live. Pra representante é a venda direta pra cliente. Mas o motor por trás é idêntico: conteúdo (ou contato) gera venda, venda gera comissão, comissão gera vontade de fazer de novo.</p>
+
+  <p>É por isso que a rotina de ativação — kit de boas-vindas, acompanhamento no chat, materiais prontos — merece a mesma atenção nas três frentes, mesmo que o produto final de cada uma pareça bem diferente.</p>
+
+  <h2>O que isso muda na prática</h2>
+
+  <ul class="checklist">
+    <li>O relógio começa a contar no dia em que ela entra, não no dia da primeira venda.</li>
+    <li>Toda dúvida respondida rápido no chat privado é combustível pro ciclo. Toda dúvida sem resposta é uma chance de ela desistir antes de girar uma vez.</li>
+    <li>Material pronto na mão dela reduz o tempo até o primeiro post — e o primeiro post é o que dá partida em tudo o resto.</li>
+    <li>Comemorar a primeira venda, por menor que seja, importa tanto quanto ensinar a fazer a segunda.</li>
+  </ul>
+
+  <p class="closing">Ninguém entra numa comunidade pra ficar seis meses esperando ela funcionar. Entra querendo sentir, o quanto antes, que o ciclo é de verdade. Nosso trabalho nos primeiros dias não é ensinar tudo — é garantir que esse primeiro giro aconteça rápido o bastante pra ela decidir ficar.</p>
+
+</div>
+</body>
+</html>
