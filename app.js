@@ -204,9 +204,10 @@ const CONFIG = {
       subtitulo: "O principal motivo pelo qual as pessoas abandonam comunidades (e como resolver isso com um framework de quatro letras).",
       data: "09 de jul de 2026 · 6 min de leitura",
       arquivo: "leitura/artigo-1-comunidade-que-ninguem-supera.html",
+      thumbSvg: "network",
     },
     {
-      titulo: "O ciclo feliz: por que a ativação rápida decide se ela fica",
+      titulo: "O ciclo feliz :)",
       subtitulo: "Cria conteúdo, vende, ganha comissão, fica feliz, cria mais. Por que os primeiros dias pesam mais que os primeiros resultados.",
       data: "28 de set de 2026 · 6 min de leitura",
       arquivo: "leitura/artigo-2-ciclo-feliz-ativacao.html",
@@ -382,10 +383,27 @@ const ARTICLE_THUMB_CYCLE = `
     <rect width="56" height="56" fill="#F1ECE1"/>
     <path d="M41 30a13 13 0 1 1-4.3-9.7" fill="none" stroke="#1C1A15" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round"/>
     <path d="M34.5 15.5l3.3 5-5.6 1.3z" fill="#1C1A15" fill-opacity="0.6"/>
-    <circle cx="28" cy="30" r="2.4" fill="#C9A227"/>
+    <text x="28" y="34" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="13" fill="#C9A227">:)</text>
   </svg>
 `;
-const ARTICLE_THUMBS = { default: ARTICLE_THUMB_SVG, cycle: ARTICLE_THUMB_CYCLE };
+// miniatura do artigo 1, ecoando a rede de pontos conectados do hero dele
+const ARTICLE_THUMB_NETWORK = `
+  <svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
+    <rect width="56" height="56" fill="#F1ECE1"/>
+    <g stroke="#1C1A15" stroke-opacity="0.3" stroke-width="1">
+      <line x1="9" y1="40" x2="21" y2="22"/>
+      <line x1="21" y1="22" x2="35" y2="28"/>
+      <line x1="35" y1="28" x2="47" y2="17"/>
+      <line x1="21" y1="22" x2="30" y2="43"/>
+    </g>
+    <circle cx="9" cy="40" r="3" fill="#6B6455" fill-opacity="0.55"/>
+    <circle cx="21" cy="22" r="4" fill="#1C1A15" fill-opacity="0.85"/>
+    <circle cx="35" cy="28" r="5.5" fill="#C9A227"/>
+    <circle cx="47" cy="17" r="3.5" fill="#1C1A15" fill-opacity="0.85"/>
+    <circle cx="30" cy="43" r="3" fill="#6B6455" fill-opacity="0.55"/>
+  </svg>
+`;
+const ARTICLE_THUMBS = { default: ARTICLE_THUMB_SVG, cycle: ARTICLE_THUMB_CYCLE, network: ARTICLE_THUMB_NETWORK };
 
 function renderArtigos() {
   const el = document.getElementById("article-list");
