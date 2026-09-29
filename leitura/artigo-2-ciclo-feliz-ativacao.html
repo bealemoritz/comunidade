@@ -128,9 +128,37 @@
     color: var(--gold);
     font-weight: 600;
   }
+  .timeline {
+    margin-top: 20px;
+    border: 1px solid var(--rule);
+    background: var(--paper);
+    border-radius: 4px;
+    padding: 4px 18px;
+  }
+  .timeline-item {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    padding: 13px 0;
+    border-top: 1px solid var(--rule);
+  }
+  .timeline-item:first-child { border-top: none; }
+  .timeline-day {
+    font-family: var(--label-font);
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: .03em;
+    color: var(--gold);
+    flex-shrink: 0;
+    width: 32px;
+  }
+  .timeline-desc {
+    font-size: 16px;
+    line-height: 1.4;
+    color: var(--ink);
+  }
   .closing {
     font-family: var(--serif);
-    font-style: italic;
     font-size: 21px;
     line-height: 1.5;
     color: var(--ink);
@@ -206,21 +234,21 @@
     <span>Cria mais conteúdo</span><span class="arrow">↻</span>
   </div>
 
-  <p>E aqui a gente pode, ainda, trabalhar um primeiro ciclo faiscado por uma ação nossa: como um kit boas vindas bem produzido, por exemplo, ou a entrega de um material pronto, para que ela possa produzir sem grandes dificuldades.</p>
+  <figure class="gif-embed">
+    <img src="https://media.giphy.com/media/D3qzfcBKemK7J97OJV/giphy.gif" alt="GIF de fogueira acendendo" loading="lazy">
+  </figure>
+
+  <p>O primeiro ciclo é sempre faiscado por uma ação nossa: como um kit boas vindas bem produzido, por exemplo, ou a entrega de um material pronto, para que ela possa produzir sem grandes dificuldades.</p>
 
   <figure class="gif-embed">
     <img src="https://media.giphy.com/media/l4FGlTEegc7xitqbm/giphy.gif" alt="GIF engraçado" loading="lazy">
   </figure>
 
-  <p>Dada a faísca, que deve partir da gente enquanto gestoras de comunidade, cada etapa só existe porque a anterior aconteceu. Sem faísca não tem o primeiro conteúdo. Sem conteúdo, não tem venda. Sem venda, não tem comissão. Sem comissão, não tem a alegria que faz ela postar de novo amanhã. É um ciclo, não uma lista: uma vez que começa a girar, ele se sustenta sozinho, mas alguém precisa dar a primeira volta com ela.</p>
+  <p>Dada a faísca, cada etapa só existe porque a anterior aconteceu. Sem faísca não tem o primeiro conteúdo. Sem conteúdo, não tem venda. Sem venda, não tem comissão. Sem comissão, não tem a alegria que faz ela postar de novo amanhã. É um ciclo, não uma lista: uma vez que começa a girar, ele se sustenta sozinho, mas alguém precisa dar a primeira volta com ela.</p>
 
   <p>É exatamente aí que a maioria dos programas de criadoras perde gente: no intervalo entre entrar e girar o ciclo inteiro pela primeira vez. Quanto mais longo esse intervalo, maior a chance de ela sumir antes da primeira comissão cair, e uma criadora que nunca sentiu o ciclo girar não tem nenhuma razão real pra continuar tentando.</p>
 
   <h2>Como se acende uma fogueira</h2>
-
-  <figure class="gif-embed">
-    <img src="https://media.giphy.com/media/D3qzfcBKemK7J97OJV/giphy.gif" alt="GIF de fogueira acendendo" loading="lazy">
-  </figure>
 
   <p>Ninguém joga fogo direto numa tora grande e espera ela pegar. Primeiro vem o gravetinho seco, a folha, o papel: alguma coisa pequena e fácil de queimar, só pra criar a primeira chama. Essa chama inicial é frágil, então não podemos depender só dela. Um vento mais forte apaga. Por isso, nos primeiros minutos, alguém fica ali do lado, protegendo com a mão, soprando devagar, alimentando aos poucos com gravetos cada vez maiores.</p>
 
@@ -254,6 +282,16 @@
     <li>Acompanhamento no privado durante os 14 primeiros dias, de forma espaçada, para criar uma aliança e comprometimento (tanto nosso com ela, quanto dela com a gente).</li>
     <li>Comemorar a primeira venda, por menor que seja, importa tanto quanto ensinar a fazer a segunda.</li>
   </ul>
+
+  <p class="intro-list">Em dias:</p>
+
+  <div class="timeline">
+    <div class="timeline-item"><span class="timeline-day">D0</span><span class="timeline-desc">Boas vindas + sobre o programa</span></div>
+    <div class="timeline-item"><span class="timeline-day">D3</span><span class="timeline-desc">Incentivo de primeiro conteúdo + abre diálogo</span></div>
+    <div class="timeline-item"><span class="timeline-day">D7</span><span class="timeline-desc">Acompanhamento</span></div>
+    <div class="timeline-item"><span class="timeline-day">D14</span><span class="timeline-desc">Fim do onboarding</span></div>
+    <div class="timeline-item"><span class="timeline-day">D+</span><span class="timeline-desc">Interrompe o ciclo quando a primeira venda acontece + parabéns</span></div>
+  </div>
 
   <p class="closing">Ninguém entra numa comunidade pra ficar seis meses esperando ela funcionar. Entra querendo sentir, o quanto antes, que o ciclo é de verdade. Nosso trabalho nos primeiros dias não é ensinar tudo, é proteger a chama até ela pegar sozinha.</p>
 
