@@ -134,6 +134,7 @@ const CONFIG = {
       link: null,
       documentos: [
         { titulo: "PLANILHA EMBAIXADORAS", url: "https://docs.google.com/spreadsheets/d/1tsYSeFviASGWHm30XAGjChOe5kOvg-7T0rE2jQcYsJM/edit?gid=1323823578#gid=1323823578" },
+        { titulo: "REGISTROS DOS TREINAMENTOS", url: "https://app.clickup.com/3109207/v/dc/2ywaq-77153/2ywaq-389713", icon: "DOC_ICON" },
       ],
       whatsapp: "https://chat.whatsapp.com/IC4RoP6130W1rJ4lHm6cCC",
       faturamento: {
