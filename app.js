@@ -188,7 +188,7 @@ const CONFIG = {
     {
       chave: "representantes",
       nome: "Representantes",
-      meta: "60 representantes &nbsp;·&nbsp; não criam conteúdo &nbsp;·&nbsp; WhatsApp + Off",
+      meta: "170 representantes &nbsp;·&nbsp; não criam conteúdo &nbsp;·&nbsp; WhatsApp + Off",
       descricao: "Não são criadoras de conteúdo: vendem tanto no online quanto no offline. O foco de venda online é o WhatsApp, com um grupo que parte de uma lista de clientes.",
       link: "https://vick-one.github.io/Cliente-Embaixadora/",
       linkLabel: "Ver página das representantes",
