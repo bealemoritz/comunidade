@@ -619,6 +619,21 @@ document.querySelectorAll("[data-view]").forEach(btn => {
 document.querySelectorAll("[data-close]").forEach(btn => {
   btn.addEventListener("click", closeViews);
 });
+// volta só uma tela (ex.: do funil pra organização)
+document.querySelectorAll("[data-back]").forEach(btn => {
+  btn.addEventListener("click", () => {
+    btn.closest(".view-overlay").classList.remove("active");
+    if (!document.querySelector(".view-overlay.active")) document.body.style.overflow = "";
+  });
+});
+
+// link direto: .../comunidade/#funil-inbazz abre o funil
+function openFromHash() {
+  const views = { "funil-inbazz": ["organizacao", "funil-inbazz"], "organizacao": ["organizacao"] };
+  const alvo = views[location.hash.slice(1)];
+  if (alvo) alvo.forEach(openView);
+}
+openFromHash();
 
 // ===== Init =====
 

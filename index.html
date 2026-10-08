@@ -66,6 +66,23 @@
       </span>
       <span class="nav-arrow">&rarr;</span>
     </button>
+
+    <button class="nav-card" data-view="organizacao">
+      <span class="nav-icon">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="16" y="5" width="16" height="11" rx="2" stroke="#1C1A15" stroke-width="1.6"/>
+          <rect x="5" y="32" width="16" height="11" rx="2" stroke="#1C1A15" stroke-width="1.6"/>
+          <rect x="27" y="32" width="16" height="11" rx="2" stroke="#1C1A15" stroke-width="1.6"/>
+          <path d="M24 16v8M13 32v-8h22v8" stroke="#1C1A15" stroke-width="1.6" stroke-linejoin="round"/>
+          <circle cx="24" cy="24" r="2.4" fill="var(--time-cor)"/>
+        </svg>
+      </span>
+      <span class="nav-text">
+        <span class="nav-title">Organização do time</span>
+        <span class="nav-sub">fluxos, ferramentas e combinados</span>
+      </span>
+      <span class="nav-arrow">&rarr;</span>
+    </button>
   </section>
 
   <!-- FRENTES -->
@@ -121,6 +138,203 @@
     <div id="frente-detail-whatsapp"></div>
     <div id="frente-detail-faturamento"></div>
     <div id="frente-detail-rotina-programa"></div>
+  </div>
+</div>
+
+<!-- ORGANIZAÇÃO VIEW -->
+<div class="view-overlay" id="view-organizacao">
+  <div class="wrap">
+    <button class="back-btn" data-close>&larr; voltar</button>
+    <div class="label">ORGANIZAÇÃO DO TIME</div>
+    <h2 class="title view-title">Organização</h2>
+    <p class="rotina-intro">Como o time trabalha junto: os fluxos que seguimos, as ferramentas que usamos e os combinados que valem pra todo mundo.</p>
+
+    <div class="rotina-section-title">Fluxos</div>
+    <div class="org-list">
+      <button class="nav-card" data-view="funil-inbazz">
+        <span class="nav-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 9h34l-12 15v12l-10 5V24z" stroke="#1C1A15" stroke-width="1.6" stroke-linejoin="round"/>
+            <circle cx="24" cy="16" r="2.4" fill="var(--embaixadoras-cor)"/>
+          </svg>
+        </span>
+        <span class="nav-text">
+          <span class="nav-title">Funil de aceite na Inbazz</span>
+          <span class="nav-sub">do cadastro até embaixadora ou representante</span>
+        </span>
+        <span class="nav-arrow">&rarr;</span>
+      </button>
+    </div>
+
+    <div class="rotina-section-title">Ferramentas</div>
+    <div class="empty-state">Em breve: as ferramentas que o time usa e pra que serve cada uma.</div>
+
+    <div class="rotina-section-title">Combinados</div>
+    <div class="empty-state">Em breve: os combinados do time.</div>
+  </div>
+</div>
+
+<!-- FUNIL DE ACEITE VIEW -->
+<div class="view-overlay" id="view-funil-inbazz">
+  <div class="wrap wrap-wide">
+    <button class="back-btn" data-back>&larr; organização</button>
+    <div class="label">ORGANIZAÇÃO · FLUXOS</div>
+    <h2 class="title view-title">Funil de aceite na Inbazz</h2>
+    <p class="rotina-intro funil-intro">Do momento em que alguém se inscreve na Inbazz até virar embaixadora, representante ou ter o cadastro excluído. São duas portas de entrada, e as duas caem na mesma fila da Thau. A cor de cada etapa mostra de quem é a vez.</p>
+
+    <div class="funil-legend">
+      <span class="who leti">Letícia · indicações</span>
+      <span class="who thau">Thau · embaixadoras</span>
+      <span class="who vito">Vitória · representantes</span>
+      <span class="who auto">Automático</span>
+      <span class="chat-tag">
+        <svg width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        acontece no chat de aceitação
+      </span>
+    </div>
+
+    <div class="flow">
+      <div class="merge">
+        <div class="col">
+          <span class="entry">Entrada 1 · Direta</span>
+          <div class="fnode start">
+            <h3>Pessoa se inscreve por conta própria</h3>
+            <p>Chegou com interesse no programa, sem passar pela Letícia. Vai direto pra fila de aprovações pendentes.</p>
+          </div>
+          <div class="rail"></div>
+        </div>
+        <div class="col">
+          <span class="entry">Entrada 2 · Afiliada indicada</span>
+          <div class="fnode start">
+            <h3>Afiliada se inscreve por indicação da Letícia</h3>
+            <p>A Letícia direcionou a afiliada pra Inbazz.</p>
+          </div>
+          <div class="fnode leti">
+            <span class="who leti">Letícia</span>
+            <h3>Avisa no chat de aceitação</h3>
+            <ul>
+              <li>Quem ela mandou pra lá e já se inscreveu</li>
+              <li>O máximo de informações sobre a pessoa</li>
+              <li>Qual perfil ela acha que funciona</li>
+            </ul>
+            <div class="chips">
+              <span class="chip thau">Embaixadora</span>
+              <span class="chip vito">Representante</span>
+            </div>
+          </div>
+          <div class="rail"></div>
+        </div>
+      </div>
+
+      <div class="fnode thau">
+        <span class="who thau">Thau</span>
+        <h3>1ª análise: quem vira embaixadora</h3>
+        <p>Analisa todas as aprovações pendentes, das duas entradas, e seleciona quem quer aceitar como embaixadora.</p>
+      </div>
+
+      <div class="split">
+        <div class="col">
+          <span class="branch thau">✓ Aceita como embaixadora</span>
+          <div class="fnode thau">
+            <span class="who thau">Thau</span>
+            <h3>Boas-vindas no WhatsApp</h3>
+            <p>Manda a mensagem com o modelo pré-definido.</p>
+          </div>
+          <div class="decision thau">
+            <span class="q-label">Pergunta</span>
+            <strong>Veio como afiliada indicada pela Letícia?</strong>
+          </div>
+          <div class="split narrow">
+            <div class="col">
+              <span class="branch thau">Não · direta</span>
+              <div class="fnode thau">
+                <h3>Kit de boas-vindas</h3>
+                <p>Thau organiza o envio.</p>
+              </div>
+            </div>
+            <div class="col">
+              <span class="branch thau">Sim · afiliada</span>
+              <div class="fnode thau">
+                <h3>Checklist da afiliada</h3>
+                <ul class="tasks">
+                  <li><span><b>Vincular o cupom que já existe</b> <span class="small">(planilha antiga das embaixadoras, na parte das afiliadas indicadas)</span></span></li>
+                  <li><span>Dar <b>check</b> na mensagem da Letícia no chat de aceitação</span></li>
+                  <li><span>Analisar critérios: <b>kit de boas-vindas</b> ou <b>seeding via Inbazz</b></span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <span class="end thau">Embaixadora</span>
+        </div>
+
+        <div class="col">
+          <span class="branch stop">Não aceita pela Thau</span>
+          <div class="gate" role="note">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2.5" stroke="currentColor" stroke-width="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="2"/></svg>
+            <p><b>Trava:</b> quando a Thau não quiser mais nenhuma embaixadora da fila, ela <b>avisa a Vitória no chat de aceitação</b> que está liberado.</p>
+          </div>
+          <div class="fnode vito">
+            <span class="who vito">Vitória</span>
+            <h3>2ª análise: representante ou exclusão</h3>
+            <p>Analisa quem a Thau não aceitou como embaixadora.</p>
+          </div>
+          <div class="split narrow">
+            <div class="col">
+              <span class="branch vito">✓ Aceita</span>
+              <div class="fnode cond vito">
+                <span class="cond-label">Só se for afiliada indicada</span>
+                <ul class="tasks">
+                  <li><span><b>Vincular o cupom que já existe</b> <span class="small">(planilha antiga das embaixadoras)</span></span></li>
+                  <li><span>Dar <b>check</b> na mensagem da Letícia</span></li>
+                </ul>
+              </div>
+              <div class="fnode auto">
+                <span class="who auto">Automático</span>
+                <h3>Fluxo de onboarding</h3>
+                <p>Tudo automatizado a partir daqui.</p>
+              </div>
+              <span class="end vito">Representante</span>
+            </div>
+            <div class="col">
+              <span class="branch stop">✕ Não aceita</span>
+              <div class="fnode stop">
+                <h3>Exclui o cadastro</h3>
+                <p>Vitória remove da Inbazz.</p>
+              </div>
+              <span class="end stop">Fim</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rotina-section-title">Quem faz o quê</div>
+    <div class="funil-rules">
+      <div class="info-card">
+        <span class="who leti">Letícia</span>
+        <ul>
+          <li>Avisa no chat de aceitação quem mandou pra Inbazz e já se inscreveu</li>
+          <li>Manda o máximo de informação + a indicação: embaixadora ou representante</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <span class="who thau">Thau</span>
+        <ul>
+          <li>Analisa as pendentes das duas entradas</li>
+          <li>Embaixadora aceita: mensagem modelo no WhatsApp + kit ou seeding</li>
+          <li>Se for afiliada: vincula o cupom e dá check na mensagem da Letícia</li>
+          <li>Terminou? Avisa a Vitória no chat que está liberado</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <span class="who vito">Vitória</span>
+        <ul>
+          <li>Só começa depois do aviso da Thau</li>
+          <li>Aceita como representante (onboarding automático) ou exclui o cadastro</li>
+          <li>Se for afiliada: vincula o cupom e dá check na mensagem da Letícia</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
 
