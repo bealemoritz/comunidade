@@ -626,7 +626,7 @@ body {
 /* ===== FUNIL DE ACEITE NA INBAZZ ===== */
 /* cor de cada pessoa = cor da frente que ela cuida */
 .wrap.wrap-wide { max-width: 1000px; }
-.funil-intro { max-width: 62ch; }
+.funil-intro { max-width: none; }
 .leti { --c: #B4524F; --c-bg: #F8E1DF; --c-line: var(--afiliadas-cor); }
 .thau { --c: #46706F; --c-bg: #DDE9E8; --c-line: var(--embaixadoras-cor); }
 .vito { --c: #8A6812; --c-bg: #FBF0CC; --c-line: #D9B65A; }
