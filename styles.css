@@ -755,3 +755,4 @@ body {
 .kit-produtos { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
 .kit-produtos span { font-size: 13px; padding: 3px 10px; border-radius: 20px; background: var(--white); border: 1px solid var(--rule); }
 .kit-modal[hidden] { display: none; }
+.cond-sep { border-top: 1px dashed var(--c-line); padding-top: 10px; margin-top: 4px; }
