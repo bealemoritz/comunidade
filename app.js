@@ -635,6 +635,16 @@ function openFromHash() {
 }
 openFromHash();
 
+// painel do passo a passo do kit
+const kitModal = document.getElementById("kit-modal");
+document.querySelectorAll("[data-kit]").forEach(btn => {
+  btn.addEventListener("click", () => { kitModal.hidden = false; kitModal.querySelector(".kit-close").focus(); });
+});
+document.querySelectorAll("[data-kit-close]").forEach(el => {
+  el.addEventListener("click", () => { kitModal.hidden = true; });
+});
+document.addEventListener("keydown", e => { if (e.key === "Escape") kitModal.hidden = true; });
+
 // ===== Init =====
 
 renderTeam();
