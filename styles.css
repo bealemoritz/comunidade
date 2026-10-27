@@ -120,6 +120,7 @@ body {
   font-family: inherit;
 }
 .nav-card:hover { background: #ECE4D2; }
+a.nav-card { text-decoration: none; color: inherit; }
 .nav-card:active { transform: scale(0.99); }
 .nav-icon {
   flex-shrink: 0;
