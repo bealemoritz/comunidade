@@ -120,7 +120,7 @@ body {
   font-family: inherit;
 }
 .nav-card:hover { background: #ECE4D2; }
-a.nav-card { text-decoration: none; color: inherit; }
+a.nav-card, a.nav-card:visited { text-decoration: none; color: var(--ink); }
 .nav-card:active { transform: scale(0.99); }
 .nav-icon {
   flex-shrink: 0;
