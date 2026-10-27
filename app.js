@@ -627,9 +627,9 @@ document.querySelectorAll("[data-back]").forEach(btn => {
   });
 });
 
-// link direto: .../comunidade/#funil-inbazz abre o funil
+// link direto: .../comunidade/#funil-inbazz abre o funil (#black-friday abre a black)
 function openFromHash() {
-  const views = { "funil-inbazz": ["organizacao", "funil-inbazz"], "organizacao": ["organizacao"] };
+  const views = { "funil-inbazz": ["organizacao", "funil-inbazz"], "organizacao": ["organizacao"], "black-friday": ["black-friday"] };
   const alvo = views[location.hash.slice(1)];
   if (alvo) alvo.forEach(openView);
 }

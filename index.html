@@ -83,6 +83,20 @@
       </span>
       <span class="nav-arrow">&rarr;</span>
     </button>
+    <button class="nav-card" data-view="black-friday">
+      <span class="nav-icon">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 9h15l19 19-13 13L9 22z" stroke="#1C1A15" stroke-width="1.6" stroke-linejoin="round"/>
+          <circle cx="15.5" cy="16.5" r="2.6" fill="var(--time-cor)"/>
+          <line x1="22" y1="27" x2="29" y2="20" stroke="#1C1A15" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="nav-text">
+        <span class="nav-title">Black Friday</span>
+        <span class="nav-sub">plano, checklist e mensagens por frente</span>
+      </span>
+      <span class="nav-arrow">&rarr;</span>
+    </button>
   </section>
 
   <!-- FRENTES -->
@@ -359,6 +373,20 @@
   </div>
 </div>
 
+<!-- BLACK FRIDAY VIEW -->
+<div class="view-overlay" id="view-black-friday">
+  <div class="wrap">
+    <button class="back-btn" data-close>&larr; voltar</button>
+    <div class="label">BLACK FRIDAY · 2026</div>
+    <h2 class="title view-title">Black Friday</h2>
+    <div id="bf-visao-geral"></div>
+
+    <div class="rotina-section-title">Ver plano de:</div>
+    <div class="filtro-chips" id="bf-frentes" role="tablist"></div>
+    <div id="bf-frente"></div>
+  </div>
+</div>
+
 <!-- PASSO A PASSO DO KIT -->
 <div class="kit-modal" id="kit-modal" hidden>
   <div class="kit-backdrop" data-kit-close></div>
@@ -385,5 +413,10 @@
 </div>
 
 <script src="app.js"></script>
+<script src="black-friday/visao-geral.js"></script>
+<script src="black-friday/embaixadoras.js"></script>
+<script src="black-friday/afiliadas.js"></script>
+<script src="black-friday/representantes.js"></script>
+<script src="black-friday/render.js"></script>
 </body>
 </html>
