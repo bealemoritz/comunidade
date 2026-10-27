@@ -111,7 +111,8 @@ BLACK_FRIDAY.frentes.embaixadoras = {
       linhaDoTempo: {
         marcos: [
           { data: "2026-10-27", titulo: "Comunicado da final" },
-          { data: "2026-10-31", titulo: "Teaser + regras do Desafio 2" },
+          { data: "2026-10-31", titulo: "Teaser do Desafio 2" },
+          { data: "2026-11-01", titulo: "Resultado do Esquenta e Desafio 2 liberado" },
           { data: "2026-11-03", titulo: "Live tira-dúvidas" },
           { data: "2026-11-10", titulo: "Pix do Esquenta" },
           { data: "2026-11-11", titulo: "Relâmpago 11.11" },
@@ -133,14 +134,13 @@ BLACK_FRIDAY.frentes.embaixadoras = {
             itens: [
               { id: "1027-m1", resp: ["Thau"], hora: "11h", feito: true, texto: "Mandar a **M1** no grupo de avisos: quem for ativa no Desafio 1 (5 dias de story ou 1 reel) concorre aos prêmios finais. De 27 a 31/10 são exatamente 5 dias." },
               { id: "1027-disparo", resp: ["Bea"], hora: "tarde", texto: "Disparo 1:1 segmentado pelo painel do Desafio 1: grupo A, “em dia, faltam reels”, recebe a **M2**; grupos “sem stories nem reels” e “fora do prêmio” recebem a **M3**." },
-              { id: "1027-teaser", resp: ["Bea"], texto: "Script do teaser do tapete roxo para produção." },
             ],
           },
           {
             data: "2026-10-28", titulo: "Quarta, 28/10",
             itens: [
               { id: "1028-e1", resp: ["Thau"], texto: "Enquete **E1** no grupo de bate-papo." },
-              { id: "1028-aprovar", resp: ["Bea"], texto: "Aprovar as mensagens **M4 a M7** e o roteiro da semana 1." },
+              { id: "1028-aprovar", resp: ["Bea"], texto: "Aprovar as mensagens **M4 a M9** e o roteiro da semana 1." },
               { id: "1028-painel", resp: ["Bea"], texto: "Montar o painel interno do Desafio 2 (pedidos, meta atual, quanto falta para a próxima, reels), só para o time." },
             ],
           },
@@ -148,7 +148,8 @@ BLACK_FRIDAY.frentes.embaixadoras = {
             data: "2026-10-29", titulo: "Quinta, 29/10",
             itens: [
               { id: "1029-1a1", resp: ["Bea"], texto: "1:1 rápido com quem está a 1 ou 2 dias de story (ou 1 reel) de virar ativa, explicando que isso garante a concorrência pelo prêmio final." },
-              { id: "1029-teaser", resp: ["Bea"], texto: "Fechar o teaser." },
+              { id: "1029-imagem", resp: ["Bea"], texto: "Arte do Desafio 2 em imagem, para o anúncio de domingo, 01/11." },
+              { id: "1029-aula", resp: ["Bea"], texto: "Gravar a mini aula de 5 min explicando o Desafio 2." },
               { id: "1029-canva", resp: ["Bea"], texto: "Desbloquear a página do Desafio 2 na apresentação do Canva com metas, regras e Relâmpago 11.11. Alterar a página do Desafio 1 para concluída. Acrescentar página com os nomes de quem conseguiu concluir o Desafio 1." },
             ],
           },
@@ -162,15 +163,16 @@ BLACK_FRIDAY.frentes.embaixadoras = {
             data: "2026-10-31", titulo: "Sábado, 31/10", tema: "último dia do Esquenta",
             itens: [
               { id: "1031-m5", resp: ["Thau"], hora: "10h", texto: "**M5** no grupo de avisos (último dia)." },
-              { id: "1031-teaser", resp: ["Thau"], hora: "19h", texto: "Teaser do tapete roxo no grupo de avisos." },
-              { id: "1031-m6", resp: ["Thau"], hora: "20h", texto: "**M6** com as regras do Desafio 2, a apresentação e o convite da live de terça." },
-              { id: "1031-m7", resp: ["Bea"], texto: "Agendar a **M7** (boas-vindas 1:1) para domingo de manhã." },
+              { id: "1031-suspense", resp: ["Thau"], hora: "fim do dia", texto: "Teaser **M6** no grupo de avisos: só suspense, avisando o resultado e a abertura do novo desafio no dia seguinte." },
+              { id: "1031-m7", resp: ["Bea"], texto: "Agendar a **M9** (boas-vindas 1:1) para domingo, depois das 11h." },
             ],
           },
           {
             data: "2026-11-01", titulo: "Domingo, 01/11", tema: "abre o Desafio 2",
             itens: [
-              { id: "1101-m7", resp: ["Bea"], texto: "Conferir se a **M7** saiu para todas." },
+              { id: "1101-resultado", resp: ["Thau"], hora: "cedo", texto: "**M7** no grupo de avisos: resultado do Esquenta Black." },
+              { id: "1101-liberado", resp: ["Thau"], hora: "11h", texto: "**M8** no grupo de avisos: FASE 2 DA BLACK | DESAFIO 2 LIBERADO, com o desafio em imagem e a mini aula gravada de 5 min." },
+              { id: "1101-m7", resp: ["Bea"], texto: "Conferir se a **M9** saiu para todas." },
             ],
           },
           {
@@ -201,15 +203,15 @@ BLACK_FRIDAY.frentes.embaixadoras = {
             itens: [
               { id: "rot-seg", dow: 1, dia: "Segunda", resp: ["Thau"], texto: "Roteiro pronto da semana no grupo de avisos." },
               { id: "rot-qua", dow: 3, dia: "Quarta", resp: ["Thau"], texto: "Enquete no grupo de bate-papo." },
-              { id: "rot-qui", dow: 4, dia: "Quinta", resp: ["Bea"], texto: "1:1 de proximidade (**M10**) com quem está até 3 pedidos da próxima meta." },
-              { id: "rot-sex", dow: 5, dia: "Sexta", resp: ["Thau"], texto: "Destaques da semana e “Indicada da Semana” no grupo (**M11**), com elogio nominal e sem números de venda." },
+              { id: "rot-qui", dow: 4, dia: "Quinta", resp: ["Bea"], texto: "1:1 de proximidade (**M12**) com quem está até 3 pedidos da próxima meta." },
+              { id: "rot-sex", dow: 5, dia: "Sexta", resp: ["Thau"], texto: "Destaques da semana e “Indicada da Semana” no grupo (**M13**), com elogio nominal e sem números de venda." },
             ],
           },
           {
             secao: "Datas especiais do Desafio 2",
             data: "2026-11-09", titulo: "Segunda, 09/11",
             itens: [
-              { id: "1109-m8", resp: ["Thau"], texto: "Roteiro da semana 2 (11.11) e anúncio do Relâmpago (**M8**)." },
+              { id: "1109-m8", resp: ["Thau"], texto: "Roteiro da semana 2 (11.11) e anúncio do Relâmpago (**M10**)." },
               { id: "1109-lapis", resp: ["Bea", "Thau"], texto: "Organizar o envio dos novos lápis batom para as embaixadoras, que precisam gravar antes do lançamento em 23/11." },
             ],
           },
@@ -223,9 +225,9 @@ BLACK_FRIDAY.frentes.embaixadoras = {
           {
             data: "2026-11-11", titulo: "Quarta, 11/11", tema: "Relâmpago 11.11",
             itens: [
-              { id: "1111-9h", resp: ["Thau"], hora: "9h", texto: "**M9**: abertura do Relâmpago." },
-              { id: "1111-15h", resp: ["Thau"], hora: "15h", texto: "**M9**: parcial do meio do dia." },
-              { id: "1111-20h", resp: ["Thau"], hora: "20h", texto: "**M9**: “últimas horas”." },
+              { id: "1111-9h", resp: ["Thau"], hora: "9h", texto: "**M11**: abertura do Relâmpago." },
+              { id: "1111-15h", resp: ["Thau"], hora: "15h", texto: "**M11**: parcial do meio do dia." },
+              { id: "1111-20h", resp: ["Thau"], hora: "20h", texto: "**M11**: “últimas horas”." },
             ],
           },
           {
@@ -296,22 +298,30 @@ BLACK_FRIDAY.frentes.embaixadoras = {
           },
           {
             id: "M5", canal: "Grupo de avisos", quando: "sábado, 31/10, 10h", titulo: "Último dia",
-            texto: "Último dia do Esquenta Black! Hoje é o dia de garantir o story que falta, o reel que ficou pra depois. E fiquem de olho no grupo: hoje às 19h tem surpresa.",
+            texto: "Último dia do Esquenta Black! Hoje é o dia de garantir o story que falta, o reel que ficou pra depois. E fiquem de olho no grupo no fim do dia: tem novidade chegando.",
           },
           {
-            id: "M6", canal: "Grupo de avisos", quando: "sábado, 31/10, 20h", titulo: "Fase 1 concluída e regras do Desafio 2",
-            texto: "Ato 1 encerrado, e que ato! Em 16 dias vocês fizeram [X] stories e [X] reels falando da Le Moritz. Um aplauso especial pra [NOMES], que não faltaram um dia sequer. Sabe o que isso significa? As seguidoras de vocês viram a marca todos os dias, criaram confiança, e agora estão prontas pra comprar. É como esquentar a frigideira antes de colocar o bife: a frigideira está quente. Começa amanhã o Ato 2, o Mês Black (01 a 19/11), e agora o prêmio é por venda: 3 pedidos no cupom = R$ 60, 6 = R$ 130, 12 = R$ 300, 25 = R$ 700 e 50 pedidos = R$ 1.800. Pra receber, basta ter 2 reels no período marcando a Le Moritz com o cupom. E no 11.11 tem Relâmpago: as 5 que mais venderem no dia ganham R$ 200 cada. Todos os detalhes na apresentação aqui embaixo, e terça, 03/11, às 20h tem live tira-dúvidas comigo. Vem?",
+            id: "M6", canal: "Grupo de avisos", quando: "sábado, 31/10, fim do dia", titulo: "Teaser: preparem-se",
+            texto: "Preparem-se! Amanhã, 01/11, bem cedinho ([X]h), sai o resultado do Esquenta Black. E às 11h, abertura do novo desafio. Tudo aqui no nosso grupo. Fiquem de olho!",
           },
           {
-            id: "M7", canal: "Privado", quando: "domingo, 01/11", titulo: "Boas-vindas ao Desafio 2",
+            id: "M7", canal: "Grupo de avisos", quando: "domingo, 01/11, cedo", titulo: "Resultado do Esquenta Black",
+            texto: "Ato 1 encerrado, e que ato! Em 16 dias vocês fizeram [X] stories e [X] reels falando da Le Moritz. Um aplauso especial pra [NOMES], que não faltaram um dia sequer. Concluíram o Desafio 1 e seguem na disputa pelos prêmios finais: [NOMES]. As seguidoras de vocês viram a marca todos os dias, criaram confiança, e agora estão prontas pra comprar. Às 11h tem novidade aqui no grupo!",
+          },
+          {
+            id: "M8", canal: "Grupo de avisos", quando: "domingo, 01/11, 11h", titulo: "Fase 2 da Black | Desafio 2 liberado",
+            texto: "FASE 2 DA BLACK | DESAFIO 2 LIBERADO\n\nComeça hoje o Mês Black (01 a 19/11), e agora o prêmio é por venda: 3 pedidos no cupom = R$ 70, 6 = R$ 200, 12 = R$ 500, 25 = R$ 1.000 e 50 pedidos = R$ 3.000. Pra receber, basta ter 2 reels no período marcando a @lemoritz_oficial, com o cupom na fala e na legenda. E no 11.11 tem Relâmpago: as 5 que mais venderem no dia ganham R$ 200 cada.\n\nO desafio completo está na imagem aqui embaixo, e gravei uma mini aula de 5 minutos explicando tudo. Terça, 03/11, às 20h, tem live tira-dúvidas comigo. Bora?",
+          },
+          {
+            id: "M9", canal: "Privado", quando: "domingo, 01/11", titulo: "Boas-vindas ao Desafio 2",
             texto: "[NOME], começou o Mês Black! Sua primeira meta: 3 pedidos com o seu cupom [CUPOM] = R$ 70. Dica de ouro: em todo story, fala que o seu cupom soma mais 10% com a Black e deixa ele escrito grande na tela. Na live de terça, 03/11, às 20h, a gente mostra tudo isso na prática. Conta comigo pro que precisar!",
           },
           {
-            id: "M8", canal: "Grupo de avisos", quando: "segunda, 09/11", titulo: "Relâmpago 11.11",
+            id: "M10", canal: "Grupo de avisos", quando: "segunda, 09/11", titulo: "Relâmpago 11.11",
             texto: "Quarta é 11.11, o dia mais forte de compras online antes da Black Friday. E tem RELÂMPAGO: as 5 embaixadoras com mais pedidos no cupom no dia 11/11 ganham R$ 200 cada, além do prêmio por meta do Mês Black. O roteiro da semana é todo pensado pro 11.11. Comecem a avisar as seguidoras desde já: quarta tem novidade.",
           },
           {
-            id: "M9", canal: "Grupo de avisos", quando: "quarta, 11/11", titulo: "Dia do Relâmpago",
+            id: "M11", canal: "Grupo de avisos", quando: "quarta, 11/11", titulo: "Dia do Relâmpago",
             partes: [
               { rotulo: "9h", texto: "É HOJE! 11.11 na Le Moritz: todas as ofertas da Black e o cupom de vocês somando. Story logo cedo, de novo na hora do almoço e de noite, que é quando elas compram." },
               { rotulo: "15h", texto: "Metade do dia! Quem ainda não postou, o roteiro está aqui em cima." },
@@ -319,11 +329,11 @@ BLACK_FRIDAY.frentes.embaixadoras = {
             ],
           },
           {
-            id: "M10", canal: "Privado", quando: "quintas-feiras", titulo: "Proximidade",
+            id: "M12", canal: "Privado", quando: "quintas-feiras", titulo: "Proximidade",
             texto: "[NOME], olha só: faltam só [X] pedidos pra você bater a meta de [META] pedidos e garantir R$ [VALOR]! Uma sequência de stories lembrando que o seu cupom soma com a Black costuma resolver. Quer que eu te mande um roteiro?",
           },
           {
-            id: "M11", canal: "Grupo de avisos", quando: "sextas-feiras", titulo: "Destaques e Indicada da Semana",
+            id: "M13", canal: "Grupo de avisos", quando: "sextas-feiras", titulo: "Destaques e Indicada da Semana",
             texto: "Fechamento da semana! A Indicada da Semana é a [NOME], que [motivo concreto: bateu a meta de 12 pedidos, fez o reel que mais vendeu, respondeu cada seguidora]. Um aplauso também pra [NOMES], que mandaram muito bem essa semana. Semana que vem é a vez de vocês.",
           },
         ],
