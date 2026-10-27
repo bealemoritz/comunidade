@@ -5,7 +5,7 @@
 window.BLACK_FRIDAY = window.BLACK_FRIDAY || { frentes: {} };
 
 BLACK_FRIDAY.visaoGeral = {
-  titulo: "Black November Awards",
+  titulo: "Black de Comunidade",
   intro: "A Black da Le Moritz em três fases, cada uma com um papel: primeiro a gente aquece a audiência, depois converte, e fecha na Black Friday.",
 
   // "curto" é o nome que cabe na barra da linha do tempo.

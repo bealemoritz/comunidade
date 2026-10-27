@@ -8,17 +8,18 @@
   if (!BF || !BF.visaoGeral) return;
 
   const ORDEM = ["embaixadoras", "afiliadas", "representantes"];
+  // [id, título, texto do botão]: com o 3º item o bloco começa fechado
   const BLOCOS = [
     ["regras", "Regras e prêmios"],
     ["narrativa", "Narrativa"],
     ["linha", "Linha do tempo"],
     ["checklist", "Checklist"],
-    ["kit", "Kit de comunicação"],
-    ["roteiros", "Roteiros"],
+    ["kit", "Kit de comunicação (mensagens)", "Ver mensagens"],
+    ["roteiros", "Roteiros", "Ver roteiros"],
     ["acompanhamento", "Acompanhamento"],
   ];
-  // esquenta (dourado), mês black (roxo do time), semana black (tinta)
-  const FASE_CORES = ["#C9A227", "var(--time-cor)", "var(--ink)"];
+  // esquenta (roxo clarinho), mês black (roxo do time), semana black (tinta)
+  const FASE_CORES = ["#C9B6D3", "var(--time-cor)", "var(--ink)"];
   // cor de cada pessoa = cor da frente que ela cuida (mesmas classes do funil)
   const PESSOA_CLASSE = { Bea: "bea", Thau: "thau", Thauanna: "thau", Vitória: "vito", Letícia: "leti" };
 
@@ -47,11 +48,17 @@
   const diasEntre = (a, b) => Math.round((parseData(b) - parseData(a)) / 864e5);
   const periodo = (de, ate) => de === ate ? ddmm(de) : `${ddmm(de)} a ${ddmm(ate)}`;
 
-  // ?hoje=2026-11-11 simula outra data (útil pra conferir o destaque)
-  const HOJE = (() => {
-    const q = new URLSearchParams(location.search).get("hoje");
-    return q && /^\d{4}-\d{2}-\d{2}$/.test(q) ? q : isoDe(new Date());
-  })();
+  // "hoje" sempre no fuso de São Paulo, seja qual for o fuso do aparelho.
+  // é recalculado quando a página volta a ficar visível e a cada minuto,
+  // pra uma aba aberta de um dia pro outro não ficar no dia anterior.
+  const hojeAgora = () => {
+    try {
+      return new Intl.DateTimeFormat("en-CA", { timeZone: "America/Sao_Paulo", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
+    } catch (err) {
+      return isoDe(new Date());
+    }
+  };
+  let HOJE = hojeAgora();
 
   // as marcações ficam só neste navegador. try/catch porque o storage pode
   // estar bloqueado (aba anônima, preview etc.); aí a página funciona sem salvar.
@@ -110,9 +117,13 @@
 
   const frentesDisponiveis = ORDEM.filter(k => BF.frentes[k]);
   const estado = {
-    frente: frentesDisponiveis.includes(store.get("bf-frente")) ? store.get("bf-frente") : frentesDisponiveis[0],
-    filtro: {}, // por frente: null = todas
+    frente: frentesDisponiveis[0],
+    // o que está aberto: f = dados (frente ou desafio), k = chave de armazenamento,
+    // el = onde foi renderizado (#bf-frente ou #bf-desafio)
+    unidade: null,
+    filtro: {}, // por chave: null = todas
   };
+  const noConteudo = sel => (estado.unidade ? estado.unidade.el.querySelector(sel) : null);
 
   // ===== visão geral =====
 
@@ -148,14 +159,73 @@
       </div>`;
   }
 
-  function renderAbas() {
+  // um card por frente, no mesmo padrão das frentes da home (ícones de app.js)
+  function renderCardsFrentes() {
     document.getElementById("bf-frentes").innerHTML = frentesDisponiveis.map(k => {
       const f = BF.frentes[k];
-      const ativa = k === estado.frente;
-      return `<button type="button" class="filtro-chip bf-aba ${ativa ? "active" : ""}" role="tab" aria-selected="${ativa}" data-frente="${k}">
-        <span class="legend-dot" style="background:${f.cor}"></span>${esc(f.nome)}
-      </button>`;
+      const icone = typeof FRENTE_ICONS !== "undefined" && FRENTE_ICONS[k] ? FRENTE_ICONS[k](f.cor) : "";
+      return `
+        <button type="button" class="nav-card" data-frente="${k}">
+          <span class="nav-icon">${icone}</span>
+          <span class="nav-text">
+            <span class="nav-title">Black ${esc(f.nome)}</span>
+            ${f.resumo ? `<span class="nav-sub">${esc(f.resumo)}</span>` : ""}
+          </span>
+          <span class="nav-arrow">&rarr;</span>
+        </button>`;
     }).join("");
+  }
+
+  function abrirFrente(k) {
+    estado.frente = k;
+    const f = BF.frentes[k];
+    document.getElementById("bf-frente-label").textContent = `BLACK FRIDAY · ${f.nome.toUpperCase()}`;
+    document.getElementById("bf-frente-titulo").textContent = `Black ${f.nome}`;
+    const el = document.getElementById("bf-frente");
+    if (f.desafios) renderCardsDesafios(el, f);
+    else renderConteudo(el, f, k);
+    openView("black-frente");
+    document.getElementById("view-black-frente").scrollTop = 0;
+  }
+
+  // ===== desafios (frentes com "desafios", como embaixadoras) =====
+
+  function renderCardsDesafios(el, f) {
+    el.innerHTML = `
+      <div class="rotina-section-title">Desafios</div>
+      <div class="frentes-list">
+        ${f.desafios.map((d, i) => {
+          const fase = BF.visaoGeral.fases[d.fase];
+          const agora = fase && HOJE >= fase.de && HOJE <= fase.ate;
+          const sub = [fase ? periodo(fase.de, fase.ate) : null, d.resumo].filter(Boolean).join(" · ");
+          return `
+            <button type="button" class="nav-card" data-desafio="${esc(d.id)}">
+              <span class="nav-icon bf-desafio-num">${i + 1}</span>
+              <span class="nav-text">
+                <span class="nav-title">Desafio ${i + 1} · ${esc(d.nome)}${agora ? `<span class="bf-agora">agora</span>` : ""}</span>
+                ${sub ? `<span class="nav-sub">${esc(sub)}</span>` : ""}
+              </span>
+              <span class="nav-arrow">&rarr;</span>
+            </button>`;
+        }).join("")}
+      </div>
+      ${f.premios ? cardPremios(f.premios) : ""}`;
+  }
+
+  function abrirDesafio(id) {
+    const k = estado.frente;
+    const f = BF.frentes[k];
+    const i = f.desafios.findIndex(d => d.id === id);
+    if (i < 0) return;
+    const d = f.desafios[i];
+    // o desafio herda cor e responsáveis da frente
+    const dados = { cor: f.cor, responsaveis: f.responsaveis, ...d, nome: `Desafio ${i + 1} · ${d.nome}` };
+    document.getElementById("bf-desafio-label").textContent = `BLACK ${f.nome.toUpperCase()} · DESAFIO ${i + 1}`;
+    document.getElementById("bf-desafio-titulo").textContent = d.nome;
+    document.getElementById("bf-desafio-back").innerHTML = `&larr; black ${esc(f.nome.toLowerCase())}`;
+    renderConteudo(document.getElementById("bf-desafio"), dados, d.chave || `${k}-${d.id}`);
+    openView("black-desafio");
+    document.getElementById("view-black-desafio").scrollTop = 0;
   }
 
   // ===== 01 · regras e prêmios =====
@@ -163,7 +233,6 @@
   function blocoRegras(f) {
     const r = f.regras;
     if (!r) return vazio("Em breve: as regras do desafio e os prêmios desta frente.");
-    const p = r.premios;
     return `
       ${r.intro ? `<p class="rotina-intro">${fmt(r.intro)}</p>` : ""}
       <div class="info-card">
@@ -171,7 +240,12 @@
         ${r.tabela ? tabela(r.tabela) : ""}
         ${(r.itens || []).map(it => infoItem(it, f.cor)).join("")}
       </div>
-      ${p ? `
+      ${r.premios ? cardPremios(r.premios) : ""}`;
+  }
+
+  // prêmios finais: no desafio (regras.premios) ou na página da frente (f.premios)
+  function cardPremios(p) {
+    return `
         <div class="info-card">
           <div class="info-card-title">${esc(p.titulo)}</div>
           ${p.periodo ? `<p class="info-card-intro bf-mono">${esc(p.periodo)}</p>` : ""}
@@ -187,7 +261,7 @@
                   </div>`).join("")}
               </div>
             </div>` : ""}
-        </div>` : ""}`;
+        </div>`;
   }
 
   // ===== 02 · narrativa =====
@@ -220,7 +294,6 @@
             <div class="bf-citacao">
               <span class="bf-mono">Frase-âncora</span>
               <p>“${fmt(cp.ancora)}”</p>
-              ${botaoCopiar(cp.ancora, "Copiar frase")}
             </div>` : ""}
           ${cp.tabelaIntro ? `<p class="info-card-intro">${fmt(cp.tabelaIntro)}</p>` : ""}
           ${cp.tabela ? tabela(cp.tabela) : ""}
@@ -347,10 +420,10 @@
   }
 
   function renderChecklistLista() {
-    const lista = document.getElementById("bf-checklist-lista");
+    const lista = noConteudo("#bf-checklist-lista");
     if (!lista) return;
-    const k = estado.frente;
-    const c = BF.frentes[k].checklist;
+    const { f, k } = estado.unidade;
+    const c = f.checklist;
     const marcas = store.get(lista.dataset.store) || {};
     const filtro = estado.filtro[k] || null;
     const marcado = (id, padrao) => (id in marcas ? !!marcas[id] : !!padrao);
@@ -416,7 +489,7 @@
   }
 
   function atualizarContagens() {
-    const lista = document.getElementById("bf-checklist-lista");
+    const lista = noConteudo("#bf-checklist-lista");
     if (!lista) return;
     lista.querySelectorAll(".bf-dia").forEach(dia => {
       const caixas = dia.querySelectorAll("input[data-check]");
@@ -425,11 +498,11 @@
     });
     const todas = lista.querySelectorAll("input[data-check]");
     const feitas = [...todas].filter(c => c.checked).length;
-    document.getElementById("bf-check-total").textContent = `${feitas} de ${todas.length} feitos`;
+    noConteudo("#bf-check-total").textContent = `${feitas} de ${todas.length} feitos`;
   }
 
   function irParaHoje() {
-    const lista = document.getElementById("bf-checklist-lista");
+    const lista = noConteudo("#bf-checklist-lista");
     if (!lista) return;
     // o dia de hoje, ou o próximo que ainda vem
     const alvo = lista.querySelector(".bf-check.hoje") || lista.querySelector(".bf-dia.hoje") || lista.querySelector(".bf-dia:not(.passado)");
@@ -544,7 +617,7 @@
 
   function blocoAcompanhamento(f, k) {
     const a = f.acompanhamento;
-    if (!a) return vazio("Em breve: as métricas que vamos acompanhar e os pontos em aberto desta frente.");
+    if (!a) return vazio("Em breve: como vamos acompanhar os resultados.");
     const marcas = store.get(`bf-abertos:${k}`) || {};
     return `
       ${a.intro ? `<p class="rotina-intro">${fmt(a.intro)}</p>` : ""}
@@ -567,9 +640,13 @@
 
   // ===== frente =====
 
-  function renderFrente() {
-    const k = estado.frente;
-    const f = BF.frentes[k];
+  // renderiza os 7 blocos de uma frente ou de um desafio em "el".
+  // só um conteúdo fica montado por vez, pra não repetir ids na página.
+  function renderConteudo(el, f, k) {
+    document.querySelectorAll("#bf-frente, #bf-desafio").forEach(c => {
+      if (c !== el && c.querySelector(".bf-secao")) c.innerHTML = "";
+    });
+    estado.unidade = { f, k, el };
     copias = [];
     const conteudo = {
       regras: blocoRegras(f),
@@ -580,7 +657,7 @@
       roteiros: blocoRoteiros(f),
       acompanhamento: blocoAcompanhamento(f, k),
     };
-    document.getElementById("bf-frente").innerHTML = `
+    el.innerHTML = `
       ${f.emConstrucao ? `
         <div class="bf-construcao" style="--frente:${f.cor}" role="note">
           ${OBRA_ICON}
@@ -589,13 +666,17 @@
       <nav class="bf-blocos" aria-label="Blocos de ${esc(f.nome)}">
         ${BLOCOS.map(([id, label]) => `<button type="button" class="filtro-chip" data-bloco="${id}">${label}</button>`).join("")}
       </nav>
-      ${BLOCOS.map(([id, label], i) => `
+      ${BLOCOS.map(([id, label, ver], i) => `
         <section class="bf-secao" id="bf-sec-${id}">
           <div class="bf-secao-head">
             <span class="bf-secao-num">${String(i + 1).padStart(2, "0")}</span>
             <h3 class="bf-secao-titulo">${label}</h3>
           </div>
-          ${conteudo[id]}
+          ${ver && !conteudo[id].startsWith('<div class="empty-state') ? `
+            <details class="bf-recolher">
+              <summary class="docs-btn"><span class="bf-ver">${ver}</span><span class="bf-esconder">Esconder</span></summary>
+              ${conteudo[id]}
+            </details>` : conteudo[id]}
         </section>`).join("")}`;
     renderChecklistLista();
   }
@@ -604,27 +685,25 @@
 
   document.getElementById("bf-frentes").addEventListener("click", e => {
     const btn = e.target.closest("[data-frente]");
-    if (!btn || btn.dataset.frente === estado.frente) return;
-    estado.frente = btn.dataset.frente;
-    store.set("bf-frente", estado.frente);
-    renderAbas();
-    renderFrente();
-    // a frente nova começa do topo, e não no meio da página anterior
-    const abas = document.getElementById("bf-frentes");
-    if (abas.getBoundingClientRect().top < 0) abas.scrollIntoView({ block: "start" });
+    if (btn) abrirFrente(btn.dataset.frente);
   });
 
-  const frenteEl = document.getElementById("bf-frente");
+  const conteudos = [document.getElementById("bf-frente"), document.getElementById("bf-desafio")];
 
-  frenteEl.addEventListener("click", async e => {
+  conteudos.forEach(el => el.addEventListener("click", async e => {
+    const desafio = e.target.closest("[data-desafio]");
+    if (desafio) { abrirDesafio(desafio.dataset.desafio); return; }
     const bloco = e.target.closest("[data-bloco]");
     if (bloco) {
-      document.getElementById(`bf-sec-${bloco.dataset.bloco}`).scrollIntoView({ behavior: "smooth", block: "start" });
+      const secao = noConteudo(`#bf-sec-${bloco.dataset.bloco}`);
+      const det = secao.querySelector("details.bf-recolher");
+      if (det) det.open = true; // atalho de bloco fechado já abre
+      secao.scrollIntoView({ behavior: "smooth", block: "start" });
       return;
     }
     const filtro = e.target.closest("[data-filtro]");
     if (filtro) {
-      estado.filtro[estado.frente] = filtro.dataset.filtro || null;
+      estado.filtro[estado.unidade.k] = filtro.dataset.filtro || null;
       filtro.parentElement.querySelectorAll("[data-filtro]").forEach(b => b.classList.toggle("active", b === filtro));
       renderChecklistLista();
       return;
@@ -641,9 +720,9 @@
       clearTimeout(botao._t);
       botao._t = setTimeout(() => { botao.classList.remove("copiado"); label.textContent = original; }, 1800);
     }
-  });
+  }));
 
-  frenteEl.addEventListener("change", e => {
+  conteudos.forEach(el => el.addEventListener("change", e => {
     const caixa = e.target.closest("input[data-check]");
     if (!caixa) return;
     const chave = caixa.closest("[data-store]").dataset.store;
@@ -652,11 +731,37 @@
     store.set(chave, marcas);
     caixa.closest("label").classList.toggle("feito", caixa.checked);
     atualizarContagens();
-  });
+  }));
 
   // ===== init =====
 
   renderVisaoGeral();
-  renderAbas();
-  renderFrente();
+  renderCardsFrentes();
+
+  // virou o dia com a página aberta: redesenha o que mostra "hoje"
+  function conferirDia() {
+    const agora = hojeAgora();
+    if (agora === HOJE) return;
+    HOJE = agora;
+    renderVisaoGeral();
+    const f = BF.frentes[estado.frente];
+    if (f && f.desafios) renderCardsDesafios(document.getElementById("bf-frente"), f);
+    const u = estado.unidade;
+    if (u) {
+      const abertos = [...u.el.querySelectorAll("details.bf-recolher")].map(d => d.open);
+      renderConteudo(u.el, u.f, u.k);
+      u.el.querySelectorAll("details.bf-recolher").forEach((d, i) => { d.open = !!abertos[i]; });
+    }
+  }
+  document.addEventListener("visibilitychange", () => { if (!document.hidden) conferirDia(); });
+  setInterval(conferirDia, 60 * 1000);
+
+  // link direto: .../comunidade/#black-embaixadoras abre a frente,
+  // #black-embaixadoras-d2 abre o desafio 2
+  const alvo = location.hash.match(/^#black-(embaixadoras|afiliadas|representantes)(?:-(d\d))?$/);
+  if (alvo && BF.frentes[alvo[1]]) {
+    openView("black-friday");
+    abrirFrente(alvo[1]);
+    if (alvo[2] && BF.frentes[alvo[1]].desafios) abrirDesafio(alvo[2]);
+  }
 })();

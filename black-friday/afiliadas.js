@@ -11,6 +11,7 @@ window.BLACK_FRIDAY = window.BLACK_FRIDAY || { frentes: {} };
 
 BLACK_FRIDAY.frentes.afiliadas = {
   nome: "Afiliadas",
+  resumo: "em construção",
   cor: "var(--afiliadas-cor)",
   responsaveis: ["Bea", "Letícia"],
   emConstrucao: "Ainda estamos definindo a estratégia das afiliadas para a Black. A estrutura já está pronta e vai sendo preenchida aos poucos.",

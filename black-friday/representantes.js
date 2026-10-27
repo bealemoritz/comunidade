@@ -11,6 +11,7 @@ window.BLACK_FRIDAY = window.BLACK_FRIDAY || { frentes: {} };
 
 BLACK_FRIDAY.frentes.representantes = {
   nome: "Representantes",
+  resumo: "em construção",
   cor: "var(--representantes-cor)",
   responsaveis: ["Bea", "Vitória"],
   emConstrucao: "Ainda estamos definindo a estratégia das representantes para a Black. A estrutura já está pronta e vai sendo preenchida aos poucos.",

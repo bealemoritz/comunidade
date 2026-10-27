@@ -787,7 +787,6 @@ body {
 .bf-oferta-nome { font-weight: 600; }
 
 /* sub-abas e blocos */
-.filtro-chip.bf-aba { display: inline-flex; align-items: center; gap: 7px; font-size: 14px; padding: 8px 15px; }
 .bf-construcao {
   margin-top: 22px; display: flex; gap: 12px; align-items: flex-start;
   border: 1.5px dashed var(--frente); border-radius: 6px; padding: 14px 16px;
@@ -798,13 +797,9 @@ body {
   display: block; font-family: var(--label-font); font-weight: 500; font-size: 11px;
   letter-spacing: .08em; text-transform: uppercase; margin-bottom: 3px;
 }
-.bf-blocos {
-  position: sticky; top: 0; z-index: 5; display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none;
-  margin: 22px -24px 0; padding: 12px 24px; background: var(--bg); border-bottom: 1px solid var(--rule);
-}
-.bf-blocos::-webkit-scrollbar { display: none; }
-.bf-blocos .filtro-chip { flex-shrink: 0; white-space: nowrap; }
-.bf-secao { padding-top: 48px; scroll-margin-top: 50px; }
+/* atalhos para as seções, um por linha */
+.bf-blocos { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; margin-top: 22px; }
+.bf-secao { padding-top: 48px; scroll-margin-top: 16px; }
 .bf-secao-head {
   display: flex; align-items: baseline; gap: 12px;
   padding-bottom: 12px; border-bottom: 1px solid var(--ink);
@@ -835,9 +830,8 @@ body {
 
 /* narrativa */
 .bf-teclas { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 16px; }
-.bf-tecla { background: var(--time-cor); border-radius: 6px; padding: 16px 18px; }
-.bf-tecla .bf-mono { color: rgba(250, 247, 240, .7); }
-.bf-tecla-texto { font-family: var(--serif); font-size: 22px; line-height: 1.2; color: var(--bg); margin-top: 8px; }
+.bf-tecla { background: var(--white); border-radius: 6px; padding: 16px 18px; }
+.bf-tecla-texto { font-family: var(--serif); font-size: 22px; line-height: 1.2; color: var(--ink); margin-top: 8px; }
 .bf-citacao {
   display: grid; gap: 8px; justify-items: start; margin-bottom: 16px;
   background: var(--white); border-left: 3px solid var(--time-cor); border-radius: 4px; padding: 14px 16px;
@@ -1012,3 +1006,24 @@ button.docs-btn { cursor: pointer; }
   .bf-gantt { grid-template-columns: 42px 1fr; padding: 14px 12px 10px; }
   .bf-msg { padding: 14px; }
 }
+
+/* número do desafio no lugar do ícone */
+.bf-desafio-num {
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--white);
+  font-family: var(--serif);
+  font-size: 20px;
+  line-height: 1;
+}
+.nav-title .bf-agora { vertical-align: 2px; }
+
+/* blocos que começam fechados (kit e roteiros) */
+.bf-recolher { margin-top: 18px; }
+.bf-recolher > summary { list-style: none; display: inline-flex; cursor: pointer; }
+.bf-recolher > summary::-webkit-details-marker { display: none; }
+.bf-recolher > summary::after { content: "↓"; }
+.bf-recolher[open] > summary { margin-bottom: 8px; }
+.bf-recolher[open] > summary::after { content: "↑"; }
+.bf-recolher .bf-esconder, .bf-recolher[open] .bf-ver { display: none; }
+.bf-recolher[open] .bf-esconder { display: inline; }
