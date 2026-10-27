@@ -141,6 +141,7 @@ BLACK_FRIDAY.frentes.embaixadoras = {
             itens: [
               { id: "1028-e1", resp: ["Thau"], texto: "Enquete **E1** no grupo de bate-papo." },
               { id: "1028-aprovar", resp: ["Bea"], texto: "Aprovar as mensagens **M4 a M9** e o roteiro da semana 1." },
+              { id: "1028-teaser", resp: ["Bea"], texto: "Criar o teaser do Desafio 2 que vai junto com a **M6** no grupo de avisos no fim do dia 31/10." },
               { id: "1028-painel", resp: ["Bea"], texto: "Montar o painel interno do Desafio 2 (pedidos, meta atual, quanto falta para a próxima, reels), só para o time." },
             ],
           },
