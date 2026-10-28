@@ -49,7 +49,8 @@ BLACK_FRIDAY.frentes.afiliadas = {
           ],
         },
         itens: [
-          { titulo: "Vale a maior meta batida", texto: "Contam os itens vendidos de qualquer produto Le Moritz pelos seus vídeos e lives entre 01 e 19/11, pelo relatório de afiliados do TikTok Shop. Só contam pedidos aprovados, sem cancelamento ou reembolso." },
+          { titulo: "Vale a maior meta batida", texto: "Contam os itens vendidos de qualquer produto Le Moritz entre 01 e 19/11 pelos seus vídeos e lives do período, pelo relatório de afiliados do TikTok Shop. Só contam pedidos aprovados, sem cancelamento ou reembolso." },
+          { titulo: "Só vale vídeo do período", texto: "Contam as vendas feitas entre 01 e 19/11 de **vídeos postados entre 01 e 19/11**. Venda de vídeo postado antes de 01/11 não conta. **Live feita nesse período também vale.**" },
           { titulo: "Stick Pés vale em dobro", texto: "Cada **Stick Hidratante para os Pés** vendido conta como **2 itens** na sua meta." },
           { titulo: "Condição para receber", texto: "Pelo menos **6 vídeos** no período, um produto marcado por vídeo, aparecendo aplicando o produto, e a **autorização de anúncio ligada** nos seus vídeos (a gente ensina na live)." },
           { titulo: "Vídeo de Ouro da semana", texto: "Toda semana, o vídeo que mais vendeu vira o exemplo do grupo: destaque com o nome da criadora, uma análise de por que ele vendeu e prioridade no anúncio pago da Le Moritz, que leva o vídeo para mais gente. São 3 semanas: 01 a 08/11, 09 a 15/11 e 16 a 19/11." },
@@ -125,7 +126,8 @@ BLACK_FRIDAY.frentes.afiliadas = {
             data: "2026-10-29", titulo: "Quinta, 29/10", tema: "reta final do Esquenta",
             itens: [
               { id: "a1029-m1", resp: ["Letícia"], hora: "11h", texto: "**M1** no grupo de avisos: reta final do Esquenta." },
-              { id: "a1029-disparo", resp: ["Letícia"], hora: "tarde", texto: "Disparo 1:1 pelo relatório do Desafio 1: quem está **perto da meta** recebe a **M2**; quem está **na meta** e pode subir recebe a **M3**." },
+              { id: "a1029-ferramenta", resp: ["Bea"], hora: "manhã", texto: "Organizar a ferramenta de disparo (Mensagens 1x1) com a **M2** e a **M3**, pelo relatório do Desafio 1, para a Letícia enviar à tarde." },
+              { id: "a1029-disparo", resp: ["Letícia"], hora: "tarde", texto: "Disparo 1:1 pela ferramenta: quem está **perto da meta** recebe a **M2**; quem está **na meta** e pode subir recebe a **M3**." },
               { id: "a1029-arte", resp: ["Bea"], texto: "Arte do Desafio 2 em imagem, no padrão do Black November Awards." },
               { id: "a1029-painel", resp: ["Bea"], texto: "Montar o painel interno do Desafio 2 (itens vendidos, meta atual, quanto falta, vídeos e autorização de anúncio), só para o time." },
             ],
@@ -143,7 +145,7 @@ BLACK_FRIDAY.frentes.afiliadas = {
             itens: [
               { id: "a1031-m4", resp: ["Letícia"], hora: "10h", texto: "**M4** no grupo de avisos (último dia)." },
               { id: "a1031-m5", resp: ["Letícia"], hora: "fim do dia", texto: "Teaser **M5**: só suspense, avisando o resultado e o novo desafio no dia seguinte." },
-              { id: "a1031-agendar", resp: ["Bea"], texto: "Agendar a **M8** (boas-vindas 1:1) para domingo, depois das 11h." },
+              { id: "a1031-agendar", resp: ["Bea"], texto: "Organizar a ferramenta de disparo com a **M8** (boas-vindas) para a Letícia enviar no domingo, depois das 11h." },
             ],
           },
           {
@@ -151,7 +153,7 @@ BLACK_FRIDAY.frentes.afiliadas = {
             itens: [
               { id: "a1101-m6", resp: ["Letícia"], hora: "cedo", texto: "**M6** no grupo de avisos: resultado do Esquenta Black." },
               { id: "a1101-m7", resp: ["Letícia"], hora: "11h", texto: "**M7**: FASE 2 DA BLACK | DESAFIO 2 LIBERADO, com a arte, a mini aula e o tutorial de autorização de anúncio." },
-              { id: "a1101-m8", resp: ["Bea"], texto: "Conferir se a **M8** saiu para todas." },
+              { id: "a1101-m8", resp: ["Letícia"], hora: "depois das 11h", texto: "Enviar a **M8** (boas-vindas) 1:1 pela ferramenta de disparo." },
             ],
           },
           {
@@ -183,7 +185,8 @@ BLACK_FRIDAY.frentes.afiliadas = {
               { id: "arot-seg", dow: 1, dia: "Segunda", resp: ["Letícia"], texto: "Roteiro da semana no grupo de avisos e anúncio do **Vídeo de Ouro** da semana anterior (**M12**)." },
               { id: "arot-ter", dow: 2, dia: "Terça", resp: ["Bea"], texto: "Separar os vídeos autorizados que mais venderam e mandar para o GMV Max." },
               { id: "arot-qua", dow: 3, dia: "Quarta", resp: ["Letícia"], texto: "Enquete no grupo de bate-papo." },
-              { id: "arot-qui", dow: 4, dia: "Quinta", resp: ["Letícia"], texto: "1:1 de proximidade (**M11**) com quem está até 30% da próxima meta." },
+              { id: "arot-qua-ferramenta", dow: 3, dia: "Quarta", resp: ["Bea"], texto: "Organizar a ferramenta de disparo com a **M11** para quem está até 30% da próxima meta, para a Letícia enviar na quinta." },
+              { id: "arot-qui", dow: 4, dia: "Quinta", resp: ["Letícia"], texto: "1:1 de proximidade (**M11**) pela ferramenta de disparo com quem está até 30% da próxima meta." },
               { id: "arot-sex", dow: 5, dia: "Sexta", resp: ["Letícia"], texto: "Destaques da semana no grupo (**M13**), com elogio nominal e sem números de venda." },
             ],
           },
@@ -224,7 +227,8 @@ BLACK_FRIDAY.frentes.afiliadas = {
           {
             data: "2026-11-18", titulo: "Quarta, 18/11",
             itens: [
-              { id: "a1118-faltam", resp: ["Letícia"], texto: "1:1 “faltam X itens” para todas que estão até 30% da próxima meta." },
+              { id: "a1118-ferramenta", resp: ["Bea"], hora: "manhã", texto: "Organizar a ferramenta de disparo com o “faltam X itens” para a Letícia enviar." },
+              { id: "a1118-faltam", resp: ["Letícia"], texto: "1:1 “faltam X itens” pela ferramenta de disparo para todas que estão até 30% da próxima meta." },
             ],
           },
           {
@@ -285,11 +289,11 @@ BLACK_FRIDAY.frentes.afiliadas = {
           },
           {
             id: "M7", canal: "Grupo de avisos", quando: "domingo, 01/11, 11h", titulo: "Fase 2 da Black | Desafio 2 liberado",
-            texto: "FASE 2 DA BLACK | DESAFIO 2 LIBERADO\n\nComeça hoje o Mês Black (01 a 19/11), e agora o prêmio é por VENDA. Contam os itens vendidos pelos seus vídeos e lives: 3 itens = R$ 70, 8 = R$ 200, 15 = R$ 400, 30 = R$ 800, 60 = R$ 1.200 e 100 = R$ 1.500. Cada Stick Pés vendido vale 2 itens!\n\nE tem mais: no 11.11, as 5 que mais venderem no dia ganham R$ 200 cada. E toda semana o vídeo que mais vender vira o Vídeo de Ouro: destaque aqui no grupo e prioridade no anúncio pago da Le Moritz.\n\nPra receber: pelo menos 6 vídeos no período, aplicando o produto, e a autorização de anúncio ligada. Por quê? Porque o seu vídeo que vende vira anúncio, e a Le Moritz paga pra ele chegar em mais gente.\n\nA arte do desafio, a mini aula de 5 minutos e o tutorial da autorização estão aqui embaixo. Terça, 03/11, às 21h, tem live tira-dúvidas. Bora vender?",
+            texto: "FASE 2 DA BLACK | DESAFIO 2 LIBERADO\n\nComeça hoje o Mês Black (01 a 19/11), e agora o prêmio é por VENDA. Contam os itens vendidos entre 01 e 19/11 pelos vídeos que você postar a partir de hoje e pelas suas lives nesse período (venda de vídeo antigo não conta): 3 itens = R$ 70, 8 = R$ 200, 15 = R$ 400, 30 = R$ 800, 60 = R$ 1.200 e 100 = R$ 1.500. Cada Stick Pés vendido vale 2 itens!\n\nE tem mais: no 11.11, as 5 que mais venderem no dia ganham R$ 200 cada. E toda semana o vídeo que mais vender vira o Vídeo de Ouro: destaque aqui no grupo e prioridade no anúncio pago da Le Moritz.\n\nPra receber: pelo menos 6 vídeos no período, aplicando o produto, e a autorização de anúncio ligada. Por quê? Porque o seu vídeo que vende vira anúncio, e a Le Moritz paga pra ele chegar em mais gente.\n\nA arte do desafio, a mini aula de 5 minutos e o tutorial da autorização estão aqui embaixo. Terça, 03/11, às 21h, tem live tira-dúvidas. Bora vender?",
           },
           {
             id: "M8", canal: "Privado", quando: "domingo, 01/11", titulo: "Boas-vindas ao Desafio 2",
-            texto: "[NOME], começou o Mês Black! Sua primeira meta: 3 itens vendidos pelos seus vídeos = R$ 70. Dica de ouro: o vídeo que mais vende na Le Moritz é o de aplicar o sérum em metade do rosto de outra pessoa e mostrar a diferença. E não esquece de ligar a autorização de anúncio, o tutorial está no grupo. Conta comigo!",
+            texto: "[NOME], começou o Mês Black! Sua primeira meta: 3 itens vendidos = R$ 70. Valem os vídeos postados a partir de hoje e as suas lives. Dica de ouro: o vídeo que mais vende na Le Moritz é o de aplicar o sérum em metade do rosto de outra pessoa e mostrar a diferença. E não esquece de ligar a autorização de anúncio, o tutorial está no grupo. Conta comigo!",
           },
           {
             id: "M9", canal: "Grupo de avisos", quando: "segunda, 09/11", titulo: "Relâmpago 11.11",

@@ -148,7 +148,8 @@ BLACK_FRIDAY.frentes.embaixadoras = {
           {
             data: "2026-10-29", titulo: "Quinta, 29/10",
             itens: [
-              { id: "1029-1a1", resp: ["Bea"], texto: "1:1 rápido com quem está a 1 ou 2 dias de story (ou 1 reel) de virar ativa, explicando que isso garante a concorrência pelo prêmio final." },
+              { id: "1029-ferramenta", resp: ["Bea"], hora: "manhã", texto: "Organizar a ferramenta de disparo (Mensagens 1x1) com quem está a 1 ou 2 dias de story (ou 1 reel) de virar ativa, para a Thau enviar." },
+              { id: "1029-1a1", resp: ["Thau"], texto: "1:1 rápido pela ferramenta de disparo com quem está a 1 ou 2 dias de story (ou 1 reel) de virar ativa, explicando que isso garante a concorrência pelo prêmio final." },
               { id: "1029-imagem", resp: ["Bea"], texto: "Arte do Desafio 2 em imagem, para o anúncio de domingo, 01/11." },
               { id: "1029-aula", resp: ["Bea"], texto: "Gravar a mini aula de 5 min explicando o Desafio 2." },
               { id: "1029-canva", resp: ["Bea"], texto: "Desbloquear a página do Desafio 2 na apresentação do Canva com metas, regras e Relâmpago 11.11. Alterar a página do Desafio 1 para concluída. Acrescentar página com os nomes de quem conseguiu concluir o Desafio 1." },
@@ -165,7 +166,7 @@ BLACK_FRIDAY.frentes.embaixadoras = {
             itens: [
               { id: "1031-m5", resp: ["Thau"], hora: "10h", texto: "**M5** no grupo de avisos (último dia)." },
               { id: "1031-suspense", resp: ["Thau"], hora: "fim do dia", texto: "Teaser **M6** no grupo de avisos: só suspense, avisando o resultado e a abertura do novo desafio no dia seguinte." },
-              { id: "1031-m7", resp: ["Bea"], texto: "Agendar a **M9** (boas-vindas 1:1) para domingo, depois das 11h." },
+              { id: "1031-m7", resp: ["Bea"], texto: "Organizar a ferramenta de disparo com a **M9** (boas-vindas) para a Thau enviar no domingo, depois das 11h." },
             ],
           },
           {
@@ -173,7 +174,7 @@ BLACK_FRIDAY.frentes.embaixadoras = {
             itens: [
               { id: "1101-resultado", resp: ["Thau"], hora: "cedo", texto: "**M7** no grupo de avisos: resultado do Esquenta Black." },
               { id: "1101-liberado", resp: ["Thau"], hora: "11h", texto: "**M8** no grupo de avisos: FASE 2 DA BLACK | DESAFIO 2 LIBERADO, com o desafio em imagem e a mini aula gravada de 5 min." },
-              { id: "1101-m7", resp: ["Bea"], texto: "Conferir se a **M9** saiu para todas." },
+              { id: "1101-m7", resp: ["Thau"], hora: "depois das 11h", texto: "Enviar a **M9** (boas-vindas) 1:1 pela ferramenta de disparo." },
             ],
           },
           {
@@ -204,7 +205,8 @@ BLACK_FRIDAY.frentes.embaixadoras = {
             itens: [
               { id: "rot-seg", dow: 1, dia: "Segunda", resp: ["Thau"], texto: "Roteiro pronto da semana no grupo de avisos." },
               { id: "rot-qua", dow: 3, dia: "Quarta", resp: ["Thau"], texto: "Enquete no grupo de bate-papo." },
-              { id: "rot-qui", dow: 4, dia: "Quinta", resp: ["Bea"], texto: "1:1 de proximidade (**M12**) com quem está até 3 pedidos da próxima meta." },
+              { id: "rot-qua-ferramenta", dow: 3, dia: "Quarta", resp: ["Bea"], texto: "Organizar a ferramenta de disparo com a **M12** para quem está até 3 pedidos da próxima meta, para a Thau enviar na quinta." },
+              { id: "rot-qui", dow: 4, dia: "Quinta", resp: ["Thau"], texto: "1:1 de proximidade (**M12**) pela ferramenta de disparo com quem está até 3 pedidos da próxima meta." },
               { id: "rot-sex", dow: 5, dia: "Sexta", resp: ["Thau"], texto: "Destaques da semana e “Indicada da Semana” no grupo (**M13**), com elogio nominal e sem números de venda." },
             ],
           },
@@ -246,7 +248,8 @@ BLACK_FRIDAY.frentes.embaixadoras = {
           {
             data: "2026-11-18", titulo: "Quarta, 18/11",
             itens: [
-              { id: "1118-faltam", resp: ["Bea"], texto: "1:1 “faltam X pedidos” para todas que estão até 30% da próxima meta." },
+              { id: "1118-ferramenta", resp: ["Bea"], hora: "manhã", texto: "Organizar a ferramenta de disparo com o “faltam X pedidos” para a Thau enviar." },
+              { id: "1118-faltam", resp: ["Thau"], texto: "1:1 “faltam X pedidos” pela ferramenta de disparo para todas que estão até 30% da próxima meta." },
             ],
           },
           {
