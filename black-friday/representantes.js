@@ -70,7 +70,7 @@ BLACK_FRIDAY.frentes.representantes = {
         itens: [
           { titulo: "Vale a maior faixa batida", texto: "Só contam pedidos aprovados no cupom entre 01 e 19/11, sem cancelamento ou reembolso." },
           { titulo: "Relâmpago 11.11 · R$ 150", texto: "As 5 representantes com mais pedidos no cupom no dia 11/11 ganham R$ 150 cada, além da faixa." },
-          { titulo: "Pagamento", texto: "Via Pix em 10/12. Os produtos seguem por envio." },
+          { titulo: "Pagamento", texto: "Via Pix em 10/12. Os produtos são **à escolha da representante** e seguem por envio." },
           { titulo: "Destrave · só no privado", texto: "Bônus de ativação para quem **não vendeu no Esquenta** (16 a 31/10), mesmo que tenha vendido antes. A primeira venda no cupom **até 07/11** vale **1 produto garantido**. Ele soma com as faixas: quem destrava já fica a 1 pedido da Estreia. **Nunca é anunciado no grupo**, para quem já vende não se sentir injustiçada; tudo acontece no 1x1 pela ferramenta de disparo (mensagens **A1 a A5** no Kit)." },
           { titulo: "Como o Destrave conversa com cada uma", texto: "Dois grupos, duas conversas. **Parou, mas já vendeu antes** (A1a): “sua cliente vai querer saber da Black, avisa ela primeiro”. **Nunca vendeu** (A1b): “te ajudo a fazer a primeira venda”. Nos dois casos, a tarefa é pequena e concreta: a **lista de 5** (5 mulheres que cuidam da pele) e a mensagem da semana pronta para mandar." },
           { titulo: "Cadência do Destrave", texto: "**01/11** convite + lista de 5 (A1a ou A1b) · **05/11** “já mandou pras 5?” (A2) para quem não destravou e parabéns (A4) para quem destravou · **07/11** último dia do Destrave (A3) · **09/11** parabéns de quem destravou entre 05 e 07/11 (A4) · **18/11** quem não destravou recebe a A5, puxando para a Estreia." },
@@ -89,7 +89,6 @@ BLACK_FRIDAY.frentes.representantes = {
             { titulo: "Fase 2 · Mês Black (01 a 19/11) = vender", texto: "Agora tem a melhor oferta do ano no ar, e o cupom de vocês ainda soma mais 10%. É a hora de chamar cada cliente no privado e pedir a venda." },
             { titulo: "Fase 3 · Semana Black (20 a 27/11) = fechar", texto: "Quem ficou em cima do muro decide na Black Friday." },
           ],
-          analogia: "**Pensa numa feira:** a cliente já passou pela sua barraca, já experimentou, já perguntou o preço. Na Black é o dia em que ela volta com a sacola. Se você não estiver lá chamando, ela compra na barraca do lado.",
         },
         cupom: {
           titulo: "2. O cupom soma com a Black",
@@ -220,7 +219,7 @@ BLACK_FRIDAY.frentes.representantes = {
           {
             data: "2026-11-10", titulo: "Terça, 10/11", tema: "véspera do 11.11",
             itens: [
-              { id: "r1110-pix", resp: ["Bea"], texto: "Pagar o Esquenta via Pix e organizar o envio dos produtos." },
+              { id: "r1110-pix", resp: ["Bea"], texto: "Pagar o Esquenta via Pix e organizar o envio dos produtos escolhidos por cada uma." },
               { id: "r1110-comemora", resp: ["Vitória"], texto: "Comemorar no grupo que os prêmios foram pagos. Isso dá credibilidade ao desafio na véspera do 11.11." },
             ],
           },
@@ -435,7 +434,6 @@ BLACK_FRIDAY.frentes.representantes = {
         },
         pontosAbertos: [
           { id: "ra-d3", texto: "Desenhar o Desafio 3 (Semana Black) e o critério de “ativa” dele." },
-          { id: "ra-produtos", texto: "Definir quais produtos entram nos prêmios e como é o envio." },
         ],
       },
     },
