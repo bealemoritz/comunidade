@@ -69,11 +69,11 @@ BLACK_FRIDAY.frentes.representantes = {
         },
         itens: [
           { titulo: "Vale a maior faixa batida", texto: "Só contam pedidos aprovados no cupom entre 01 e 19/11, sem cancelamento ou reembolso." },
-          { titulo: "Relâmpago 11.11 · R$ 150", texto: "As 5 representantes com mais pedidos no cupom no dia 11/11 ganham R$ 150 cada, além da faixa." },
+          { titulo: "Relâmpago 11.11 · R$ 150", texto: "As **3** representantes com mais pedidos no cupom no dia 11/11 ganham R$ 150 cada, além da faixa. Critério de desempate a definir." },
           { titulo: "Pagamento", texto: "Via Pix em 10/12. Os produtos são **à escolha da representante** e seguem por envio." },
           { titulo: "Destrave · só no privado", texto: "Bônus de ativação para quem **não vendeu no Esquenta** (16 a 31/10), mesmo que tenha vendido antes. A primeira venda no cupom **até 07/11** vale **1 produto garantido**. Ele soma com as faixas: quem destrava já fica a 1 pedido da Estreia. **Nunca é anunciado no grupo**, para quem já vende não se sentir injustiçada; tudo acontece no 1x1 pela ferramenta de disparo (mensagens **A1 a A5** no Kit)." },
           { titulo: "Como o Destrave conversa com cada uma", texto: "Dois grupos, duas conversas. **Parou, mas já vendeu antes** (A1a): “sua cliente vai querer saber da Black, avisa ela primeiro”. **Nunca vendeu** (A1b): “te ajudo a fazer a primeira venda”. Nos dois casos, a tarefa é pequena e concreta: a **lista de 5** (5 mulheres que cuidam da pele) e a mensagem da semana pronta para mandar." },
-          { titulo: "Cadência do Destrave", texto: "**01/11** convite + lista de 5 (A1a ou A1b) · **05/11** “já mandou pras 5?” (A2) para quem não destravou e parabéns (A4) para quem destravou · **07/11** último dia do Destrave (A3) · **09/11** parabéns de quem destravou entre 05 e 07/11 (A4) · **18/11** quem não destravou recebe a A5, puxando para a Estreia." },
+          { titulo: "Cadência do Destrave", texto: "**01/11** (depois das 13h) convite + lista de 5 (A1a ou A1b) · **05/11** “já mandou pras 5?” (A2) para quem não destravou e parabéns (A4) para quem destravou · **07/11** último dia do Destrave (A3) · **09/11** parabéns de quem destravou entre 05 e 07/11 (A4) · **18/11** quem não destravou recebe a A5, puxando para a Estreia." },
         ],
       },
 
@@ -151,7 +151,8 @@ BLACK_FRIDAY.frentes.representantes = {
             data: "2026-10-31", titulo: "Sábado, 31/10", tema: "último dia do Esquenta",
             itens: [
               { id: "r1031-r3", resp: ["Vitória"], hora: "10h", texto: "**R3** no grupo (último dia)." },
-              { id: "r1031-r4", resp: ["Vitória"], hora: "fim do dia", texto: "Teaser **R4** no grupo: só suspense, avisando o resultado e o novo desafio no dia seguinte." },
+              { id: "r1031-r4", resp: ["Vitória"], hora: "fim do dia", texto: "Teaser **R4** no grupo: só suspense, avisando o resultado e o novo desafio no dia seguinte. O vídeo do teaser está na [pasta no Drive](https://drive.google.com/drive/folders/1PKKW0jZR1ar6jAgA1hYhCcUpJrd7vpvb?hl=pt-br)." },
+              { id: "r1031-drive", resp: ["Vitória"], texto: "Baixar da [pasta no Drive](https://drive.google.com/drive/folders/1PKKW0jZR1ar6jAgA1hYhCcUpJrd7vpvb?hl=pt-br) a arte do Desafio 2 e a mini aula, para deixar prontas para domingo às 13h." },
               { id: "r1031-ferramenta", resp: ["Bea"], texto: "Organizar a ferramenta de disparo com duas listas para domingo: a **R7** (boas-vindas) para quem vendeu no Esquenta e o convite do Destrave para quem não vendeu, separado em dois: **A1a** (parou, mas já vendeu antes) e **A1b** (nunca vendeu)." },
             ],
           },
@@ -159,9 +160,9 @@ BLACK_FRIDAY.frentes.representantes = {
             data: "2026-11-01", titulo: "Domingo, 01/11", tema: "abre o Desafio 2",
             itens: [
               { id: "r1101-r5", resp: ["Vitória"], hora: "cedo", texto: "**R5** no grupo: resultado do Esquenta Black, com elogio nominal a quem bateu meta e sem números de venda." },
-              { id: "r1101-r6", resp: ["Vitória"], hora: "11h", texto: "**R6** no grupo: FASE 2 DA BLACK | DESAFIO 2 LIBERADO, com a arte e a mini aula de 5 min." },
-              { id: "r1101-r7", resp: ["Vitória"], hora: "depois das 11h", texto: "Enviar a **R7** (boas-vindas) 1:1 pela ferramenta de disparo para quem vendeu no Esquenta." },
-              { id: "r1101-destrave", resp: ["Vitória"], hora: "depois das 11h", texto: "Enviar o convite do Destrave (**A1a** ou **A1b**) 1:1 pela ferramenta de disparo para quem não vendeu no Esquenta." },
+              { id: "r1101-r6", resp: ["Vitória"], hora: "13h", texto: "Sai o Desafio 2: **arte do desafio + mensagem R6 + mini treinamento** explicando o Desafio 2, no grupo (FASE 2 DA BLACK | DESAFIO 2 LIBERADO). Arte e aula na [pasta no Drive](https://drive.google.com/drive/folders/1PKKW0jZR1ar6jAgA1hYhCcUpJrd7vpvb?hl=pt-br)." },
+              { id: "r1101-r7", resp: ["Vitória"], hora: "depois das 13h", texto: "Enviar a **R7** (boas-vindas) 1:1 pela ferramenta de disparo para quem vendeu no Esquenta." },
+              { id: "r1101-destrave", resp: ["Vitória"], hora: "depois das 13h", texto: "Enviar o convite do Destrave (**A1a** ou **A1b**) 1:1 pela ferramenta de disparo para quem não vendeu no Esquenta." },
             ],
           },
           {
@@ -234,7 +235,7 @@ BLACK_FRIDAY.frentes.representantes = {
           {
             data: "2026-11-13", titulo: "Sexta, 13/11",
             itens: [
-              { id: "r1113-apurar", resp: ["Bea", "Vitória"], texto: "Apurar o Relâmpago (o dado pode atrasar 1 dia) e anunciar as 5 vencedoras junto com os destaques da semana." },
+              { id: "r1113-apurar", resp: ["Bea", "Vitória"], texto: "Apurar o Relâmpago (o dado pode atrasar 1 dia) e anunciar as 3 vencedoras junto com os destaques da semana." },
             ],
           },
           {
@@ -296,15 +297,15 @@ BLACK_FRIDAY.frentes.representantes = {
           },
           {
             id: "R4", canal: "Grupo das representantes", quando: "sábado, 31/10, fim do dia", titulo: "Teaser: preparem-se",
-            texto: "Preparem-se! Amanhã, 01/11, bem cedinho, sai o resultado do Esquenta Black. E às 11h, abertura do novo desafio, com metas que começam bem pertinho. Tudo aqui no grupo. Fiquem de olho!",
+            texto: "Preparem-se! Amanhã, 01/11, bem cedinho, sai o resultado do Esquenta Black. E às 13h, abertura do novo desafio, com metas que começam bem pertinho. Tudo aqui no grupo. Fiquem de olho!",
           },
           {
             id: "R5", canal: "Grupo das representantes", quando: "domingo, 01/11, cedo", titulo: "Resultado do Esquenta Black",
-            texto: "Ato 1 encerrado! Um aplauso especial pra [NOMES], que bateram meta no Esquenta Black. E um obrigada pra todas que levaram a Le Moritz pras clientes nesses 16 dias. Agora começa a fase em que a cliente compra. Às 11h tem novidade aqui no grupo!",
+            texto: "Ato 1 encerrado! Um aplauso especial pra [NOMES], que bateram meta no Esquenta Black. E um obrigada pra todas que levaram a Le Moritz pras clientes nesses 16 dias. Agora começa a fase em que a cliente compra. Às 13h tem novidade aqui no grupo!",
           },
           {
-            id: "R6", canal: "Grupo das representantes", quando: "domingo, 01/11, 11h", titulo: "Fase 2 da Black | Desafio 2 liberado",
-            texto: "FASE 2 DA BLACK | DESAFIO 2 LIBERADO\n\nComeça hoje o Mês Black (01 a 19/11), e agora a primeira meta está no alcance de todas: 2 pedidos no cupom = R$ 50 + 1 produto. Depois vêm 5 pedidos = R$ 150 + 1 produto, 10 = R$ 350 + 2 produtos, 20 = R$ 750 + 3 produtos e 35 pedidos = R$ 1.300 + 4 produtos. Tudo isso além da sua comissão. E no 11.11 tem Relâmpago: as 5 que mais venderem no dia ganham R$ 150 cada.\n\nO desafio completo está na imagem aqui embaixo, e gravei uma mini aula de 5 minutos mostrando como chamar as clientes. Bora?",
+            id: "R6", canal: "Grupo das representantes", quando: "domingo, 01/11, 13h", titulo: "Fase 2 da Black | Desafio 2 liberado",
+            texto: "FASE 2 DA BLACK | DESAFIO 2 LIBERADO\n\nComeça hoje o Mês Black (01 a 19/11), e agora a primeira meta está no alcance de todas: 2 pedidos no cupom = R$ 50 + 1 produto. Depois vêm 5 pedidos = R$ 150 + 1 produto, 10 = R$ 350 + 2 produtos, 20 = R$ 750 + 3 produtos e 35 pedidos = R$ 1.300 + 4 produtos. Tudo isso além da sua comissão. E no 11.11 tem Relâmpago: as 3 que mais venderem no dia ganham R$ 150 cada.\n\nO desafio completo está na imagem aqui embaixo, e gravei uma mini aula de 5 minutos mostrando como chamar as clientes. Bora?",
           },
           {
             id: "R7", canal: "Privado", quando: "domingo, 01/11", titulo: "Boas-vindas (quem vendeu no Esquenta)",
@@ -312,7 +313,7 @@ BLACK_FRIDAY.frentes.representantes = {
           },
           {
             id: "R8", canal: "Grupo das representantes", quando: "segunda, 09/11", titulo: "Relâmpago 11.11",
-            texto: "Quarta é 11.11, o dia mais forte de compras online antes da Black Friday. E tem RELÂMPAGO: as 5 representantes com mais pedidos no cupom no dia 11/11 ganham R$ 150 cada, além da faixa do Mês Black. A mensagem da semana é toda pensada pro 11.11. Comecem a avisar as clientes desde já: quarta tem novidade.",
+            texto: "Quarta é 11.11, o dia mais forte de compras online antes da Black Friday. E tem RELÂMPAGO: as 3 representantes com mais pedidos no cupom no dia 11/11 ganham R$ 150 cada, além da faixa do Mês Black. A mensagem da semana é toda pensada pro 11.11. Comecem a avisar as clientes desde já: quarta tem novidade.",
           },
           {
             id: "R9", canal: "Grupo das representantes", quando: "quarta, 11/11", titulo: "Dia do Relâmpago",
@@ -331,11 +332,11 @@ BLACK_FRIDAY.frentes.representantes = {
             texto: "Fechamento da semana! Um aplauso pra [NOMES], que [motivo concreto: chegaram na Estreia, subiram de faixa, chamaram cada cliente]. E pra quem fez a primeira venda da Black essa semana: bem-vinda ao jogo! Semana que vem é a vez de vocês.",
           },
           {
-            id: "A1a", canal: "Privado · Destrave", quando: "domingo, 01/11, depois das 11h", titulo: "Convite: parou, mas já vendeu antes",
+            id: "A1a", canal: "Privado · Destrave", quando: "domingo, 01/11, depois das 13h", titulo: "Convite: parou, mas já vendeu antes",
             texto: "Oi, [NOME]! Tenho um convite só pra você. A Black da Le Moritz começou, e as suas clientes vão comprar com desconto de qualquer jeito: melhor que seja com você. Fazendo 1 venda com o seu cupom [CUPOM] até 07/11, você destrava 1 produto Le Moritz de presente, além da comissão. E com 2 vendas você já entra na primeira faixa do desafio. Pensa em 5 clientes que já compraram com você e manda pra elas a mensagem que eu te envio aqui embaixo. Topa?",
           },
           {
-            id: "A1b", canal: "Privado · Destrave", quando: "domingo, 01/11, depois das 11h", titulo: "Convite: nunca vendeu",
+            id: "A1b", canal: "Privado · Destrave", quando: "domingo, 01/11, depois das 13h", titulo: "Convite: nunca vendeu",
             texto: "Oi, [NOME]! Tenho um convite só pra você. Fazendo a sua primeira venda com o cupom [CUPOM] até 07/11, você ganha 1 produto Le Moritz de presente, além da comissão. E eu te ajudo: anota 5 mulheres que você conhece que cuidam da pele e manda pra cada uma a mensagem que eu te envio aqui embaixo. Com a Black no ar e o seu cupom somando 10%, é o momento mais fácil do ano pra começar. Me conta quando mandar?",
           },
           {
@@ -433,6 +434,7 @@ BLACK_FRIDAY.frentes.representantes = {
           ],
         },
         pontosAbertos: [
+          { id: "ra-desempate", texto: "Definir o critério de desempate do Relâmpago 11.11." },
           { id: "ra-d3", texto: "Desenhar o Desafio 3 (Semana Black) e o critério de “ativa” dele." },
         ],
       },

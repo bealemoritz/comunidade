@@ -165,16 +165,17 @@ BLACK_FRIDAY.frentes.embaixadoras = {
             data: "2026-10-31", titulo: "Sábado, 31/10", tema: "último dia do Esquenta",
             itens: [
               { id: "1031-m5", resp: ["Thau"], hora: "10h", texto: "**M5** no grupo de avisos (último dia)." },
-              { id: "1031-suspense", resp: ["Thau"], hora: "fim do dia", texto: "Teaser **M6** no grupo de avisos: só suspense, avisando o resultado e a abertura do novo desafio no dia seguinte." },
-              { id: "1031-m7", resp: ["Bea"], texto: "Organizar a ferramenta de disparo com a **M9** (boas-vindas) para a Thau enviar no domingo, depois das 11h." },
+              { id: "1031-suspense", resp: ["Thau"], hora: "fim do dia", texto: "Teaser **M6** no grupo de avisos: só suspense, avisando o resultado e a abertura do novo desafio no dia seguinte. O vídeo do teaser está na [pasta no Drive](https://drive.google.com/drive/folders/1PKKW0jZR1ar6jAgA1hYhCcUpJrd7vpvb?hl=pt-br)." },
+              { id: "1031-drive", resp: ["Thau"], texto: "Baixar da [pasta no Drive](https://drive.google.com/drive/folders/1PKKW0jZR1ar6jAgA1hYhCcUpJrd7vpvb?hl=pt-br) a arte do Desafio 2 e a mini aula, para deixar prontas para domingo às 13h." },
+              { id: "1031-m7", resp: ["Bea"], texto: "Organizar a ferramenta de disparo com a **M9** (boas-vindas) para a Thau enviar no domingo, depois das 13h." },
             ],
           },
           {
             data: "2026-11-01", titulo: "Domingo, 01/11", tema: "abre o Desafio 2",
             itens: [
               { id: "1101-resultado", resp: ["Thau"], hora: "cedo", texto: "**M7** no grupo de avisos: resultado do Esquenta Black." },
-              { id: "1101-liberado", resp: ["Thau"], hora: "11h", texto: "**M8** no grupo de avisos: FASE 2 DA BLACK | DESAFIO 2 LIBERADO, com o desafio em imagem e a mini aula gravada de 5 min." },
-              { id: "1101-m7", resp: ["Thau"], hora: "depois das 11h", texto: "Enviar a **M9** (boas-vindas) 1:1 pela ferramenta de disparo." },
+              { id: "1101-liberado", resp: ["Thau"], hora: "13h", texto: "Sai o Desafio 2: **arte do desafio + mensagem M8 + mini treinamento** explicando o Desafio 2, no grupo de avisos (FASE 2 DA BLACK | DESAFIO 2 LIBERADO). Arte e aula na [pasta no Drive](https://drive.google.com/drive/folders/1PKKW0jZR1ar6jAgA1hYhCcUpJrd7vpvb?hl=pt-br)." },
+              { id: "1101-m7", resp: ["Thau"], hora: "depois das 13h", texto: "Enviar a **M9** (boas-vindas) 1:1 pela ferramenta de disparo." },
             ],
           },
           {
@@ -306,14 +307,14 @@ BLACK_FRIDAY.frentes.embaixadoras = {
           },
           {
             id: "M6", canal: "Grupo de avisos", quando: "sábado, 31/10, fim do dia", titulo: "Teaser: preparem-se",
-            texto: "Preparem-se! Amanhã, 01/11, bem cedinho ([X]h), sai o resultado do Esquenta Black. E às 11h, abertura do novo desafio. Tudo aqui no nosso grupo. Fiquem de olho!",
+            texto: "Preparem-se! Amanhã, 01/11, bem cedinho ([X]h), sai o resultado do Esquenta Black. E às 13h, abertura do novo desafio. Tudo aqui no nosso grupo. Fiquem de olho!",
           },
           {
             id: "M7", canal: "Grupo de avisos", quando: "domingo, 01/11, cedo", titulo: "Resultado do Esquenta Black",
-            texto: "Ato 1 encerrado, e que ato! Em 16 dias vocês fizeram [X] stories e [X] reels falando da Le Moritz. Um aplauso especial pra [NOMES], que não faltaram um dia sequer. Concluíram o Desafio 1 e seguem na disputa pelos prêmios finais: [NOMES]. As seguidoras de vocês viram a marca todos os dias, criaram confiança, e agora estão prontas pra comprar. Às 11h tem novidade aqui no grupo!",
+            texto: "Ato 1 encerrado, e que ato! Em 16 dias vocês fizeram [X] stories e [X] reels falando da Le Moritz. Um aplauso especial pra [NOMES], que não faltaram um dia sequer. Concluíram o Desafio 1 e seguem na disputa pelos prêmios finais: [NOMES]. As seguidoras de vocês viram a marca todos os dias, criaram confiança, e agora estão prontas pra comprar. Às 13h tem novidade aqui no grupo!",
           },
           {
-            id: "M8", canal: "Grupo de avisos", quando: "domingo, 01/11, 11h", titulo: "Fase 2 da Black | Desafio 2 liberado",
+            id: "M8", canal: "Grupo de avisos", quando: "domingo, 01/11, 13h", titulo: "Fase 2 da Black | Desafio 2 liberado",
             texto: "FASE 2 DA BLACK | DESAFIO 2 LIBERADO\n\nComeça hoje o Mês Black (01 a 19/11), e agora o prêmio é por venda: 3 pedidos no cupom = R$ 70, 6 = R$ 200, 12 = R$ 500, 25 = R$ 1.000 e 50 pedidos = R$ 3.000. Pra receber, basta ter 2 reels no período marcando a @lemoritz_oficial, com o cupom na fala e na legenda. E no 11.11 tem Relâmpago: as 5 que mais venderem no dia ganham R$ 200 cada.\n\nO desafio completo está na imagem aqui embaixo, e gravei uma mini aula de 5 minutos explicando tudo. Terça, 03/11, às 20h, tem live tira-dúvidas comigo. Bora?",
           },
           {

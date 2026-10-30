@@ -144,16 +144,17 @@ BLACK_FRIDAY.frentes.afiliadas = {
             data: "2026-10-31", titulo: "Sábado, 31/10", tema: "último dia do Esquenta",
             itens: [
               { id: "a1031-m4", resp: ["Letícia"], hora: "10h", texto: "**M4** no grupo de avisos (último dia)." },
-              { id: "a1031-m5", resp: ["Letícia"], hora: "fim do dia", texto: "Teaser **M5**: só suspense, avisando o resultado e o novo desafio no dia seguinte." },
-              { id: "a1031-agendar", resp: ["Bea"], texto: "Organizar a ferramenta de disparo com a **M8** (boas-vindas) para a Letícia enviar no domingo, depois das 11h." },
+              { id: "a1031-m5", resp: ["Letícia"], hora: "fim do dia", texto: "Teaser **M5**: só suspense, avisando o resultado e o novo desafio no dia seguinte. O vídeo do teaser está na [pasta no Drive](https://drive.google.com/drive/folders/1PKKW0jZR1ar6jAgA1hYhCcUpJrd7vpvb?hl=pt-br)." },
+              { id: "a1031-drive", resp: ["Letícia"], texto: "Baixar da [pasta no Drive](https://drive.google.com/drive/folders/1PKKW0jZR1ar6jAgA1hYhCcUpJrd7vpvb?hl=pt-br) a arte do Desafio 2 e a mini aula, para deixar prontas para domingo às 13h." },
+              { id: "a1031-agendar", resp: ["Bea"], texto: "Organizar a ferramenta de disparo com a **M8** (boas-vindas) para a Letícia enviar no domingo, depois das 13h." },
             ],
           },
           {
             data: "2026-11-01", titulo: "Domingo, 01/11", tema: "abre o Desafio 2",
             itens: [
               { id: "a1101-m6", resp: ["Letícia"], hora: "cedo", texto: "**M6** no grupo de avisos: resultado do Esquenta Black." },
-              { id: "a1101-m7", resp: ["Letícia"], hora: "11h", texto: "**M7**: FASE 2 DA BLACK | DESAFIO 2 LIBERADO, com a arte, a mini aula e o tutorial de autorização de anúncio." },
-              { id: "a1101-m8", resp: ["Letícia"], hora: "depois das 11h", texto: "Enviar a **M8** (boas-vindas) 1:1 pela ferramenta de disparo." },
+              { id: "a1101-m7", resp: ["Letícia"], hora: "13h", texto: "Sai o Desafio 2: **arte do desafio + mensagem M7 + mini treinamento** explicando o Desafio 2, no grupo de avisos (FASE 2 DA BLACK | DESAFIO 2 LIBERADO), junto com o tutorial de autorização de anúncio. Arte e aula na [pasta no Drive](https://drive.google.com/drive/folders/1PKKW0jZR1ar6jAgA1hYhCcUpJrd7vpvb?hl=pt-br)." },
+              { id: "a1101-m8", resp: ["Letícia"], hora: "depois das 13h", texto: "Enviar a **M8** (boas-vindas) 1:1 pela ferramenta de disparo." },
             ],
           },
           {
@@ -281,14 +282,14 @@ BLACK_FRIDAY.frentes.afiliadas = {
           },
           {
             id: "M5", canal: "Grupo de avisos", quando: "sábado, 31/10, fim do dia", titulo: "Teaser: preparem-se",
-            texto: "Preparem-se! Amanhã, 01/11, bem cedinho, sai o resultado do Esquenta Black. Às 11h abre o Desafio 2, e ele muda o jogo: agora quem vende ganha. Fiquem de olho aqui no grupo!",
+            texto: "Preparem-se! Amanhã, 01/11, bem cedinho, sai o resultado do Esquenta Black. Às 13h abre o Desafio 2, e ele muda o jogo: agora quem vende ganha. Fiquem de olho aqui no grupo!",
           },
           {
             id: "M6", canal: "Grupo de avisos", quando: "domingo, 01/11, cedo", titulo: "Resultado do Esquenta Black",
-            texto: "Ato 1 encerrado! Em 16 dias vocês fizeram [X] vídeos de Le Moritz no TikTok. Um aplauso para quem fechou o Esquenta numa meta: [NOMES]. Todo esse conteúdo ensinou o TikTok a mostrar a Le Moritz pra quem tem interesse. Agora essas pessoas estão prontas pra comprar. Às 11h tem novidade aqui no grupo!",
+            texto: "Ato 1 encerrado! Em 16 dias vocês fizeram [X] vídeos de Le Moritz no TikTok. Um aplauso para quem fechou o Esquenta numa meta: [NOMES]. Todo esse conteúdo ensinou o TikTok a mostrar a Le Moritz pra quem tem interesse. Agora essas pessoas estão prontas pra comprar. Às 13h tem novidade aqui no grupo!",
           },
           {
-            id: "M7", canal: "Grupo de avisos", quando: "domingo, 01/11, 11h", titulo: "Fase 2 da Black | Desafio 2 liberado",
+            id: "M7", canal: "Grupo de avisos", quando: "domingo, 01/11, 13h", titulo: "Fase 2 da Black | Desafio 2 liberado",
             texto: "FASE 2 DA BLACK | DESAFIO 2 LIBERADO\n\nComeça hoje o Mês Black (01 a 19/11), e agora o prêmio é por VENDA. Contam os itens vendidos entre 01 e 19/11 pelos vídeos que você postar a partir de hoje e pelas suas lives nesse período (venda de vídeo antigo não conta): 3 itens = R$ 70, 8 = R$ 200, 15 = R$ 400, 30 = R$ 800, 60 = R$ 1.200 e 100 = R$ 1.500. Cada Stick Pés vendido vale 2 itens!\n\nE tem mais: no 11.11, as 5 que mais venderem no dia ganham R$ 200 cada. E toda semana o vídeo que mais vender vira o Vídeo de Ouro: destaque aqui no grupo e prioridade no anúncio pago da Le Moritz.\n\nPra receber: pelo menos 6 vídeos no período, aplicando o produto, e a autorização de anúncio ligada. Por quê? Porque o seu vídeo que vende vira anúncio, e a Le Moritz paga pra ele chegar em mais gente.\n\nA arte do desafio, a mini aula de 5 minutos e o tutorial da autorização estão aqui embaixo. Terça, 03/11, às 21h, tem live tira-dúvidas. Bora vender?",
           },
           {

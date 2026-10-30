@@ -39,7 +39,7 @@
 
   const esc = s => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
   // **negrito** e \n viram HTML; o resto é escapado
-  const fmt = s => esc(s).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>").replace(/\n/g, "<br>");
+  const fmt = s => esc(s).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>").replace(/\[([^\]]+)\]\((https:\/\/[^\s)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>').replace(/\n/g, "<br>");
   const semMarcas = s => String(s ?? "").replace(/\*\*/g, "");
 
   const parseData = iso => { const [y, m, d] = iso.split("-").map(Number); return new Date(y, m - 1, d); };

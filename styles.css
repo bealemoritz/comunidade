@@ -1028,3 +1028,6 @@ button.docs-btn { cursor: pointer; }
 .bf-recolher[open] > summary::after { content: "↑"; }
 .bf-recolher .bf-esconder, .bf-recolher[open] .bf-ver { display: none; }
 .bf-recolher[open] .bf-esconder { display: inline; }
+
+/* links dentro dos textos da Black (checklist, regras, mensagens) */
+#view-black-friday a[href^="https"], .bf-check-texto a, .info-item a { color: inherit; text-decoration: underline; text-underline-offset: 2px; font-weight: 600; }
