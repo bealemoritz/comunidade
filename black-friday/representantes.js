@@ -33,7 +33,7 @@ BLACK_FRIDAY.frentes.representantes = {
     ativaIntro: "Concorre quem participou **ativamente das 3 fases**. Como as representantes vendem no 1x1 e não postam, ser ativa é vender:",
     ativa: [
       { fase: "Desafio 1 · Esquenta", texto: "Pelo menos 1 pedido no cupom entre 16 e 31/10." },
-      { fase: "Desafio 2 · Mês Black", texto: "Bateu a Estreia (2 pedidos no cupom entre 01 e 19/11)." },
+      { fase: "Desafio 2 · Mês Black", texto: "Bateu a primeira meta (2 pedidos no cupom entre 01 e 19/11)." },
       { fase: "Desafio 3 · Semana Black", texto: "Critério a definir com o desenho do Desafio 3.", pendente: true },
     ],
   },
@@ -55,21 +55,21 @@ BLACK_FRIDAY.frentes.representantes = {
 
       // 01 · REGRAS E PRÊMIOS
       regras: {
-        intro: "No Desafio 2 a escada começa **no alcance de todas**. No Esquenta a primeira meta era 8 cupons; agora são 2. Toda faixa continua pagando **dinheiro + produto**, além da comissão de sempre. O Mês Black (01 a 19/11) é quando a cliente compra: a melhor oferta do ano está no ar e o cupom ainda soma 10% em cima.",
+        intro: "No Desafio 2 a escada começa **no alcance de todas**. No Esquenta a primeira meta era 8 cupons; agora são 2. Toda meta continua pagando **dinheiro + produto**, além da comissão de sempre. O Mês Black (01 a 19/11) é quando a cliente compra: a melhor oferta do ano está no ar e o cupom ainda soma 10% em cima.",
         titulo: "Regras do Desafio 2 · Mês Black · 01 a 19/11",
         tabela: {
-          colunas: ["Faixa", "Pedidos no cupom", "Prêmio (além da comissão)"],
+          colunas: ["Pedidos no cupom", "Prêmio (além da comissão)"],
           linhas: [
-            ["Estreia", "2", "R$ 50 + 1 produto"],
-            ["Bronze", "5", "R$ 150 + 1 produto"],
-            ["Prata", "10", "R$ 350 + 2 produtos"],
-            ["Ouro", "20", "R$ 750 + 3 produtos"],
-            ["Black Diamond", "35", "R$ 1.300 + 4 produtos"],
+            ["2", "R$ 50 + 1 produto"],
+            ["5", "R$ 150 + 1 produto"],
+            ["10", "R$ 350 + 2 produtos"],
+            ["20", "R$ 750 + 3 produtos"],
+            ["35", "R$ 1.300 + 4 produtos"],
           ],
         },
         itens: [
-          { titulo: "Vale a maior faixa batida", texto: "Só contam pedidos aprovados no cupom entre 01 e 19/11, sem cancelamento ou reembolso." },
-          { titulo: "Relâmpago 11.11 · R$ 150", texto: "As **3** representantes com mais pedidos no cupom no dia 11/11 ganham R$ 150 cada, além da faixa. Critério de desempate a definir." },
+          { titulo: "Vale a maior meta batida", texto: "Só contam pedidos aprovados no cupom entre 01 e 19/11, sem cancelamento ou reembolso." },
+          { titulo: "Relâmpago 11.11 · R$ 150", texto: "As **3** representantes com mais pedidos no cupom no dia 11/11 ganham R$ 150 cada, além da meta. Em caso de empate, leva quem tiver mais pedidos no cupom desde o início do Desafio 1 (16/10) até o fim do dia 11/11." },
           { titulo: "Pagamento", texto: "Via Pix em 10/12. Os produtos são **à escolha da representante** e seguem por envio." },
           { titulo: "Destrave · só no privado", texto: "Bônus de ativação para quem **não vendeu no Esquenta** (16 a 31/10), mesmo que tenha vendido antes. A primeira venda no cupom **até 07/11** vale **1 produto garantido**. Ele soma com as faixas: quem destrava já fica a 1 pedido da Estreia. **Nunca é anunciado no grupo**, para quem já vende não se sentir injustiçada; tudo acontece no 1x1 pela ferramenta de disparo (mensagens **A1 a A5** no Kit)." },
           { titulo: "Como o Destrave conversa com cada uma", texto: "Dois grupos, duas conversas. **Parou, mas já vendeu antes** (A1a): “sua cliente vai querer saber da Black, avisa ela primeiro”. **Nunca vendeu** (A1b): “te ajudo a fazer a primeira venda”. Nos dois casos, a tarefa é pequena e concreta: a **lista de 5** (5 mulheres que cuidam da pele) e a mensagem da semana pronta para mandar." },
@@ -281,7 +281,7 @@ BLACK_FRIDAY.frentes.representantes = {
 
       // 05 · KIT DE COMUNICAÇÃO
       kit: {
-        intro: "Mensagens prontas para copiar e ajustar. [NOME], [CUPOM], [X], [FAIXA] e [VALOR] são trocados no envio. Os emojis ficam a critério de quem envia. As mensagens **A1 a A5** são do Destrave: só no privado, nunca no grupo.",
+        intro: "Mensagens prontas para copiar e ajustar. [NOME], [CUPOM], [X] e [VALOR] são trocados no envio. Os emojis ficam a critério de quem envia. As mensagens **A1 a A5** são do Destrave: só no privado, nunca no grupo.",
         mensagens: [
           {
             id: "R1", canal: "Grupo das representantes", quando: "sexta, 30/10, 10h", titulo: "Ofertas no ar",
@@ -313,7 +313,7 @@ BLACK_FRIDAY.frentes.representantes = {
           },
           {
             id: "R8", canal: "Grupo das representantes", quando: "segunda, 09/11", titulo: "Relâmpago 11.11",
-            texto: "Quarta é 11.11, o dia mais forte de compras online antes da Black Friday. E tem RELÂMPAGO: as 3 representantes com mais pedidos no cupom no dia 11/11 ganham R$ 150 cada, além da faixa do Mês Black. A mensagem da semana é toda pensada pro 11.11. Comecem a avisar as clientes desde já: quarta tem novidade.",
+            texto: "Quarta é 11.11, o dia mais forte de compras online antes da Black Friday. E tem RELÂMPAGO: as 3 representantes com mais pedidos no cupom no dia 11/11 ganham R$ 150 cada, além da meta do Mês Black. Empatou? Leva quem vendeu mais desde o Desafio 1 até o fim do dia 11/11. A mensagem da semana é toda pensada pro 11.11. Comecem a avisar as clientes desde já: quarta tem novidade.",
           },
           {
             id: "R9", canal: "Grupo das representantes", quando: "quarta, 11/11", titulo: "Dia do Relâmpago",
@@ -325,15 +325,15 @@ BLACK_FRIDAY.frentes.representantes = {
           },
           {
             id: "R10", canal: "Privado", quando: "quintas-feiras e 18/11", titulo: "Proximidade",
-            texto: "[NOME], olha só: faltam só [X] pedidos pra você chegar na faixa [FAIXA] e garantir R$ [VALOR] + produto! Chama as clientes que responderam e ainda não fecharam, lembrando que o seu cupom soma com a Black. Quer que eu te mande a mensagem pronta?",
+            texto: "[NOME], olha só: faltam só [X] pedidos pra você chegar na próxima meta e garantir R$ [VALOR] + produto! Chama as clientes que responderam e ainda não fecharam, lembrando que o seu cupom soma com a Black. Quer que eu te mande a mensagem pronta?",
           },
           {
             id: "R11", canal: "Grupo das representantes", quando: "sextas-feiras", titulo: "Destaques da semana",
-            texto: "Fechamento da semana! Um aplauso pra [NOMES], que [motivo concreto: chegaram na Estreia, subiram de faixa, chamaram cada cliente]. E pra quem fez a primeira venda da Black essa semana: bem-vinda ao jogo! Semana que vem é a vez de vocês.",
+            texto: "Fechamento da semana! Um aplauso pra [NOMES], que [motivo concreto: bateram a primeira meta, subiram de meta, chamaram cada cliente]. E pra quem fez a primeira venda da Black essa semana: bem-vinda ao jogo! Semana que vem é a vez de vocês.",
           },
           {
             id: "A1a", canal: "Privado · Destrave", quando: "domingo, 01/11, depois das 13h", titulo: "Convite: parou, mas já vendeu antes",
-            texto: "Oi, [NOME]! Tenho um convite só pra você. A Black da Le Moritz começou, e as suas clientes vão comprar com desconto de qualquer jeito: melhor que seja com você. Fazendo 1 venda com o seu cupom [CUPOM] até 07/11, você destrava 1 produto Le Moritz de presente, além da comissão. E com 2 vendas você já entra na primeira faixa do desafio. Pensa em 5 clientes que já compraram com você e manda pra elas a mensagem que eu te envio aqui embaixo. Topa?",
+            texto: "Oi, [NOME]! Tenho um convite só pra você. A Black da Le Moritz começou, e as suas clientes vão comprar com desconto de qualquer jeito: melhor que seja com você. Fazendo 1 venda com o seu cupom [CUPOM] até 07/11, você destrava 1 produto Le Moritz de presente, além da comissão. E com 2 vendas você já bate a primeira meta do desafio. Pensa em 5 clientes que já compraram com você e manda pra elas a mensagem que eu te envio aqui embaixo. Topa?",
           },
           {
             id: "A1b", canal: "Privado · Destrave", quando: "domingo, 01/11, depois das 13h", titulo: "Convite: nunca vendeu",
@@ -349,16 +349,16 @@ BLACK_FRIDAY.frentes.representantes = {
           },
           {
             id: "A4", canal: "Privado · Destrave", quando: "quinta, 05/11 e segunda, 09/11", titulo: "Parabéns, você destravou",
-            texto: "[NOME], você destravou! Seu produto de presente está garantido. E agora falta só 1 pedido pra você entrar na Estreia: R$ 50 + mais 1 produto. Quem comprou com você tem amiga, irmã, mãe: pede indicação!",
+            texto: "[NOME], você destravou! Seu produto de presente está garantido. E agora falta só 1 pedido pra você bater a primeira meta: R$ 50 + mais 1 produto. Quem comprou com você tem amiga, irmã, mãe: pede indicação!",
           },
           {
-            id: "A5", canal: "Privado", quando: "quarta, 18/11", titulo: "Ainda dá pra entrar na Estreia",
-            texto: "[NOME], amanhã é o último dia do Mês Black. Com 2 vendas no seu cupom [CUPOM] você entra na Estreia e ganha R$ 50 + 1 produto. Manda a mensagem da semana pra 5 clientes hoje, que eu torço daqui!",
+            id: "A5", canal: "Privado", quando: "quarta, 18/11", titulo: "Ainda dá pra bater a primeira meta",
+            texto: "[NOME], amanhã é o último dia do Mês Black. Com 2 vendas no seu cupom [CUPOM] você bate a primeira meta e ganha R$ 50 + 1 produto. Manda a mensagem da semana pra 5 clientes hoje, que eu torço daqui!",
           },
         ],
         enquetes: [
           { id: "E1", quando: "03/11", pergunta: "Qual oferta da Black as suas clientes mais pedem?", opcoes: ["Progressivo", "Kit Cliente Premium", "Kit Transformação Instantânea"] },
-          { id: "E2", quando: "quartas", pergunta: "Qual faixa você vai buscar no Mês Black?", opcoes: ["Estreia", "Bronze", "Prata", "Ouro", "Black Diamond"] },
+          { id: "E2", quando: "quartas", pergunta: "Qual meta você vai buscar no Mês Black?", opcoes: ["2 pedidos", "5 pedidos", "10 pedidos", "20 pedidos", "35 pedidos"] },
           { id: "E3", quando: "11/11", pergunta: "Em que horário suas clientes mais respondem?", opcoes: ["Manhã", "Almoço", "Noite"] },
           { id: "E4", quando: "18/11", pergunta: "O que mais convenceu suas clientes?", opcoes: ["O cupom somando", "O preço do kit", "Indicação de quem já usa", "A rotina completa"] },
         ],
@@ -434,7 +434,6 @@ BLACK_FRIDAY.frentes.representantes = {
           ],
         },
         pontosAbertos: [
-          { id: "ra-desempate", texto: "Definir o critério de desempate do Relâmpago 11.11." },
           { id: "ra-d3", texto: "Desenhar o Desafio 3 (Semana Black) e o critério de “ativa” dele." },
         ],
       },

@@ -69,8 +69,8 @@ BLACK_FRIDAY.frentes.embaixadoras = {
         },
         itens: [
           { titulo: "Vale a maior meta batida", texto: "Só contam pedidos aprovados, sem cancelamento ou reembolso." },
-          { titulo: "Condição para receber", texto: "Pelo menos **2 reels** no período marcando @lemoritz_oficial, com o cupom na fala e na legenda." },
-          { titulo: "Relâmpago 11.11", texto: "As 5 embaixadoras com mais pedidos no dia 11/11 ganham R$ 200 cada." },
+          { titulo: "Condição para receber", texto: "Pelo menos **2 reels** no período marcando @lemoritz_oficial, com o cupom na fala e na legenda. Cada reel com **mínimo de 1 min e máximo de 3 min**, e o **produto precisa aparecer**." },
+          { titulo: "Relâmpago 11.11", texto: "As 5 embaixadoras com mais pedidos no dia 11/11 ganham R$ 200 cada. Em caso de empate, leva quem tiver mais pedidos no cupom desde o início do Desafio 1 (16/10) até o fim do dia 11/11." },
           { titulo: "Pagamento", texto: "Via Pix em 10/12." },
           { titulo: "Quem participa", texto: "As afiliadas que rodam em Meta Ads ficam só no desafio das afiliadas." },
         ],
@@ -323,7 +323,7 @@ BLACK_FRIDAY.frentes.embaixadoras = {
           },
           {
             id: "M10", canal: "Grupo de avisos", quando: "segunda, 09/11", titulo: "Relâmpago 11.11",
-            texto: "Quarta é 11.11, o dia mais forte de compras online antes da Black Friday. E tem RELÂMPAGO: as 5 embaixadoras com mais pedidos no cupom no dia 11/11 ganham R$ 200 cada, além do prêmio por meta do Mês Black. O roteiro da semana é todo pensado pro 11.11. Comecem a avisar as seguidoras desde já: quarta tem novidade.",
+            texto: "Quarta é 11.11, o dia mais forte de compras online antes da Black Friday. E tem RELÂMPAGO: as 5 embaixadoras com mais pedidos no cupom no dia 11/11 ganham R$ 200 cada, além do prêmio por meta do Mês Black. Empatou? Leva quem vendeu mais desde o Desafio 1 até o fim do dia 11/11. O roteiro da semana é todo pensado pro 11.11. Comecem a avisar as seguidoras desde já: quarta tem novidade.",
           },
           {
             id: "M11", canal: "Grupo de avisos", quando: "quarta, 11/11", titulo: "Dia do Relâmpago",
