@@ -315,11 +315,11 @@ BLACK_FRIDAY.frentes.embaixadoras = {
           },
           {
             id: "M8", canal: "Grupo de avisos", quando: "domingo, 01/11, 13h", titulo: "Fase 2 da Black | Desafio 2 liberado",
-            texto: "FASE 2 DA BLACK | DESAFIO 2 LIBERADO\n\nComeça hoje o Mês Black (01 a 19/11), e agora o prêmio é por venda: 3 pedidos no cupom = R$ 70, 6 = R$ 200, 12 = R$ 500, 25 = R$ 1.000 e 50 pedidos = R$ 3.000. Pra receber, basta ter 2 reels no período marcando a @lemoritz_oficial, com o cupom na fala e na legenda. E no 11.11 tem Relâmpago: as 5 que mais venderem no dia ganham R$ 200 cada.\n\nO desafio completo está na imagem aqui embaixo, e gravei uma mini aula de 5 minutos explicando tudo. Terça, 03/11, às 20h, tem live tira-dúvidas comigo. Bora?",
+            texto: "FASE 2 DA BLACK | DESAFIO 2 LIBERADO\n\nComeça hoje o Mês Black (01 a 19/11), e agora o prêmio é por venda: 3 pedidos no cupom = R$ 70, 6 = R$ 200, 12 = R$ 500, 25 = R$ 1.000 e 50 pedidos = R$ 3.000. Pra receber, basta ter 2 reels no período marcando a @lemoritz_oficial, com o cupom na fala e na legenda. E no 11.11 tem Relâmpago: as 5 que mais venderem no dia ganham R$ 200 cada.\n\nO desafio completo está na imagem aqui embaixo, e gravei uma mini aula de 5 minutos explicando tudo. Terça, 03/11, tem live tira-dúvidas comigo, e o horário eu aviso aqui no grupo no próprio dia. Bora?",
           },
           {
             id: "M9", canal: "Privado", quando: "domingo, 01/11", titulo: "Boas-vindas ao Desafio 2",
-            texto: "[NOME], começou o Mês Black! Sua primeira meta: 3 pedidos com o seu cupom [CUPOM] = R$ 70. Dica de ouro: em todo story, fala que o seu cupom soma mais 10% com a Black e deixa ele escrito grande na tela. Na live de terça, 03/11, às 20h, a gente mostra tudo isso na prática. Conta comigo pro que precisar!",
+            texto: "[NOME], começou o Mês Black! Sua primeira meta: 3 pedidos com o seu cupom [CUPOM] = R$ 70. Dica de ouro: em todo story, fala que o seu cupom soma mais 10% com a Black e deixa ele escrito grande na tela. Na live de terça, 03/11, a gente mostra tudo isso na prática. Conta comigo pro que precisar!",
           },
           {
             id: "M10", canal: "Grupo de avisos", quando: "segunda, 09/11", titulo: "Relâmpago 11.11",
