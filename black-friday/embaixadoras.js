@@ -173,7 +173,7 @@ BLACK_FRIDAY.frentes.embaixadoras = {
           {
             data: "2026-11-01", titulo: "Domingo, 01/11", tema: "abre o Desafio 2",
             itens: [
-              { id: "1101-resultado", resp: ["Thau"], hora: "cedo", texto: "**M7** no grupo de avisos: resultado do Esquenta Black." },
+              { id: "1101-resultado", resp: ["Thau"], hora: "9h", texto: "**M7** no grupo de avisos: resultado do Esquenta Black." },
               { id: "1101-liberado", resp: ["Thau"], hora: "13h", texto: "Sai o Desafio 2: **arte do desafio + mensagem M8 + mini treinamento** explicando o Desafio 2, no grupo de avisos (FASE 2 DA BLACK | DESAFIO 2 LIBERADO). Arte e aula na [pasta no Drive](https://drive.google.com/drive/folders/1PKKW0jZR1ar6jAgA1hYhCcUpJrd7vpvb?hl=pt-br)." },
               { id: "1101-m7", resp: ["Thau"], hora: "depois das 13h", texto: "Enviar a **M9** (boas-vindas) 1:1 pela ferramenta de disparo." },
             ],
@@ -310,7 +310,7 @@ BLACK_FRIDAY.frentes.embaixadoras = {
             texto: "Preparem-se! Amanhã, 01/11, bem cedinho ([X]h), sai o resultado do Esquenta Black. E às 13h, abertura do novo desafio. Tudo aqui no nosso grupo. Fiquem de olho!",
           },
           {
-            id: "M7", canal: "Grupo de avisos", quando: "domingo, 01/11, cedo", titulo: "Resultado do Esquenta Black",
+            id: "M7", canal: "Grupo de avisos", quando: "domingo, 01/11, 9h", titulo: "Resultado do Esquenta Black",
             texto: "Ato 1 encerrado, e que ato! Em 16 dias vocês fizeram [X] stories e [X] reels falando da Le Moritz. Um aplauso especial pra [NOMES], que não faltaram um dia sequer. Concluíram o Desafio 1 e seguem na disputa pelos prêmios finais: [NOMES]. As seguidoras de vocês viram a marca todos os dias, criaram confiança, e agora estão prontas pra comprar. Às 13h tem novidade aqui no grupo!",
           },
           {
