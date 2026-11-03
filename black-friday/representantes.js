@@ -71,9 +71,9 @@ BLACK_FRIDAY.frentes.representantes = {
           { titulo: "Vale a maior meta batida", texto: "Só contam pedidos aprovados no cupom entre 01 e 19/11, sem cancelamento ou reembolso." },
           { titulo: "Relâmpago 11.11 · R$ 150", texto: "As **3** representantes com mais pedidos no cupom no dia 11/11 ganham R$ 150 cada, além da meta. Em caso de empate, leva quem tiver mais pedidos no cupom desde o início do Desafio 1 (16/10) até o fim do dia 11/11." },
           { titulo: "Pagamento", texto: "Via Pix em 10/12. Os produtos são **à escolha da representante** e seguem por envio." },
-          { titulo: "Destrave · só no privado", texto: "Bônus de ativação para quem **não vendeu no Esquenta** (16 a 31/10), mesmo que tenha vendido antes. A primeira venda no cupom **até 07/11** vale **1 produto garantido**. Ele soma com as faixas: quem destrava já fica a 1 pedido da Estreia. **Nunca é anunciado no grupo**, para quem já vende não se sentir injustiçada; tudo acontece no 1x1 pela ferramenta de disparo (mensagens **A1 a A5** no Kit)." },
+          { titulo: "Destrave · só no privado", texto: "Bônus de ativação para quem **não vendeu no Esquenta** (16 a 31/10), mesmo que tenha vendido antes. A primeira venda no cupom **até 19/11** (fim do Desafio 2) vale **1 produto garantido**. Ele **acumula com qualquer faixa** batida no Desafio 2, e quem destrava já fica a 1 pedido da Estreia. No 1x1 ele é apresentado como um benefício exclusivo dela, para incentivar as vendas no Desafio 2, e vai em destaque na mensagem. **Nunca é anunciado no grupo**, para quem já vende não se sentir injustiçada; tudo acontece no 1x1 pela ferramenta de disparo (mensagens **A1 a A5** no Kit)." },
           { titulo: "Como o Destrave conversa com cada uma", texto: "Dois grupos, duas conversas. **Parou, mas já vendeu antes** (A1a): “sua cliente vai querer saber da Black, avisa ela primeiro”. **Nunca vendeu** (A1b): “te ajudo a fazer a primeira venda”. Nos dois casos, a tarefa é pequena e concreta: a **lista de 5** (5 mulheres que cuidam da pele) e a mensagem da semana pronta para mandar." },
-          { titulo: "Cadência do Destrave", texto: "**01/11** (depois das 13h) convite + lista de 5 (A1a ou A1b) · **05/11** “já mandou pras 5?” (A2) para quem não destravou e parabéns (A4) para quem destravou · **07/11** último dia do Destrave (A3) · **09/11** parabéns de quem destravou entre 05 e 07/11 (A4) · **18/11** quem não destravou recebe a A5, puxando para a Estreia." },
+          { titulo: "Cadência do Destrave", texto: "**03/11** convite do Destrave em destaque, junto com a abertura do Desafio 2 no 1x1 · **05/11** “já mandou pras 5?” (A2) para quem não destravou e parabéns (A4) para quem destravou · **09/11** parabéns de quem destravou desde 05/11 (A4) · **18/11** véspera do último dia do Destrave (A3) para quem ainda não destravou · **19/11** último dia do Destrave e do Desafio 2." },
         ],
       },
 
@@ -176,6 +176,7 @@ BLACK_FRIDAY.frentes.representantes = {
             itens: [
               { id: "r1103-e1", resp: ["Vitória"], texto: "Enquete **E1** no grupo." },
               { id: "r1103-plantao", resp: ["Vitória"], hora: "19h às 20h", texto: "Plantão tira-dúvidas no grupo: avisar de manhã e responder ao vivo no horário." },
+              { id: "r1103-abertura", resp: ["Vitória"], texto: "Enviar as 2 mensagens de abertura do Desafio 2 pela ferramenta de disparo. Quem não vendeu no Esquenta recebe o **Destrave em destaque** na 2ª mensagem (válido até 19/11 e acumulando com as faixas)." },
             ],
           },
           {
@@ -188,13 +189,6 @@ BLACK_FRIDAY.frentes.representantes = {
             data: "2026-11-05", titulo: "Quinta, 05/11",
             itens: [
               { id: "r1105-destrave2", resp: ["Vitória"], texto: "Enviar a **A4** e a **A2** 1:1 pela ferramenta de disparo." },
-            ],
-          },
-          {
-            data: "2026-11-07", titulo: "Sábado, 07/11",
-            itens: [
-              { id: "r1107-ferramenta", resp: ["Bea"], hora: "manhã", texto: "Organizar a ferramenta de disparo com a **A3** (último dia do Destrave) para quem ainda não vendeu." },
-              { id: "r1107-destrave3", resp: ["Vitória"], hora: "tarde", texto: "Enviar a **A3** 1:1 pela ferramenta de disparo." },
             ],
           },
           {
@@ -213,7 +207,7 @@ BLACK_FRIDAY.frentes.representantes = {
             data: "2026-11-09", titulo: "Segunda, 09/11",
             itens: [
               { id: "r1109-r8", resp: ["Vitória"], texto: "Mensagem da semana 2 (11.11) e anúncio do Relâmpago (**R8**) no grupo." },
-              { id: "r1109-destrave", resp: ["Bea"], hora: "manhã", texto: "Fechar a lista do Destrave: conferir na Inbazz quem fez a primeira venda entre 05 e 07/11 e organizar a ferramenta de disparo com a **A4**." },
+              { id: "r1109-destrave", resp: ["Bea"], hora: "manhã", texto: "Fechar a lista do Destrave: conferir na Inbazz quem fez a primeira venda desde 05/11 e organizar a ferramenta de disparo com a **A4**." },
               { id: "r1109-a4", resp: ["Vitória"], hora: "tarde", texto: "Enviar a **A4** (parabéns do Destrave) 1:1 pela ferramenta de disparo." },
             ],
           },
@@ -247,8 +241,8 @@ BLACK_FRIDAY.frentes.representantes = {
           {
             data: "2026-11-18", titulo: "Quarta, 18/11",
             itens: [
-              { id: "r1118-ferramenta", resp: ["Bea"], hora: "manhã", texto: "Organizar a ferramenta de disparo com duas listas: o “faltam X pedidos” (**R10**) para todas até 30% da próxima faixa e a **A5** para quem ainda não vendeu no Mês Black." },
-              { id: "r1118-envio", resp: ["Vitória"], texto: "Enviar as duas listas 1:1 pela ferramenta de disparo." },
+              { id: "r1118-ferramenta", resp: ["Bea"], hora: "manhã", texto: "Organizar a ferramenta de disparo com duas listas: o “faltam X pedidos” (**R10**) para todas até 30% da próxima faixa, a **A3** (véspera do último dia do Destrave) para quem não vendeu no Esquenta e ainda não destravou, e a **A5** para as demais que ainda não venderam no Mês Black." },
+              { id: "r1118-envio", resp: ["Vitória"], texto: "Enviar as listas 1:1 pela ferramenta de disparo." },
             ],
           },
           {
@@ -333,22 +327,22 @@ BLACK_FRIDAY.frentes.representantes = {
           },
           {
             id: "A1a", canal: "Privado · Destrave", quando: "domingo, 01/11, depois das 13h", titulo: "Convite: parou, mas já vendeu antes",
-            texto: "Oi, [NOME]! Tenho um convite só pra você. A Black da Le Moritz começou, e as suas clientes vão comprar com desconto de qualquer jeito: melhor que seja com você. Fazendo 1 venda com o seu cupom [CUPOM] até 07/11, você destrava 1 produto Le Moritz de presente, além da comissão. E com 2 vendas você já bate a primeira meta do desafio. Pensa em 5 clientes que já compraram com você e manda pra elas a mensagem que eu te envio aqui embaixo. Topa?",
+            texto: "Oi, [NOME]! Tenho um convite só pra você. A Black da Le Moritz começou, e as suas clientes vão comprar com desconto de qualquer jeito: melhor que seja com você. Fazendo 1 venda com o seu cupom [CUPOM] até 19/11, você destrava 1 produto Le Moritz de presente, além da comissão e acumulando com as faixas do desafio. E com 2 vendas você já bate a primeira meta do desafio. Pensa em 5 clientes que já compraram com você e manda pra elas a mensagem que eu te envio aqui embaixo. Topa?",
           },
           {
             id: "A1b", canal: "Privado · Destrave", quando: "domingo, 01/11, depois das 13h", titulo: "Convite: nunca vendeu",
-            texto: "Oi, [NOME]! Tenho um convite só pra você. Fazendo a sua primeira venda com o cupom [CUPOM] até 07/11, você ganha 1 produto Le Moritz de presente, além da comissão. E eu te ajudo: anota 5 mulheres que você conhece que cuidam da pele e manda pra cada uma a mensagem que eu te envio aqui embaixo. Com a Black no ar e o seu cupom somando 10%, é o momento mais fácil do ano pra começar. Me conta quando mandar?",
+            texto: "Oi, [NOME]! Tenho um convite só pra você. Fazendo a sua primeira venda com o cupom [CUPOM] até 19/11, você ganha 1 produto Le Moritz de presente, além da comissão e acumulando com as faixas do desafio. E eu te ajudo: anota 5 mulheres que você conhece que cuidam da pele e manda pra cada uma a mensagem que eu te envio aqui embaixo. Com a Black no ar e o seu cupom somando 10%, é o momento mais fácil do ano pra começar. Me conta quando mandar?",
           },
           {
             id: "A2", canal: "Privado · Destrave", quando: "quinta, 05/11", titulo: "Já mandou pras 5?",
-            texto: "[NOME], passando pra saber: conseguiu mandar a mensagem pras suas 5? Se alguém respondeu e ficou em dúvida, me chama que eu te ajudo a fechar. O seu produto de presente está te esperando até sábado, 07/11.",
+            texto: "[NOME], passando pra saber: conseguiu mandar a mensagem pras suas 5? Se alguém respondeu e ficou em dúvida, me chama que eu te ajudo a fechar. O seu produto de presente está te esperando até o fim do desafio, 19/11.",
           },
           {
-            id: "A3", canal: "Privado · Destrave", quando: "sábado, 07/11", titulo: "Último dia do Destrave",
-            texto: "[NOME], hoje é o último dia pra destravar o seu produto de presente: 1 venda com o cupom [CUPOM] e ele é seu. E quarta tem 11.11, o dia mais forte antes da Black Friday. Quer que eu te mande uma mensagem pronta pra mandar agora?",
+            id: "A3", canal: "Privado · Destrave", quando: "quarta, 18/11", titulo: "Véspera do último dia do Destrave",
+            texto: "[NOME], amanhã, 19/11, é o último dia pra destravar o seu produto de presente: 1 venda com o cupom [CUPOM] e ele é seu. E com 2 vendas você ainda bate a primeira meta, R$ 50 + 1 produto, somando com o Destrave. Quer que eu te mande uma mensagem pronta pra mandar agora?",
           },
           {
-            id: "A4", canal: "Privado · Destrave", quando: "quinta, 05/11 e segunda, 09/11", titulo: "Parabéns, você destravou",
+            id: "A4", canal: "Privado · Destrave", quando: "quinta, 05/11, segunda, 09/11 e depois a cada nova destravada", titulo: "Parabéns, você destravou",
             texto: "[NOME], você destravou! Seu produto de presente está garantido. E agora falta só 1 pedido pra você bater a primeira meta: R$ 50 + mais 1 produto. Quem comprou com você tem amiga, irmã, mãe: pede indicação!",
           },
           {
@@ -426,7 +420,7 @@ BLACK_FRIDAY.frentes.representantes = {
           colunas: ["O que a gente acompanha", "Onde", "Quando"],
           linhas: [
             ["Pedidos no cupom e faixa de cada representante", "Inbazz (grupo representantes)", "Segunda, quarta e sexta"],
-            ["Destrave: quem não vendeu no Esquenta e fez a 1ª venda até 07/11", "Inbazz (lista do Esquenta × vendas de novembro)", "04/11, 07/11 e 09/11"],
+            ["Destrave: quem não vendeu no Esquenta e fez a 1ª venda até 19/11", "Inbazz (lista do Esquenta × vendas de novembro)", "04/11, 09/11 e 18/11"],
             ["Ativação: quantas das 144 paradas venderam no Mês Black", "Inbazz", "Toda sexta"],
             ["Quem está até 3 pedidos da próxima faixa", "Inbazz", "Quarta"],
             ["Ranking do dia 11/11", "Inbazz", "13/11"],
