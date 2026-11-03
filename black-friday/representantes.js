@@ -45,8 +45,8 @@ BLACK_FRIDAY.frentes.representantes = {
       id: "d1",
       nome: "Esquenta Black",
       fase: 0,
-      resumo: "encerra 31/10",
-      emConstrucao: "O Desafio 1 vai até 31/10: metas de cupons além da comissão (8 cupons = R$ 100 + 1 produto, 12 = R$ 250 + 2, 20 = R$ 400 + 3, 30 = R$ 700 + 4). O resultado sai no domingo, 01/11, junto com a abertura do Desafio 2.",
+      resumo: "encerrado",
+      resultado: "Encerrado em 31/10. Metas de cupons além da comissão (8 cupons = R$ 100 + 1 produto, 12 = R$ 250 + 2, 20 = R$ 400 + 3, 30 = R$ 700 + 4): 5 representantes bateram meta e 29 venderam no período. Quem bateu cada meta, pedidos por dia e vendas no [relatório do Desafio 1 · representantes](https://bealemoritz.github.io/desafio1-black/representantes/).",
     },
     {
       id: "d2",

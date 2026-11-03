@@ -43,8 +43,8 @@ BLACK_FRIDAY.frentes.embaixadoras = {
       id: "d1",
       nome: "Esquenta Black",
       fase: 0,
-      resumo: "em curso",
-      emConstrucao: "O Desafio 1 está em curso. O plano dele entra aqui em breve.",
+      resumo: "encerrado",
+      resultado: "Encerrado em 31/10: 36 embaixadoras concluíram (story nos 16 dias + 3 reels) e recebem R$ 300; Top 3 em vendas entre quem concluiu. Lista completa, validações manuais e vendas no [relatório do Desafio 1 · embaixadoras](https://bealemoritz.github.io/desafio1-black/).",
     },
     {
       id: "d2",

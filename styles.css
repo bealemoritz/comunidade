@@ -794,6 +794,8 @@ a.nav-card, a.nav-card:visited { text-decoration: none; color: var(--ink); }
   background: var(--white); font-size: 14.5px; line-height: 1.5;
 }
 .bf-construcao svg { flex: none; margin-top: 1px; }
+.bf-resultado { border-style: solid; }
+.bf-resultado a { color: inherit; font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
 .bf-construcao b {
   display: block; font-family: var(--label-font); font-weight: 500; font-size: 11px;
   letter-spacing: .08em; text-transform: uppercase; margin-bottom: 3px;

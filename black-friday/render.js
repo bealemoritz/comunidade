@@ -658,6 +658,10 @@
       acompanhamento: blocoAcompanhamento(f, k),
     };
     el.innerHTML = `
+      ${f.resultado ? `
+        <div class="bf-construcao bf-resultado" style="--frente:${f.cor}" role="note">
+          <p><b>Resultado</b>${fmt(f.resultado)}</p>
+        </div>` : ""}
       ${f.emConstrucao ? `
         <div class="bf-construcao" style="--frente:${f.cor}" role="note">
           ${OBRA_ICON}
