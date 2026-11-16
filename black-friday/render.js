@@ -660,7 +660,7 @@
     el.innerHTML = `
       ${f.resultado ? `
         <div class="bf-construcao bf-resultado" style="--frente:${f.cor}" role="note">
-          <p><b>Resultado</b>${fmt(f.resultado)}</p>
+          <p><b>${esc(f.resultadoTitulo || "Resultado")}</b>${fmt(f.resultado)}</p>
         </div>` : ""}
       ${f.emConstrucao ? `
         <div class="bf-construcao" style="--frente:${f.cor}" role="note">

@@ -51,6 +51,8 @@ BLACK_FRIDAY.frentes.afiliadas = {
       id: "d2",
       nome: "Mês Black",
       fase: 1,
+      resultadoTitulo: "Relatório parcial",
+      resultado: "Parcial com dados do TikTok Shop até 14/11 (o desafio vai até 19/11): quem já bateu cada meta, quem está perto e o Relâmpago 11.11 no [relatório parcial do Desafio 2 · afiliadas](https://bealemoritz.github.io/desafio2-afiliadas/).",
 
       // 01 · REGRAS E PRÊMIOS
       regras: {
