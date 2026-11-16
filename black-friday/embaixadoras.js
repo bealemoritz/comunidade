@@ -50,6 +50,8 @@ BLACK_FRIDAY.frentes.embaixadoras = {
       id: "d2",
       nome: "Mês Black",
       fase: 1,
+      resultadoTitulo: "Relatório parcial",
+      resultado: "Parcial com dados da Inbazz até 16/11 (o desafio vai até 19/11): quem já bateu cada meta, quem ainda precisa dos 2 reels, quem está perto da próxima meta e o Relâmpago 11.11 no [relatório parcial do Desafio 2 · embaixadoras](https://bealemoritz.github.io/desafio1-black/desafio2/).",
       // mantém a chave de antes da divisão em desafios, pra não perder o que já foi marcado.
       chave: "embaixadoras",
 
