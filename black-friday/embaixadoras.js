@@ -265,7 +265,7 @@ BLACK_FRIDAY.frentes.embaixadoras = {
           {
             data: "2026-11-20", titulo: "Sexta, 20/11", tema: "abre a Semana Black",
             itens: [
-              { id: "1120-d3", resp: ["Bea"], texto: "Abre o Desafio 3 (checklist na aba do Desafio 3) e sai a parcial do Desafio 2." },
+              { id: "1120-d3", resp: ["Bea"], texto: "9h: resultado do Mês Black. 13h: abre o Desafio 3 com o vídeo de mini treinamento (checklist completo na aba do Desafio 3)." },
             ],
           },
           {
@@ -428,7 +428,7 @@ BLACK_FRIDAY.frentes.embaixadoras = {
         tabela: {
           colunas: ["O que fazer", "Prêmio"],
           linhas: [
-            ["**Missão de conteúdo:** 1 reel + story em pelo menos 5 dos 8 dias", "R$ 100"],
+            ["**Missão de conteúdo:** 1 reel + combo de stories em pelo menos 5 dos 8 dias", "R$ 100"],
             ["Missão + 3 pedidos aprovados no cupom", "+ R$ 100"],
             ["Missão + 6 pedidos", "+ R$ 300"],
             ["Missão + 10 pedidos", "+ R$ 500"],
@@ -436,8 +436,10 @@ BLACK_FRIDAY.frentes.embaixadoras = {
           ],
         },
         itens: [
-          { titulo: "Missão de conteúdo", texto: "**1 reel** entre 20 e 27/11, com o cupom na fala e na legenda, **mínimo de 1 min e máximo de 3 min**, e o **produto precisa aparecer**. E **story em pelo menos 5 dos 8 dias**, marcando @lemoritz_oficial. Não precisa ser todo dia: qualquer 5 dias da semana valem." },
-          { titulo: "Marcação: sem ela, não conta", texto: "**No story:** marcar @lemoritz_oficial no próprio story. **No reel:** usar o **Marcar pessoas** na hora de publicar e marcar @lemoritz_oficial. Escrever @lemoritz_oficial só na legenda é menção, não marcação, e a Inbazz não registra. Story ou reel que não aparecer na Inbazz só vale com print enviado no privado até sábado, 28/11, às 12h." },
+          { titulo: "Missão de conteúdo · reel", texto: "**1 reel** entre 20 e 27/11, **com você aparecendo e falando** do produto, o cupom na fala e na legenda, **mínimo de 1 min e máximo de 3 min**, e o **produto precisa aparecer**." },
+          { titulo: "Missão de conteúdo · combo de stories", texto: "Story em **pelo menos 5 dos 8 dias** (não precisa ser todo dia). Para o dia contar, é um **combo de pelo menos 3 stories** no dia, todos marcando @lemoritz_oficial, e em pelo menos 1 deles **você aparece falando** do produto ou da oferta, com o cupom. Story isolado, só foto do produto ou repost não contam como dia." },
+          { titulo: "Conteúdo de verdade", texto: "A missão premia criação de conteúdo. O time confere os reels e os stories, e conteúdo que não segue as regras acima não conta para a missão." },
+          { titulo: "Marcação: sem ela, não conta", texto: "**No story:** marcar @lemoritz_oficial no próprio story. **No reel:** usar o **Marcar pessoas** na hora de publicar e marcar @lemoritz_oficial. Escrever @lemoritz_oficial só na legenda é menção, não marcação, e a Inbazz não registra. Vale o que a Inbazz registrar." },
           { titulo: "Bônus de venda", texto: "Só para quem cumpriu a missão de conteúdo. Vale a **maior faixa batida**, sem somar as faixas. Contam pedidos aprovados no cupom de 20 a 27/11, sem cancelamento ou reembolso. Quem bate 20 pedidos recebe R$ 1.100 no total (R$ 100 da missão + R$ 1.000)." },
           { titulo: "Pagamento", texto: "Via Pix em 10/12, junto com o Desafio 2 e os prêmios finais." },
           { titulo: "Quem participa", texto: "As embaixadoras da lista do Esquenta (relatório do Desafio 1). Afiliadas do TikTok Shop participam só do desafio das afiliadas, para não duplicar." },
@@ -462,10 +464,10 @@ BLACK_FRIDAY.frentes.embaixadoras = {
       // 03 · LINHA DO TEMPO
       linhaDoTempo: {
         marcos: [
-          { data: "2026-11-20", titulo: "Desafio 3 liberado" },
+          { data: "2026-11-19", titulo: "Teaser: resultado e novo desafio" },
+          { data: "2026-11-20", titulo: "Resultado do Mês Black (9h) e Desafio 3 liberado (13h)" },
           { data: "2026-11-23", titulo: "Começa a Black Week" },
           { data: "2026-11-27", titulo: "Black Friday e último dia do Desafio 3" },
-          { data: "2026-11-28", titulo: "Prazo para prints de validação (12h)" },
           { data: "2026-12-10", titulo: "Pix do Desafio 2, do Desafio 3 e dos prêmios finais" },
         ],
         nota: "O Desafio 3 começa no dia seguinte ao fim do Mês Black e cobre o último fim de semana da Black November (até 22/11), a Black Week (23 a 27/11) e a Black Friday.",
@@ -478,72 +480,70 @@ BLACK_FRIDAY.frentes.embaixadoras = {
             secao: "Preparação",
             data: "2026-11-19", titulo: "Quinta, 19/11", tema: "véspera do Desafio 3",
             itens: [
-              { id: "d3-1119-arte", resp: ["Bea"], texto: "Arte do Desafio 3 com as regras, as faixas e o reforço da marcação (story marcando, reel com **Marcar pessoas**)." },
-              { id: "d3-1119-aprovar", resp: ["Bea"], texto: "Aprovar as mensagens **M14 a M20** e o roteiro do reel da semana." },
+              { id: "d3-1119-arte", resp: ["Bea"], texto: "Arte do Desafio 3 com as regras, as faixas e o reforço da marcação (combo de stories marcando, reel com **Marcar pessoas**)." },
+              { id: "d3-1119-video", resp: ["Bea"], texto: "Gravar o vídeo de mini treinamento do Desafio 3 (missão, combo de stories, marcação e bônus de venda)." },
+              { id: "d3-1119-aprovar", resp: ["Bea"], texto: "Aprovar as mensagens **M14 a M22** e o roteiro do reel da semana." },
+              { id: "d3-1119-teaser", resp: ["Thau"], hora: "fim do dia", texto: "**M14** no grupo de avisos: teaser com o horário do resultado e da abertura do novo desafio." },
+              { id: "d3-1119-final", resp: ["Bea"], hora: "00h01", texto: "Puxar o relatório final do Mês Black e montar a **M15** com os nomes." },
             ],
           },
           {
             secao: "Semana do Desafio 3",
-            data: "2026-11-20", titulo: "Sexta, 20/11", tema: "abre o Desafio 3",
+            data: "2026-11-20", titulo: "Sexta, 20/11", tema: "resultado do Mês Black e abre o Desafio 3",
             itens: [
-              { id: "d3-1120-m14", resp: ["Thau"], hora: "10h", texto: "**M14** no grupo de avisos com a arte: FASE 3 DA BLACK | DESAFIO 3 LIBERADO." },
+              { id: "d3-1120-m15", resp: ["Thau"], hora: "9h", texto: "**M15** no grupo de avisos: resultado do Mês Black." },
+              { id: "d3-1120-m14", resp: ["Thau"], hora: "13h", texto: "Sai o Desafio 3: **arte do desafio + mensagem M16 + vídeo de mini treinamento**, no grupo de avisos (FASE 3 DA BLACK | DESAFIO 3 LIBERADO)." },
               { id: "d3-1120-roteiro", resp: ["Thau"], hora: "logo depois", texto: "Mandar o roteiro do reel da semana no grupo de avisos." },
-              { id: "d3-1120-ferramenta", resp: ["Bea"], texto: "Organizar a ferramenta de disparo com a **M15** (boas-vindas), para todas da lista." },
-              { id: "d3-1120-m15", resp: ["Thau"], hora: "tarde", texto: "Enviar a **M15** 1:1 pela ferramenta de disparo." },
+              { id: "d3-1120-ferramenta", resp: ["Bea"], texto: "Organizar a ferramenta de disparo com a **M17** (boas-vindas), para todas da lista." },
+              { id: "d3-1120-m15b", resp: ["Thau"], hora: "depois das 13h", texto: "Enviar a **M17** 1:1 pela ferramenta de disparo." },
             ],
           },
           {
             data: "2026-11-22", titulo: "Domingo, 22/11", tema: "último dia da Black November",
             itens: [
-              { id: "d3-1122-m16", resp: ["Thau"], hora: "10h", texto: "**M16** no grupo de avisos: último dia da Black November e lembrete da marcação." },
+              { id: "d3-1122-m16", resp: ["Thau"], hora: "10h", texto: "**M18** no grupo de avisos: último dia da Black November e lembrete da marcação." },
             ],
           },
           {
             data: "2026-11-23", titulo: "Segunda, 23/11", tema: "começa a Black Week",
             itens: [
-              { id: "d3-1123-m17", resp: ["Thau"], hora: "10h", texto: "**M17** no grupo de avisos: começou a Black Week." },
+              { id: "d3-1123-m17", resp: ["Thau"], hora: "10h", texto: "**M19** no grupo de avisos: começou a Black Week." },
               { id: "d3-1123-e5", resp: ["Thau"], texto: "Enquete **E5**." },
-              { id: "d3-1123-parcial", resp: ["Bea"], texto: "Parcial na Inbazz: quem já tem reel, quantos dias de story e quantos pedidos. Conferir se tem reel com menção na legenda em vez de marcação." },
+              { id: "d3-1123-parcial", resp: ["Bea"], texto: "Parcial na Inbazz: quem já tem reel, quantos dias com 3 stories ou mais e quantos pedidos. Conferir se tem reel com menção na legenda em vez de marcação, e avisar no privado." },
             ],
           },
           {
             data: "2026-11-24", titulo: "Terça, 24/11",
             itens: [
-              { id: "d3-1124-ferramenta", resp: ["Bea"], texto: "Organizar a ferramenta de disparo com a **M18**: versão “missão” para quem ainda não tem o reel ou está com poucos dias de story, versão “bônus” para quem cumpriu ou vai cumprir a missão e está perto de uma faixa." },
+              { id: "d3-1124-ferramenta", resp: ["Bea"], texto: "Organizar a ferramenta de disparo com a **M20**: versão “missão” para quem ainda não tem o reel ou está com poucos dias de story, versão “bônus” para quem cumpriu ou vai cumprir a missão e está perto de uma faixa." },
             ],
           },
           {
             data: "2026-11-25", titulo: "Quarta, 25/11",
             itens: [
-              { id: "d3-1125-m18", resp: ["Thau"], texto: "Enviar a **M18** 1:1 pela ferramenta de disparo. Quarta é o último dia para quem tem só 2 dias de story ainda chegar a 5." },
+              { id: "d3-1125-m18", resp: ["Thau"], texto: "Enviar a **M20** 1:1 pela ferramenta de disparo. Quarta é o último dia para quem tem só 2 dias de combo ainda chegar a 5." },
             ],
           },
           {
             data: "2026-11-26", titulo: "Quinta, 26/11", tema: "véspera da Black Friday",
             itens: [
-              { id: "d3-1126-m19", resp: ["Thau"], hora: "10h", texto: "**M19** no grupo de avisos: amanhã é Black Friday." },
+              { id: "d3-1126-m19", resp: ["Thau"], hora: "10h", texto: "**M21** no grupo de avisos: amanhã é Black Friday." },
               { id: "d3-1126-destaques", resp: ["Thau"], hora: "tarde", texto: "Destaques da semana no grupo (mesmo formato da **M13**): elogio nominal a quem já cumpriu a missão, sem números de venda." },
             ],
           },
           {
             data: "2026-11-27", titulo: "Sexta, 27/11", tema: "Black Friday · último dia",
             itens: [
-              { id: "d3-1127-9h", resp: ["Thau"], hora: "9h", texto: "**M20**: é hoje." },
-              { id: "d3-1127-15h", resp: ["Thau"], hora: "15h", texto: "**M20**: metade do dia." },
-              { id: "d3-1127-20h", resp: ["Thau"], hora: "20h", texto: "**M20**: últimas horas e conferir a marcação." },
+              { id: "d3-1127-9h", resp: ["Thau"], hora: "9h", texto: "**M22**: é hoje." },
+              { id: "d3-1127-15h", resp: ["Thau"], hora: "15h", texto: "**M22**: metade do dia." },
+              { id: "d3-1127-20h", resp: ["Thau"], hora: "20h", texto: "**M22**: últimas horas e conferir a marcação." },
             ],
           },
           {
             secao: "Fechamento",
-            data: "2026-11-28", titulo: "Sábado, 28/11",
-            itens: [
-              { id: "d3-1128-prints", resp: ["Thau"], hora: "até 12h", texto: "Receber os prints de quem teve story ou reel sem registro na Inbazz e passar para a Bea validar." },
-            ],
-          },
-          {
             data: "2026-12-02", titulo: "Até quarta, 02/12",
             itens: [
-              { id: "d3-1202-apuracao", resp: ["Bea", "Thau"], texto: "Apuração do Desafio 3: missão (reel + 5 dias de story, com as validações manuais), pedidos sem cancelamento ou reembolso, faixa de cada uma." },
+              { id: "d3-1202-apuracao", resp: ["Bea", "Thau"], texto: "Apuração do Desafio 3: missão (reel com ela falando + 5 dias de combo, ou seja, 3 stories ou mais no dia, conferindo se ela aparece falando), pedidos sem cancelamento ou reembolso, faixa de cada uma." },
               { id: "d3-1202-ativas", resp: ["Bea"], texto: "Fechar quem foi ativa nas 3 fases e apurar os prêmios finais (Lemorita Black, Presença Black e Alcance Black)." },
               { id: "d3-1202-resultado", resp: ["Thau"], texto: "Mensagem de resultado do Desafio 3 e dos prêmios finais no grupo de avisos, com nomes e sem números de venda." },
             ],
@@ -562,38 +562,46 @@ BLACK_FRIDAY.frentes.embaixadoras = {
         intro: "Mensagens prontas para copiar e ajustar. [NOME], [CUPOM], [X] e [VALOR] são trocados no envio. Os emojis ficam a critério de quem envia. Toda mensagem reforça a marcação.",
         mensagens: [
           {
-            id: "M14", canal: "Grupo de avisos", quando: "sexta, 20/11, 10h", titulo: "Fase 3 da Black | Desafio 3 liberado",
-            texto: "FASE 3 DA BLACK | DESAFIO 3 LIBERADO\n\nComeça hoje a Semana Black (20 a 27/11), a reta final do Black November Awards. E dessa vez o desafio é criar e vender.\n\n1. Missão de conteúdo = R$ 100: 1 reel na semana + story em pelo menos 5 dos 8 dias, marcando a @lemoritz_oficial.\n2. Bônus de venda, pra quem cumprir a missão: 3 pedidos no cupom = + R$ 100, 6 = + R$ 300, 10 = + R$ 500 e 20 = + R$ 1.000.\n\nAtenção à marcação, porque sem ela não conta: no story, marquem a @lemoritz_oficial. No reel, usem o “Marcar pessoas” na hora de publicar. Escrever @lemoritz_oficial só na legenda não vale, o sistema não registra.\n\nE quem postar pelo menos 1 reel ou story em 3 dias segue na disputa pelos prêmios finais. O desafio completo está na imagem aqui embaixo. Bora fechar a Black?",
+            id: "M14", canal: "Grupo de avisos", quando: "quinta, 19/11, fim do dia", titulo: "Teaser: preparem-se",
+            texto: "Acabou o Mês Black, e amanhã tem dois momentos aqui no grupo! Às 9h sai o resultado do Desafio 2. E às 13h abre o Desafio 3, a reta final do Black November Awards. Não vou contar nada ainda, mas dessa vez vai ser diferente. Fiquem de olho!",
           },
           {
-            id: "M15", canal: "Privado", quando: "sexta, 20/11", titulo: "Boas-vindas ao Desafio 3",
-            texto: "[NOME], começou a Semana Black! São 8 dias e a missão é simples: 1 reel + story em 5 dias marcando a @lemoritz_oficial = R$ 100. E se vender 3 pedidos no seu cupom [CUPOM], ganha mais R$ 100 em cima. Uma dica importante: no reel, marca a gente pelo “Marcar pessoas”, não só na legenda, senão não conta. Quer um roteiro pra gravar o seu?",
+            id: "M15", canal: "Grupo de avisos", quando: "sexta, 20/11, 9h", titulo: "Resultado do Mês Black",
+            texto: "Ato 2 encerrado! No Mês Black vocês fizeram [X] reels e [X] stories falando da Le Moritz, e [X] embaixadoras bateram meta.\n\nUm aplauso pra quem bateu meta e postou os 2 reels:\n\n[NOMES, com @, por ordem alfabética]\n\nE pras 5 do Relâmpago 11.11, que ganharam R$ 200 cada:\n\n[NOMES]\n\nA lista final é confirmada depois da conferência de cancelamentos e reembolsos, e os prêmios são pagos no dia 10/12.\n\nÀs 13h abre aqui no grupo o Desafio 3, a Semana Black. É a última fase, e vale muito a pena. Fiquem de olho!",
           },
           {
-            id: "M16", canal: "Grupo de avisos", quando: "domingo, 22/11, 10h", titulo: "Último dia da Black November",
-            texto: "Hoje é o último dia da Black November! Ótimo dia pra um story com as ofertas e o cupom de vocês. Lembrando que cada dia com story marcando a @lemoritz_oficial conta pra missão: são 5 dias de 8, e a semana já está andando.",
+            id: "M16", canal: "Grupo de avisos", quando: "sexta, 20/11, 13h", titulo: "Fase 3 da Black | Desafio 3 liberado",
+            texto: "FASE 3 DA BLACK | DESAFIO 3 LIBERADO\n\nComeça hoje a Semana Black (20 a 27/11), a reta final do Black November Awards. E dessa vez o desafio é criar e vender.\n\n1. Missão de conteúdo = R$ 100: 1 reel na semana + combo de stories em pelo menos 5 dos 8 dias. Combo é pelo menos 3 stories no dia, marcando a @lemoritz_oficial, com você aparecendo e falando em pelo menos um deles. No reel, você também aparece falando.\n2. Bônus de venda, pra quem cumprir a missão: 3 pedidos no cupom = + R$ 100, 6 = + R$ 300, 10 = + R$ 500 e 20 = + R$ 1.000.\n\nAtenção à marcação, porque sem ela não conta: no story, marquem a @lemoritz_oficial. No reel, usem o “Marcar pessoas” na hora de publicar. Escrever @lemoritz_oficial só na legenda não vale, o sistema não registra.\n\nE quem postar pelo menos 1 reel ou story em 3 dias segue na disputa pelos prêmios finais. O desafio completo está na imagem aqui embaixo, e gravei um vídeo curtinho explicando tudo. Bora fechar a Black?",
           },
           {
-            id: "M17", canal: "Grupo de avisos", quando: "segunda, 23/11, 10h", titulo: "Começou a Black Week",
+            id: "M17", canal: "Privado", quando: "sexta, 20/11, depois das 13h", titulo: "Boas-vindas ao Desafio 3",
+            texto: "[NOME], começou a Semana Black! São 8 dias e a missão é: 1 reel + combo de stories (pelo menos 3 no dia, você aparecendo e falando em um deles) em 5 dias, marcando a @lemoritz_oficial = R$ 100. E se vender 3 pedidos no seu cupom [CUPOM], ganha mais R$ 100 em cima. Uma dica importante: no reel, marca a gente pelo “Marcar pessoas”, não só na legenda, senão não conta. Quer um roteiro pra gravar o seu?",
+          },
+          {
+            id: "M18", canal: "Grupo de avisos", quando: "domingo, 22/11, 10h", titulo: "Último dia da Black November",
+            texto: "Hoje é o último dia da Black November! Ótimo dia pra um story com as ofertas e o cupom de vocês. Lembrando que cada dia com combo de stories (pelo menos 3, marcando a @lemoritz_oficial e você aparecendo em um deles) conta pra missão: são 5 dias de 8, e a semana já está andando.",
+          },
+          {
+            id: "M19", canal: "Grupo de avisos", quando: "segunda, 23/11, 10h", titulo: "Começou a Black Week",
             texto: "Começou a Black Week! Até sexta, a seguidora que ficou em cima do muro vai decidir, e o conteúdo de vocês é o empurrão que falta. Quem ainda não postou o reel da semana, o roteiro está aqui em cima. E confiram a marcação: reel com “Marcar pessoas”, story marcando a @lemoritz_oficial.",
           },
           {
-            id: "M18", canal: "Privado", quando: "quarta, 25/11", titulo: "Proximidade",
+            id: "M20", canal: "Privado", quando: "quarta, 25/11", titulo: "Proximidade",
             partes: [
-              { rotulo: "Missão", texto: "[NOME], passando pra te lembrar: falta [o reel / X dias de story] pra você garantir os R$ 100 da missão do Desafio 3. Dá tempo até sexta, 27/11, dia da Black Friday! Quer que eu te mande o roteiro do reel?" },
+              { rotulo: "Missão", texto: "[NOME], passando pra te lembrar: falta [o reel / X dias de combo de stories] pra você garantir os R$ 100 da missão do Desafio 3. Dá tempo até sexta, 27/11, dia da Black Friday! Quer que eu te mande o roteiro do reel?" },
               { rotulo: "Bônus", texto: "[NOME], olha só: faltam só [X] pedidos pra você ganhar mais R$ [VALOR] no Desafio 3! A Black Friday é sexta, e um story lembrando que o seu cupom [CUPOM] vale até lá costuma resolver. Bora?" },
             ],
           },
           {
-            id: "M19", canal: "Grupo de avisos", quando: "quinta, 26/11, 10h", titulo: "Véspera da Black Friday",
-            texto: "Amanhã é Black Friday e o último dia do Desafio 3! Hoje é dia de avisar as seguidoras: amanhã é a última chance da Black, e o cupom de vocês vale. Quem ainda não fechou os 5 dias de story, hoje e amanhã contam. E quem ainda não postou o reel, dá tempo!",
+            id: "M21", canal: "Grupo de avisos", quando: "quinta, 26/11, 10h", titulo: "Véspera da Black Friday",
+            texto: "Amanhã é Black Friday e o último dia do Desafio 3! Hoje é dia de avisar as seguidoras: amanhã é a última chance da Black, e o cupom de vocês vale. Quem ainda não fechou os 5 dias de combo de stories, hoje e amanhã contam. E quem ainda não postou o reel, dá tempo!",
           },
           {
-            id: "M20", canal: "Grupo de avisos", quando: "sexta, 27/11", titulo: "Black Friday · último dia",
+            id: "M22", canal: "Grupo de avisos", quando: "sexta, 27/11", titulo: "Black Friday · último dia",
             partes: [
               { rotulo: "9h", texto: "É HOJE! Black Friday e último dia do Desafio 3. Story logo cedo, de novo na hora do almoço e de noite, que é quando elas compram. Cupom falado, escrito na tela e a @lemoritz_oficial marcada." },
-              { rotulo: "15h", texto: "Metade do dia! Quem ainda precisa de story ou do reel pra fechar a missão, é agora." },
-              { rotulo: "20h", texto: "Últimas horas do Desafio 3! Último story com a oferta e o cupom. E confiram: o reel está com a gente marcada pelo “Marcar pessoas”? Se algo não subiu, mandem o print no privado até amanhã, 12h." },
+              { rotulo: "15h", texto: "Metade do dia! Quem ainda precisa do combo de stories ou do reel pra fechar a missão, é agora." },
+              { rotulo: "20h", texto: "Últimas horas do Desafio 3! Último story com a oferta e o cupom. E confiram: o reel está com a gente marcada pelo “Marcar pessoas”? Menção só na legenda não conta." },
             ],
           },
         ],
@@ -603,9 +611,8 @@ BLACK_FRIDAY.frentes.embaixadoras = {
         reforco: {
           titulo: "Como marcar para contar",
           itens: [
-            { titulo: "Story", texto: "Marcar @lemoritz_oficial no próprio story. Cupom falado e escrito na tela." },
+            { titulo: "Combo de stories", texto: "Pelo menos 3 stories no dia, todos marcando @lemoritz_oficial no próprio story, e em pelo menos 1 você aparece falando do produto ou da oferta. Cupom falado e escrito na tela." },
             { titulo: "Reel", texto: "Na hora de publicar, tocar em **Marcar pessoas** e marcar @lemoritz_oficial. Cupom falado e repetido na legenda. Escrever @lemoritz_oficial só na legenda é menção, e a Inbazz não registra." },
-            { titulo: "Se não aparecer", texto: "Mandar print no privado até sábado, 28/11, às 12h." },
             { titulo: "Identificação de publicidade", texto: "Seguir a orientação dos treinamentos em todos os posts." },
           ],
         },
