@@ -449,7 +449,7 @@ BLACK_FRIDAY.frentes.embaixadoras = {
       // 02 · NARRATIVA CENTRAL
       narrativa: {
         intro: "Toda comunicação do Desafio 3 bate em duas teclas:",
-        teclas: ["Vocês são criadoras: o conteúdo já vale prêmio", "É a reta final: quem estava em cima do muro decide agora"],
+        teclas: ["É a melhor época do ano: tá todo mundo esperando pela Semana Black e pronto pra comprar", "É a reta final: quem estava em cima do muro decide agora"],
         porQue: {
           titulo: "Por que agora é a hora",
           subtitulo: "A lógica dos desafios, contada para elas.",
@@ -482,6 +482,7 @@ BLACK_FRIDAY.frentes.embaixadoras = {
             itens: [
               { id: "d3-1119-arte", resp: ["Bea"], texto: "Arte do Desafio 3 com as regras, as faixas e o reforço da marcação (story marcando, reel com **Marcar pessoas**) e a exigência de aparecer falando." },
               { id: "d3-1119-video", resp: ["Bea"], texto: "Gravar o vídeo de mini treinamento do Desafio 3 (missão, aparecer falando, marcação e bônus de venda)." },
+              { id: "d3-1119-canva", resp: ["Thau"], texto: "Organizar a apresentação no Canva do Desafio 3 com a missão de conteúdo, as metas de bônus e as regras." },
               { id: "d3-1119-aprovar", resp: ["Bea"], texto: "Aprovar as mensagens **M14 a M22** e o roteiro do reel da semana." },
               { id: "d3-1119-teaser", resp: ["Thau"], hora: "fim do dia", texto: "**M14** no grupo de avisos: teaser com o horário do resultado e da abertura do novo desafio." },
               { id: "d3-1119-final", resp: ["Bea"], hora: "00h01", texto: "Puxar o relatório final do Mês Black e montar a **M15** com os nomes." },
