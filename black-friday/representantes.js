@@ -34,7 +34,7 @@ BLACK_FRIDAY.frentes.representantes = {
     ativa: [
       { fase: "Desafio 1 · Esquenta", texto: "Pelo menos 1 pedido no cupom entre 16 e 31/10." },
       { fase: "Desafio 2 · Mês Black", texto: "Bateu a primeira meta (2 pedidos no cupom entre 01 e 19/11)." },
-      { fase: "Desafio 3 · Semana Black", texto: "Critério a definir com o desenho do Desafio 3.", pendente: true },
+      { fase: "Desafio 3 · Semana Black", texto: "Pelo menos 1 pedido no cupom entre 20 e 27/11." },
     ],
   },
 
@@ -255,12 +255,6 @@ BLACK_FRIDAY.frentes.representantes = {
             ],
           },
           {
-            data: "2026-11-20", titulo: "Sexta, 20/11", tema: "abre a Semana Black",
-            itens: [
-              { id: "r1120-d3", resp: ["Bea"], texto: "Abre o Desafio 3 (a desenhar) e sai a parcial do Desafio 2." },
-            ],
-          },
-          {
             data: "2026-11-25", titulo: "Até quarta, 25/11",
             itens: [
               { id: "r1125-apuracao", resp: ["Bea", "Vitória"], texto: "Apuração do Desafio 2: descontar cancelamentos e reembolsos, fechar as faixas batidas, conferir a lista final do Destrave e comunicar." },
@@ -429,17 +423,277 @@ BLACK_FRIDAY.frentes.representantes = {
             ["Cancelamentos e reembolsos", "Inbazz + Yampi", "Na apuração (até 25/11)"],
           ],
         },
-        pontosAbertos: [
-          { id: "ra-d3", texto: "Desenhar o Desafio 3 (Semana Black) e o critério de “ativa” dele." },
-        ],
+        pontosAbertos: [],
       },
     },
     {
       id: "d3",
       nome: "Semana Black",
       fase: 2,
-      resumo: "em construção",
-      emConstrucao: "O Desafio 3 ainda está sendo desenhado. A estrutura já está pronta e vai sendo preenchida aos poucos.",
+
+      // 01 · REGRAS E PRÊMIOS
+      regras: {
+        intro: "No Desafio 3 o prêmio é **só em dinheiro**, além da comissão de sempre: 4 faixas, começando em 3 pedidos. É só 1 semana (20 a 27/11), com o último fim de semana da Black November, a Black Week e a Black Friday, a semana em que mais se compra no ano. E o Relâmpago volta na Black Friday, maior: **R$ 500** para cada uma das 3 que mais venderem no dia.",
+        titulo: "Regras do Desafio 3 · Semana Black · 20 a 27/11",
+        tabela: {
+          colunas: ["Pedidos no cupom", "Prêmio (além da comissão)"],
+          linhas: [
+            ["3", "R$ 100"],
+            ["6", "R$ 200"],
+            ["10", "R$ 400"],
+            ["20", "R$ 800"],
+          ],
+        },
+        itens: [
+          { titulo: "Vale a maior meta batida", texto: "Só contam pedidos aprovados no cupom entre 20 e 27/11, sem cancelamento ou reembolso. As faixas não somam: quem bate 10 pedidos recebe R$ 400." },
+          { titulo: "Relâmpago Black Friday · R$ 500", texto: "As **3** representantes com mais pedidos no cupom no dia **27/11** ganham **R$ 500 cada**, além da meta. Em caso de empate, leva quem tiver mais pedidos no cupom desde o início do Desafio 1 (16/10) até o fim do dia 27/11." },
+          { titulo: "Só dinheiro", texto: "A partir do Desafio 3, os prêmios são só em Pix, sem produto. Os produtos do Esquenta, do Mês Black e do Destrave continuam valendo e seguem por envio." },
+          { titulo: "Prêmios finais", texto: "Para seguir na disputa dos prêmios finais, basta **1 pedido no cupom** entre 20 e 27/11, além de ter sido ativa no Esquenta e no Mês Black (critérios logo abaixo dos desafios)." },
+          { titulo: "Pagamento", texto: "Via Pix em 10/12, junto com o Desafio 2 e os prêmios finais." },
+          { titulo: "Quem participa", texto: "As representantes aprovadas no grupo Representantes da Inbazz." },
+        ],
+      },
+
+      // 02 · NARRATIVA CENTRAL
+      narrativa: {
+        intro: "Toda comunicação do Desafio 3 bate em duas teclas:",
+        teclas: ["A cliente que ficou em cima do muro decide agora: avisa ela antes da Black Friday", "Agora é dinheiro direto: 3 pedidos já valem R$ 100"],
+        porQue: {
+          titulo: "Por que agora é a hora",
+          subtitulo: "A lógica dos desafios, contada para elas.",
+          fases: [
+            { titulo: "Fase 1 · Esquenta (16 a 31/10) = avisar", texto: "Quem falou da Le Moritz no Esquenta deixou o produto na cabeça da cliente." },
+            { titulo: "Fase 2 · Mês Black (01 a 19/11) = vender", texto: "A melhor oferta do ano no ar e o cupom somando mais 10%. Muita cliente já comprou." },
+            { titulo: "Fase 3 · Semana Black (20 a 27/11) = fechar", texto: "Quem ficou em dúvida decide na Black Friday. Uma mensagem sua, no dia certo, é o empurrão que falta." },
+          ],
+        },
+      },
+
+      // 03 · LINHA DO TEMPO
+      linhaDoTempo: {
+        marcos: [
+          { data: "2026-11-19", titulo: "Teaser: resultado e novo desafio" },
+          { data: "2026-11-20", titulo: "Resultado do Mês Black (9h) e Desafio 3 liberado (13h)" },
+          { data: "2026-11-22", titulo: "Último dia da Black November" },
+          { data: "2026-11-23", titulo: "Começa a Black Week" },
+          { data: "2026-11-27", titulo: "Black Friday, Relâmpago e último dia do Desafio 3" },
+          { data: "2026-12-10", titulo: "Pix do Desafio 2, do Desafio 3 e dos prêmios finais" },
+        ],
+        nota: "O Desafio 3 começa no dia seguinte ao fim do Mês Black e cobre o último fim de semana da Black November (até 22/11), a Black Week (23 a 27/11) e a Black Friday, que é também o dia do Relâmpago.",
+      },
+
+      // 04 · CHECKLIST DIA A DIA
+      // "resp": quem faz (Bea, Vitória). "hora" é opcional. "secao" abre um novo grupo.
+      checklist: {
+        intro: "Toda mensagem no 1x1 sai pela ferramenta de disparo (Mensagens 1x1 · /representantes): a Bea organiza a lista e o texto, a Vitória envia.",
+        dias: [
+          {
+            secao: "Virada do Mês Black para o Desafio 3",
+            data: "2026-11-19", titulo: "Quinta, 19/11", tema: "véspera do Desafio 3",
+            itens: [
+              { id: "r3-1119-arte", resp: ["Bea"], texto: "Arte do Desafio 3 com as 4 faixas (só dinheiro) e o Relâmpago Black Friday de R$ 500." },
+              { id: "r3-1119-aula", resp: ["Bea"], texto: "Gravar a mini aula do Desafio 3: faixas, Relâmpago, critério dos prêmios finais e a mensagem da semana para as clientes." },
+              { id: "r3-1119-canva", resp: ["Bea"], texto: "Desbloquear a página do Desafio 3 na apresentação do Canva das representantes. Alterar a página do Desafio 2 para concluída." },
+              { id: "r3-1119-aprovar", resp: ["Bea"], texto: "Aprovar as mensagens **R12 a R20** e as mensagens da semana (seção Roteiros)." },
+              { id: "r3-1119-ferramenta", resp: ["Bea"], texto: "Organizar a ferramenta de disparo com a **R15** (boas-vindas) para todas as representantes: versão “vendeu no Mês Black” e versão “ainda não vendeu na Black”." },
+              { id: "r3-1119-r12", resp: ["Vitória"], hora: "fim do dia", texto: "Teaser **R12** no grupo: resultado amanhã às 9h e novo desafio às 13h." },
+              { id: "r3-1119-drive", resp: ["Vitória"], texto: "Baixar da pasta no Drive a arte do Desafio 3 e a mini aula, para deixar prontas para sexta às 13h." },
+              { id: "r3-1119-final", resp: ["Bea"], hora: "00h01", texto: "Puxar o relatório final do Mês Black e montar a **R13** com os nomes de quem bateu meta e das 3 do Relâmpago 11.11." },
+            ],
+          },
+          {
+            secao: "Semana do Desafio 3",
+            data: "2026-11-20", titulo: "Sexta, 20/11", tema: "resultado do Mês Black e abre o Desafio 3",
+            itens: [
+              { id: "r3-1120-r13", resp: ["Vitória"], hora: "9h", texto: "**R13** no grupo: resultado do Mês Black, com elogio nominal e sem números de venda." },
+              { id: "r3-1120-r14", resp: ["Vitória"], hora: "13h", texto: "Sai o Desafio 3: **arte do desafio + mensagem R14 + mini aula**, no grupo (FASE 3 DA BLACK | DESAFIO 3 LIBERADO)." },
+              { id: "r3-1120-semana", resp: ["Vitória"], hora: "13h", texto: "Logo depois da R14, a mensagem da semana para as clientes (Roteiros · 20 a 22/11), pronta para elas copiarem." },
+              { id: "r3-1120-r15", resp: ["Vitória"], hora: "depois das 13h", texto: "Enviar a **R15** (boas-vindas) 1:1 pela ferramenta de disparo." },
+            ],
+          },
+          {
+            data: "2026-11-22", titulo: "Domingo, 22/11", tema: "último dia da Black November",
+            itens: [
+              { id: "r3-1122-r16", resp: ["Vitória"], hora: "10h", texto: "**R16** no grupo: último dia da Black November." },
+            ],
+          },
+          {
+            data: "2026-11-23", titulo: "Segunda, 23/11", tema: "começa a Black Week",
+            itens: [
+              { id: "r3-1123-semana", resp: ["Vitória"], hora: "10h", texto: "Mensagem da semana para as clientes (Roteiros · 23 a 27/11) no grupo, logo antes da **R17**." },
+              { id: "r3-1123-r17", resp: ["Vitória"], hora: "10h", texto: "**R17** no grupo: começou a Black Week e o anúncio do Relâmpago Black Friday." },
+              { id: "r3-1123-e5", resp: ["Vitória"], texto: "Enquete **E5** no grupo." },
+              { id: "r3-1123-parcial", resp: ["Bea"], texto: "Parcial na Inbazz: pedidos de cada uma desde 20/11, faixa e quem das ativas nas 2 primeiras fases ainda não vendeu na semana." },
+            ],
+          },
+          {
+            data: "2026-11-24", titulo: "Terça, 24/11",
+            itens: [
+              { id: "r3-1124-ferramenta", resp: ["Bea"], texto: "Organizar a ferramenta de disparo com a **R18** em três listas: “perto da faixa” (até 2 pedidos da próxima), “prêmios finais” (ativas no Esquenta e no Mês Black, ainda sem venda na semana) e “ainda não vendeu” (as demais)." },
+            ],
+          },
+          {
+            data: "2026-11-25", titulo: "Quarta, 25/11",
+            itens: [
+              { id: "r3-1125-r18", resp: ["Vitória"], texto: "Enviar a **R18** 1:1 pela ferramenta de disparo." },
+            ],
+          },
+          {
+            data: "2026-11-26", titulo: "Quinta, 26/11", tema: "véspera da Black Friday",
+            itens: [
+              { id: "r3-1126-r19", resp: ["Vitória"], hora: "10h", texto: "**R19** no grupo: amanhã é Black Friday e Relâmpago." },
+              { id: "r3-1126-r11", resp: ["Vitória"], hora: "tarde", texto: "Destaques da semana no grupo (mesmo formato da **R11**), com elogio nominal e sem números de venda." },
+            ],
+          },
+          {
+            data: "2026-11-27", titulo: "Sexta, 27/11", tema: "Black Friday · Relâmpago · último dia",
+            itens: [
+              { id: "r3-1127-9h", resp: ["Vitória"], hora: "9h", texto: "**R20**: é hoje." },
+              { id: "r3-1127-15h", resp: ["Vitória"], hora: "15h", texto: "**R20**: metade do dia." },
+              { id: "r3-1127-20h", resp: ["Vitória"], hora: "20h", texto: "**R20**: últimas horas." },
+            ],
+          },
+          {
+            secao: "Fechamento",
+            data: "2026-11-28", titulo: "Sábado, 28/11",
+            itens: [
+              { id: "r3-1128-relampago", resp: ["Bea"], texto: "Apurar o Relâmpago Black Friday (o dado pode atrasar 1 dia)." },
+            ],
+          },
+          {
+            data: "2026-12-02", titulo: "Até quarta, 02/12",
+            itens: [
+              { id: "r3-1202-apuracao", resp: ["Bea", "Vitória"], texto: "Apuração do Desafio 3: pedidos sem cancelamento ou reembolso e faixa de cada uma." },
+              { id: "r3-1202-ativas", resp: ["Bea"], texto: "Fechar quem foi ativa nas 3 fases e apurar os prêmios finais (Lemorita Black, Prata e Bronze)." },
+              { id: "r3-1202-resultado", resp: ["Vitória"], texto: "Mensagem de resultado do Desafio 3, do Relâmpago e dos prêmios finais no grupo, com nomes e sem números de venda." },
+            ],
+          },
+          {
+            data: "2026-12-10", titulo: "Quinta, 10/12", tema: "pagamento",
+            itens: [
+              { id: "r3-1210-pix", resp: ["Bea"], texto: "Pix do Desafio 3 e do Relâmpago Black Friday (junto com o Desafio 2 e os prêmios finais)." },
+            ],
+          },
+        ],
+      },
+
+      // 05 · KIT DE COMUNICAÇÃO
+      kit: {
+        intro: "Mensagens prontas para copiar e ajustar. [NOME], [CUPOM], [X] e [VALOR] são trocados no envio. Os emojis ficam a critério de quem envia.",
+        mensagens: [
+          {
+            id: "R12", canal: "Grupo das representantes", quando: "quinta, 19/11, fim do dia", titulo: "Teaser: preparem-se",
+            texto: "Acabou o Mês Black! E amanhã tem dois momentos aqui no grupo: às 9h sai o resultado do Desafio 2, e às 13h abre o Desafio 3, a reta final do Black November Awards. Uma pista: dessa vez o prêmio é todo em dinheiro. Fiquem de olho!",
+          },
+          {
+            id: "R13", canal: "Grupo das representantes", quando: "sexta, 20/11, 9h", titulo: "Resultado do Mês Black",
+            texto: "Ato 2 encerrado! No Mês Black, [X] representantes bateram meta. Um aplauso pra:\n\n[NOMES, com @, por ordem alfabética]\n\nE pras 3 do Relâmpago 11.11, que ganharam R$ 150 cada:\n\n[NOMES]\n\nA lista final sai depois da conferência de cancelamentos e reembolsos, e o Pix cai em 10/12. Às 13h abre o Desafio 3, aqui no grupo!",
+          },
+          {
+            id: "R14", canal: "Grupo das representantes", quando: "sexta, 20/11, 13h", titulo: "Fase 3 da Black | Desafio 3 liberado",
+            texto: "FASE 3 DA BLACK | DESAFIO 3 LIBERADO\n\nComeça hoje a Semana Black (20 a 27/11), com a Black Week e a Black Friday no meio: a semana em que mais se compra no ano. E agora o prêmio é todo em dinheiro, além da comissão de sempre:\n\n3 pedidos no cupom = R$ 100\n6 pedidos = R$ 200\n10 pedidos = R$ 400\n20 pedidos = R$ 800\n\nVale a maior meta batida.\n\nE tem RELÂMPAGO BLACK FRIDAY: as 3 representantes com mais pedidos no cupom no dia 27/11 ganham R$ 500 cada, além da meta.\n\nQuem foi ativa no Esquenta e no Mês Black segue na disputa pelos prêmios finais (R$ 1.500, R$ 1.000 e R$ 500) com 1 venda na semana.\n\nNo vídeo aqui embaixo eu explico tudo. Bora fechar a Black com tudo!",
+          },
+          {
+            id: "R15", canal: "Privado", quando: "sexta, 20/11, depois das 13h", titulo: "Boas-vindas ao Desafio 3",
+            partes: [
+              { rotulo: "Vendeu no Mês Black", texto: "[NOME], começou a Semana Black! São 8 dias, com a Black Week e a Black Friday no meio, e agora o prêmio é todo em dinheiro: 3 pedidos no seu cupom [CUPOM] = R$ 100, 6 = R$ 200, 10 = R$ 400 e 20 = R$ 800. Dica: chama primeiro quem já comprou com você e quem perguntou e não fechou. Quer que eu te mande a mensagem da semana pronta?" },
+              { rotulo: "Ainda não vendeu na Black", texto: "[NOME], a Black Friday é o dia em que mais gente compra no ano, e dá tempo de você entrar no jogo: 3 pedidos no seu cupom [CUPOM] até 27/11 = R$ 100, além da comissão. Anota 5 mulheres que cuidam da pele e manda pra elas a mensagem que vou te passar aqui embaixo. Se alguém ficar em dúvida, me chama que eu te ajudo a fechar." },
+            ],
+          },
+          {
+            id: "R16", canal: "Grupo das representantes", quando: "domingo, 22/11, 10h", titulo: "Último dia da Black November",
+            texto: "Hoje é o último dia da Black November! Ótimo dia pra mandar a mensagem da semana pras clientes que ficaram em dúvida. E amanhã começa a Black Week, que vai até a Black Friday.",
+          },
+          {
+            id: "R17", canal: "Grupo das representantes", quando: "segunda, 23/11, 10h", titulo: "Começou a Black Week + Relâmpago",
+            texto: "Começou a Black Week! Até sexta, a cliente que ficou em cima do muro vai decidir, e a mensagem de vocês é o empurrão que falta. A mensagem da semana está aqui em cima, pronta pra copiar.\n\nE lembrando: sexta, 27/11, é Black Friday e dia de RELÂMPAGO. As 3 com mais pedidos no cupom no dia ganham R$ 500 cada, além da meta. Empatou? Leva quem vendeu mais desde o Esquenta (16/10). Já vai separando a lista de quem você vai chamar na sexta!",
+          },
+          {
+            id: "R18", canal: "Privado", quando: "quarta, 25/11", titulo: "Proximidade",
+            partes: [
+              { rotulo: "Perto da faixa", texto: "[NOME], olha só: faltam só [X] pedidos pra você chegar na próxima meta e garantir R$ [VALOR] no Desafio 3! A Black Friday é sexta, o dia em que mais se compra no ano. Chama hoje quem respondeu e ainda não fechou. Quer que eu te mande a mensagem pronta?" },
+              { rotulo: "Prêmios finais", texto: "[NOME], você foi ativa no Esquenta e no Mês Black e está na disputa pelos prêmios finais (R$ 1.500, R$ 1.000 e R$ 500). Pra seguir nela, falta só 1 venda no seu cupom [CUPOM] até sexta, 27/11. Bora garantir?" },
+              { rotulo: "Ainda não vendeu", texto: "[NOME], ainda dá tempo! Até sexta, 27/11, dia da Black Friday, 3 pedidos no seu cupom [CUPOM] valem R$ 100. Manda a mensagem da semana pra 5 clientes hoje, que eu torço daqui!" },
+            ],
+          },
+          {
+            id: "R19", canal: "Grupo das representantes", quando: "quinta, 26/11, 10h", titulo: "Véspera da Black Friday",
+            texto: "Amanhã é Black Friday, último dia do Desafio 3 e dia do Relâmpago de R$ 500! Hoje é dia de avisar as clientes que amanhã é a última chance da Black. Manda a mensagem hoje pra quem ficou em dúvida e deixa o status pronto pra amanhã cedo.",
+          },
+          {
+            id: "R20", canal: "Grupo das representantes", quando: "sexta, 27/11", titulo: "Black Friday · Relâmpago · último dia",
+            partes: [
+              { rotulo: "9h", texto: "É HOJE! Black Friday, último dia do Desafio 3 e Relâmpago de R$ 500 pras 3 que mais venderem hoje. Manda a mensagem pras clientes logo cedo e posta no status com o cupom escrito grande." },
+              { rotulo: "15h", texto: "Metade do dia! Quem ainda não chamou as clientes, a mensagem está aqui em cima, é só copiar. E chama de novo quem respondeu e não fechou." },
+              { rotulo: "20h", texto: "Últimas horas da Black Friday e do Desafio 3! Uma última mensagem pra quem ainda está em dúvida, agora." },
+            ],
+          },
+        ],
+        enquetes: [
+          { id: "E5", quando: "23/11", pergunta: "Qual meta você vai buscar na Semana Black?", opcoes: ["3 pedidos", "6 pedidos", "10 pedidos", "20 pedidos"] },
+        ],
+        reforco: {
+          titulo: "Como vender no 1x1 na Semana Black",
+          itens: [
+            { titulo: "Quem ficou em dúvida vem primeiro", texto: "A cliente que perguntou no Mês Black e não fechou é a mais perto de comprar. A Black Friday é o prazo que ela estava esperando." },
+            { titulo: "Quem já comprou também", texto: "Cliente que já usa a Le Moritz confia no produto. A Black Friday é a hora de repor e de levar presente." },
+            { titulo: "Status todo dia", texto: "Um status por dia com a oferta, o produto na mão e o cupom escrito grande. Na Black Friday, três: de manhã, no almoço e à noite." },
+            { titulo: "Cupom e link sempre juntos", texto: "Toda mensagem leva o cupom escrito e o link, para a cliente não precisar perguntar nada." },
+            { titulo: "Responder rápido", texto: "Quem pergunta na Black Friday está pronta para comprar. Responder na hora vale mais que qualquer mensagem bonita." },
+          ],
+        },
+        live: null,
+        teaser: null,
+      },
+
+      // 06 · ROTEIROS SEMANAIS
+      // para as representantes, o roteiro é a mensagem que elas mandam para as
+      // clientes no privado e no status.
+      roteiros: {
+        intro: "Uma mensagem base para cada parte da semana, para elas mandarem às clientes no privado e no status, com duas aberturas. É base, não texto para decorar. Todas terminam com o cupom e o link.",
+        semanas: [
+          {
+            rotulo: "20 a 22/11 · último fim de semana da Black November",
+            titulo: "Última chance da Black November",
+            aberturas: [
+              "Oi, [nome da cliente]! Passando porque a Black November da Le Moritz acaba domingo.",
+              "Lembra que você ficou de ver a Le Moritz? Domingo é o último dia da Black November.",
+            ],
+            fala: "Ainda dá tempo de pegar as ofertas da Black November até domingo, 22/11, e com o meu cupom [CUPOM] você ainda ganha mais 10% em cima. Se quiser, eu monto o carrinho com o que faz sentido pra sua pele e te mando o link.",
+            mostrar: "Foto dos produtos na mão ou print do carrinho montado com o preço final.",
+            porque: "Dá um prazo concreto (domingo) para quem ficou em dúvida no Mês Black.",
+          },
+          {
+            rotulo: "23 a 27/11 · Black Week e Black Friday",
+            titulo: "Se for comprar, compra até sexta",
+            aberturas: [
+              "Sexta é Black Friday e eu queria te avisar antes.",
+              "Se você estava esperando a Black Friday pra comprar, ela chegou.",
+            ],
+            fala: "Até sexta, 27/11, a Le Moritz está com [oferta da Black Week]. Com o meu cupom [CUPOM], [o que o cupom soma na Black Week]. A minha escolha seria o [produto], porque [resultado que você viu em você]. Quer que eu te mande o link?",
+            mostrar: "O produto na mão ou em uso, e o cupom escrito.",
+            porque: "Fala com quem ficou em cima do muro e dá o último prazo da Black.",
+          },
+        ],
+      },
+
+      // 07 · ACOMPANHAMENTO
+      acompanhamento: {
+        intro: "O acompanhamento fica num painel interno, só para o time. Aqui ficam o que a gente olha e o que ainda está em aberto.",
+        metricas: {
+          colunas: ["O que a gente acompanha", "Onde", "Quando"],
+          linhas: [
+            ["Pedidos no cupom e faixa de cada representante desde 20/11", "Inbazz (grupo representantes)", "Segunda, quarta e sexta"],
+            ["Quem está até 2 pedidos da próxima faixa", "Inbazz", "Terça, 24/11"],
+            ["Ativas no Esquenta e no Mês Black que ainda não venderam na semana (prêmios finais)", "Inbazz + relatórios dos Desafios 1 e 2", "23/11 e 24/11"],
+            ["Ranking do dia 27/11 (Relâmpago)", "Inbazz", "28/11"],
+            ["Cancelamentos e reembolsos", "Inbazz + Yampi", "Na apuração (até 02/12)"],
+          ],
+        },
+        pontosAbertos: [
+          { id: "ra3-blackweek", texto: "Confirmar as ofertas da Black Week (23 a 27/11) e se o cupom soma com elas, para fechar a mensagem da semana de 23 a 27/11." },
+        ],
+      },
     },
   ],
 };
