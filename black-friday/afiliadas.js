@@ -31,9 +31,9 @@ BLACK_FRIDAY.frentes.afiliadas = {
     ],
     ativaIntro: "Concorre quem participou **ativamente das 3 fases**. O que conta como ativa em cada uma:",
     ativa: [
-      { fase: "Desafio 1 · Esquenta", texto: "Critério a definir.", pendente: true },
-      { fase: "Desafio 2 · Mês Black", texto: "Critério a definir.", pendente: true },
-      { fase: "Desafio 3 · Semana Black", texto: "Critério a definir com o desenho do Desafio 3.", pendente: true },
+      { fase: "Desafio 1 · Esquenta", texto: "Pelo menos **5 vídeos** de Sérum Lifting ou Stick Pés entre 16 e 31/10." },
+      { fase: "Desafio 2 · Mês Black", texto: "Pelo menos **6 vídeos** de Sérum Lifting ou Stick Pés entre 01 e 19/11 (a condição do Desafio 2)." },
+      { fase: "Desafio 3 · Semana Black", texto: "Vídeo em **pelo menos 4 dos 8 dias** entre 20 e 27/11 (a condição do Desafio 3)." },
     ],
   },
 
@@ -52,7 +52,7 @@ BLACK_FRIDAY.frentes.afiliadas = {
       nome: "Mês Black",
       fase: 1,
       resultadoTitulo: "Relatório parcial",
-      resultado: "Parcial com dados do TikTok Shop até 14/11 (o desafio vai até 19/11): quem já bateu cada meta, quem está perto e o Relâmpago 11.11 no [relatório parcial do Desafio 2 · afiliadas](https://bealemoritz.github.io/desafio2-afiliadas/).",
+      resultado: "Parcial com dados do TikTok Shop até 17/11: quem já bateu cada meta, quem está perto e o Relâmpago 11.11 no [relatório parcial do Desafio 2 · afiliadas](https://bealemoritz.github.io/desafio2-afiliadas/). O resultado final sai na segunda, 23/11, porque o dado de venda do TikTok atrasa até 2 dias.",
 
       // 01 · REGRAS E PRÊMIOS
       regras: {
@@ -123,7 +123,8 @@ BLACK_FRIDAY.frentes.afiliadas = {
           { data: "2026-11-10", titulo: "Pix do Esquenta" },
           { data: "2026-11-11", titulo: "Relâmpago 11.11" },
           { data: "2026-11-16", titulo: "Vídeo de Ouro · semana 2" },
-          { data: "2026-11-20", titulo: "Vídeo de Ouro · semana 3 e abre o Desafio 3" },
+          { data: "2026-11-20", titulo: "Abre o Desafio 3" },
+          { data: "2026-11-23", titulo: "Resultado do Mês Black e Vídeo de Ouro · semana 3" },
           { data: "2026-11-27", titulo: "Black Friday" },
         ],
         nota: "O Desafio 2 cobre o 11.11, o maior dia de compras do TikTok antes da Black Friday, com o Relâmpago no meio. O Pix do Esquenta, na véspera do 11.11, mostra que o prêmio chega. O Vídeo de Ouro de cada semana sai na segunda seguinte, porque o dado de venda do TikTok atrasa até 2 dias.",
@@ -262,7 +263,7 @@ BLACK_FRIDAY.frentes.afiliadas = {
           {
             data: "2026-11-20", titulo: "Sexta, 20/11", tema: "abre a Semana Black",
             itens: [
-              { id: "a1120-d3", resp: ["Bea"], texto: "Abre o Desafio 3 (a desenhar), sai o Vídeo de Ouro da semana 3 e a parcial do Desafio 2." },
+              { id: "a1120-d3", resp: ["Bea"], texto: "Abre o Desafio 3 às 13h. O resultado do Mês Black e o Vídeo de Ouro da semana 3 saem na segunda, 23/11 (checklist completo na aba do Desafio 3)." },
             ],
           },
           {
@@ -416,8 +417,217 @@ BLACK_FRIDAY.frentes.afiliadas = {
       id: "d3",
       nome: "Semana Black",
       fase: 2,
-      resumo: "em construção",
-      emConstrucao: "O Desafio 3 ainda está sendo desenhado. A estrutura já está pronta e vai sendo preenchida aos poucos.",
+
+      // 01 · REGRAS E PRÊMIOS
+      regras: {
+        intro: "O Desafio 3 segue a lógica do Mês Black, o prêmio é por **venda**, só que mais simples: 4 faixas, **vale qualquer produto Le Moritz** e a condição é aparecer em pelo menos 4 dos 8 dias. É só 1 semana (20 a 27/11), com a Black Week e a Black Friday no meio, a semana em que mais se compra no ano.",
+        titulo: "Regras do Desafio 3 · Semana Black · 20 a 27/11",
+        tabela: {
+          colunas: ["Itens vendidos pelos seus vídeos e lives", "Prêmio"],
+          linhas: [
+            ["3", "R$ 70"],
+            ["10", "R$ 300"],
+            ["25", "R$ 800"],
+            ["60", "R$ 1.200"],
+          ],
+        },
+        itens: [
+          { titulo: "Vale a maior meta batida", texto: "Contam os itens vendidos de **qualquer produto Le Moritz** entre 20 e 27/11 pelos seus vídeos e lives do período, pelo relatório de afiliados do TikTok Shop. Cada item vale 1, sem dobro. Só contam pedidos aprovados, sem cancelamento ou reembolso." },
+          { titulo: "Só vale vídeo do período", texto: "Contam as vendas feitas entre 20 e 27/11 de **vídeos postados entre 20 e 27/11**. Venda de vídeo postado antes de 20/11 não conta, nem a de vídeo do Mês Black. **Live feita nesse período também vale.**" },
+          { titulo: "Condição para receber", texto: "Vídeo postado em **pelo menos 4 dos 8 dias** do desafio (não precisa ser todo dia), aparecendo e aplicando o produto. Vale um vídeo por dia para contar o dia: postar vários no mesmo dia conta como 1 dia." },
+          { titulo: "Fale do jeito que o anúncio fala", texto: "Use o nome e as promessas que estão no anúncio do produto. Vídeo que promete o que o anúncio não diz pode levar violação, perder o carrinho e deixa de contar." },
+          { titulo: "Uma conta por afiliada", texto: "Quem tem mais de uma conta participa com a de melhor resultado, sem somar contas." },
+          { titulo: "Prêmios finais", texto: "Quem cumprir a condição do Desafio 3 e tiver sido ativa nas outras 2 fases segue na disputa pelos prêmios finais (critérios logo abaixo dos desafios)." },
+          { titulo: "Pagamento", texto: "Via Pix em 10/12, junto com o Desafio 2 e os prêmios finais. O time pode pedir print dos insights para conferir." },
+        ],
+      },
+
+      // 02 · NARRATIVA CENTRAL
+      narrativa: {
+        intro: "Toda comunicação do Desafio 3 bate em duas teclas:",
+        teclas: ["É a semana em que mais se compra no ano: quem ficou em dúvida decide agora", "Agora vale tudo: qualquer produto Le Moritz que você vender conta"],
+        porQue: {
+          titulo: "Por que agora é a hora",
+          subtitulo: "A lógica dos desafios, contada para elas.",
+          fases: [
+            { titulo: "Fase 1 · Esquenta (16 a 31/10) = aparecer", texto: "Vocês gravaram muito e o TikTok aprendeu quem se interessa por Le Moritz." },
+            { titulo: "Fase 2 · Mês Black (01 a 19/11) = vender", texto: "O desconto de Black e o 11.11 trouxeram as primeiras vendas, e os vídeos que venderam viraram anúncio." },
+            { titulo: "Fase 3 · Semana Black (20 a 27/11) = fechar", texto: "Quem ficou na dúvida decide na Black Friday. Aparecer todo dia nessa semana é o que faz a venda acontecer." },
+          ],
+        },
+      },
+
+      // 03 · LINHA DO TEMPO
+      linhaDoTempo: {
+        marcos: [
+          { data: "2026-11-19", titulo: "Teaser do Desafio 3" },
+          { data: "2026-11-20", titulo: "Desafio 3 liberado (13h)" },
+          { data: "2026-11-23", titulo: "Começa a Black Week e sai o resultado do Mês Black" },
+          { data: "2026-11-27", titulo: "Black Friday e último dia do Desafio 3" },
+          { data: "2026-12-10", titulo: "Pix do Desafio 2, do Desafio 3 e dos prêmios finais" },
+        ],
+        nota: "O Desafio 3 começa no dia seguinte ao fim do Mês Black e cobre o último fim de semana da Black November (até 22/11), a Black Week (23 a 27/11) e a Black Friday. O resultado do Mês Black sai só na segunda, 23/11, porque o dado de venda do TikTok atrasa até 2 dias.",
+      },
+
+      // 04 · CHECKLIST DIA A DIA
+      // "resp": quem faz (Bea, Letícia). "hora" é opcional. "secao" abre um novo grupo.
+      checklist: {
+        dias: [
+          {
+            secao: "Preparação",
+            data: "2026-11-19", titulo: "Quinta, 19/11", tema: "véspera do Desafio 3",
+            itens: [
+              { id: "ad3-1119-arte", resp: ["Bea"], texto: "Arte do Desafio 3 com as 4 faixas, a condição dos 4 dias e o reforço de que só vale vídeo postado a partir de 20/11." },
+              { id: "ad3-1119-video", resp: ["Bea"], texto: "Gravar o vídeo de mini treinamento do Desafio 3 (faixas, qualquer produto, só vídeo do período e a condição dos 4 dias)." },
+              { id: "ad3-1119-aprovar", resp: ["Bea"], texto: "Aprovar as mensagens **M14 a M21** e o roteiro da Semana Black." },
+              { id: "ad3-1119-ferramenta", resp: ["Bea"], texto: "Organizar a ferramenta de disparo com a **M16** (boas-vindas), para todas da planilha de afiliadas." },
+              { id: "ad3-1119-teaser", resp: ["Letícia"], hora: "fim do dia", texto: "**M14** no grupo de avisos: teaser com o horário da abertura do Desafio 3 e o aviso de que o resultado do Mês Black sai na segunda." },
+            ],
+          },
+          {
+            secao: "Semana do Desafio 3",
+            data: "2026-11-20", titulo: "Sexta, 20/11", tema: "abre o Desafio 3",
+            itens: [
+              { id: "ad3-1120-m15", resp: ["Letícia"], hora: "13h", texto: "Sai o Desafio 3: **arte do desafio + mensagem M15 + vídeo de mini treinamento**, no grupo de avisos (FASE 3 DA BLACK | DESAFIO 3 LIBERADO)." },
+              { id: "ad3-1120-roteiro", resp: ["Letícia"], hora: "logo depois", texto: "Mandar o roteiro da Semana Black no grupo de avisos." },
+              { id: "ad3-1120-m16", resp: ["Letícia"], hora: "depois das 13h", texto: "Enviar a **M16** (boas-vindas) 1:1 pela ferramenta de disparo." },
+            ],
+          },
+          {
+            data: "2026-11-23", titulo: "Segunda, 23/11", tema: "começa a Black Week · resultado do Mês Black",
+            itens: [
+              { id: "ad3-1123-final", resp: ["Bea"], hora: "manhã", texto: "Puxar o relatório final do Mês Black (vendas até 19/11, de vídeos postados entre 01 e 19/11, sem reembolsos), separar o Vídeo de Ouro da semana 3 e montar a **M18** com os nomes." },
+              { id: "ad3-1123-m17", resp: ["Letícia"], hora: "10h", texto: "**M17** no grupo de avisos: começou a Black Week." },
+              { id: "ad3-1123-m18", resp: ["Letícia"], hora: "15h", texto: "**M18** no grupo de avisos: resultado do Mês Black e Vídeo de Ouro da semana 3." },
+              { id: "ad3-1123-e5", resp: ["Letícia"], texto: "Enquete **E5** no grupo de bate-papo." },
+            ],
+          },
+          {
+            data: "2026-11-24", titulo: "Terça, 24/11",
+            itens: [
+              { id: "ad3-1124-parcial", resp: ["Bea"], texto: "Parcial do Desafio 3: quantos dias com vídeo cada uma tem e quantos itens já vendeu (dados até 22/11)." },
+              { id: "ad3-1124-gmv", resp: ["Bea"], texto: "Separar os vídeos autorizados que mais venderam e mandar para o GMV Max." },
+              { id: "ad3-1124-ferramenta", resp: ["Bea"], texto: "Organizar a ferramenta de disparo com a **M19**: versão “dias” para quem ainda não tem os 4 dias com vídeo, versão “faixa” para quem está perto da próxima faixa." },
+            ],
+          },
+          {
+            data: "2026-11-25", titulo: "Quarta, 25/11",
+            itens: [
+              { id: "ad3-1125-m19", resp: ["Letícia"], texto: "Enviar a **M19** 1:1 pela ferramenta de disparo. Quarta é o último dia em que quem ainda não postou chega aos 4 dias postando até sexta." },
+            ],
+          },
+          {
+            data: "2026-11-26", titulo: "Quinta, 26/11", tema: "véspera da Black Friday",
+            itens: [
+              { id: "ad3-1126-m20", resp: ["Letícia"], hora: "10h", texto: "**M20** no grupo de avisos: amanhã é Black Friday." },
+              { id: "ad3-1126-destaques", resp: ["Letícia"], hora: "tarde", texto: "Destaques da semana no grupo (mesmo formato da **M13**): elogio nominal, sem números de venda." },
+            ],
+          },
+          {
+            data: "2026-11-27", titulo: "Sexta, 27/11", tema: "Black Friday · último dia",
+            itens: [
+              { id: "ad3-1127-9h", resp: ["Letícia"], hora: "9h", texto: "**M21**: é hoje." },
+              { id: "ad3-1127-15h", resp: ["Letícia"], hora: "15h", texto: "**M21**: metade do dia." },
+              { id: "ad3-1127-20h", resp: ["Letícia"], hora: "20h", texto: "**M21**: últimas horas." },
+            ],
+          },
+          {
+            secao: "Fechamento",
+            data: "2026-12-02", titulo: "Até quarta, 02/12",
+            itens: [
+              { id: "ad3-1202-apuracao", resp: ["Bea", "Letícia"], texto: "Apuração do Desafio 3: itens vendidos entre 20 e 27/11 de vídeos postados no período e de lives, sem cancelamento ou reembolso, os 4 dias com vídeo e a faixa de cada uma." },
+              { id: "ad3-1202-ativas", resp: ["Bea"], texto: "Fechar quem foi ativa nas 3 fases e apurar os prêmios finais (LM Black, Presença Black, Alcance Black e Lemorita Revelação)." },
+              { id: "ad3-1202-resultado", resp: ["Letícia"], texto: "Mensagem de resultado do Desafio 3 e dos prêmios finais no grupo de avisos, com nomes e sem números de venda." },
+            ],
+          },
+          {
+            data: "2026-12-10", titulo: "Quinta, 10/12", tema: "pagamento",
+            itens: [
+              { id: "ad3-1210-pix", resp: ["Bea"], texto: "Pix do Desafio 3 (junto com o Desafio 2 e os prêmios finais)." },
+            ],
+          },
+        ],
+      },
+
+      // 05 · KIT DE COMUNICAÇÃO
+      kit: {
+        intro: "Mensagens prontas para copiar e ajustar. [NOME], [X], [VALOR] e [LINK] são trocados no envio. Nos roteiros, [X]% é o desconto da Black. Os emojis ficam a critério de quem envia.",
+        mensagens: [
+          {
+            id: "M14", canal: "Grupo de avisos", quando: "quinta, 19/11, fim do dia", titulo: "Teaser: preparem-se",
+            texto: "Acabou o Mês Black! Amanhã, às 13h, abre aqui no grupo o Desafio 3, a reta final do Black November Awards. Não vou contar nada ainda, mas ele vai ser o mais simples dos três. E o resultado do Mês Black sai na segunda, 23/11: o TikTok leva até 2 dias para fechar as vendas, e a gente quer contar tudo certinho. Fiquem de olho!",
+          },
+          {
+            id: "M15", canal: "Grupo de avisos", quando: "sexta, 20/11, 13h", titulo: "Fase 3 da Black | Desafio 3 liberado",
+            texto: "FASE 3 DA BLACK | DESAFIO 3 LIBERADO\n\nComeça hoje a Semana Black (20 a 27/11), a reta final do Black November Awards. O prêmio continua sendo por VENDA, e agora vale QUALQUER produto Le Moritz: 3 itens = R$ 70, 10 = R$ 300, 25 = R$ 800 e 60 = R$ 1.200.\n\nContam os itens vendidos entre 20 e 27/11 pelos vídeos que você postar a partir de hoje e pelas suas lives nessa semana. Venda de vídeo antigo, inclusive do Mês Black, não conta.\n\nPra receber: vídeo postado em pelo menos 4 dos 8 dias, aparecendo e aplicando o produto. E quem cumprir isso segue na disputa pelos prêmios finais.\n\nA arte do desafio e um vídeo curtinho explicando tudo estão aqui embaixo. Bora fechar a Black?",
+          },
+          {
+            id: "M16", canal: "Privado", quando: "sexta, 20/11, depois das 13h", titulo: "Boas-vindas ao Desafio 3",
+            texto: "[NOME], começou a Semana Black! Sua primeira meta: 3 itens vendidos de qualquer produto Le Moritz = R$ 70. Valem os vídeos postados a partir de hoje e as suas lives, e você precisa aparecer em pelo menos 4 dos 8 dias. Dica: o vídeo que mais vende na Le Moritz é o de aplicar o sérum em metade do rosto de outra pessoa e mostrar a diferença. Conta comigo!",
+          },
+          {
+            id: "M17", canal: "Grupo de avisos", quando: "segunda, 23/11, 10h", titulo: "Começou a Black Week",
+            texto: "Começou a Black Week! Até sexta, quem ficou na dúvida vai decidir, e o seu vídeo é o empurrão que falta. Lembrando: pra receber no Desafio 3 você precisa de vídeo em pelo menos 4 dos 8 dias, e ainda dá tempo pra todo mundo. O roteiro da semana está aqui em cima. E hoje à tarde sai o resultado do Mês Black!",
+          },
+          {
+            id: "M18", canal: "Grupo de avisos", quando: "segunda, 23/11, 15h", titulo: "Resultado do Mês Black",
+            texto: "Ato 2 encerrado! No Mês Black vocês fizeram [X] vídeos da Le Moritz no TikTok, e [X] afiliadas bateram meta.\n\nUm aplauso pra quem fechou o Mês Black numa meta:\n\n[NOMES, com @, por ordem alfabética]\n\nE pras 5 do Relâmpago 11.11, que ganharam R$ 200 cada:\n\n[NOMES]\n\nVÍDEO DE OURO DA SEMANA 3: [NOME]! Olha esse vídeo: [LINK].\n\nA lista final é confirmada depois da conferência de cancelamentos e reembolsos, e os prêmios são pagos no dia 10/12. Agora é Semana Black: bora fechar com tudo!",
+          },
+          {
+            id: "M19", canal: "Privado", quando: "quarta, 25/11", titulo: "Proximidade",
+            partes: [
+              { rotulo: "Dias", texto: "[NOME], passando pra te lembrar: no Desafio 3 você precisa de vídeo em pelo menos 4 dos 8 dias, e você está com [X]. Dá tempo até sexta, 27/11, dia da Black Friday! Quer que eu te mande o roteiro da semana?" },
+              { rotulo: "Faixa", texto: "[NOME], olha só: faltam só [X] itens pra você chegar em R$ [VALOR] no Desafio 3! Vale qualquer produto Le Moritz, e a Black Friday é sexta. Um vídeo novo hoje, com o desconto falado e o carrinho laranja no fim, costuma resolver. Bora?" },
+            ],
+          },
+          {
+            id: "M20", canal: "Grupo de avisos", quando: "quinta, 26/11, 10h", titulo: "Véspera da Black Friday",
+            texto: "Amanhã é Black Friday e o último dia do Desafio 3! Hoje é dia de deixar vídeo pronto pra postar logo cedo amanhã. Quem ainda não fechou os 4 dias com vídeo, hoje e amanhã contam. E lembrando: só vale venda de vídeo postado a partir de 20/11.",
+          },
+          {
+            id: "M21", canal: "Grupo de avisos", quando: "sexta, 27/11", titulo: "Black Friday · último dia",
+            partes: [
+              { rotulo: "9h", texto: "É HOJE! Black Friday e último dia do Desafio 3. Vídeo logo cedo, com o desconto do dia falado e o carrinho laranja no fim. Quem consegue, faz live à noite, que é quando elas compram." },
+              { rotulo: "15h", texto: "Metade do dia! Quem ainda precisa de um dia de vídeo pra fechar os 4, é agora. Um vídeo postado agora ainda pega o pico da noite." },
+              { rotulo: "20h", texto: "Últimas horas do Desafio 3! Hora da live e do último vídeo com o desconto da Black Friday." },
+            ],
+          },
+        ],
+        enquetes: [
+          { id: "E5", quando: "23/11", pergunta: "Qual produto você vai mais vender na Black Friday?", opcoes: ["Sérum Lifting", "Stick Pés", "Máscara de Cílios", "Sticks de maquiagem", "Outro"] },
+        ],
+        reforco: {
+          titulo: "Como fazer o vídeo vender",
+          itens: [
+            { titulo: "Os 3 primeiros segundos", texto: "Começa pelo resultado: o lado com e o lado sem, o rosto mudando. Apresentação fica para depois." },
+            { titulo: "Prova de verdade", texto: "Aplica o produto em você ou em outra pessoa, sem corte no meio da aplicação. Só segurar o produto não conta." },
+            { titulo: "Preço e carrinho", texto: "Fala o desconto de Black do dia e termina apontando o carrinho laranja." },
+            { titulo: "Vídeo novo", texto: "Só conta venda de vídeo postado a partir de 20/11. Pode reaproveitar a ideia de um vídeo que vendeu, mas grava e posta de novo." },
+            { titulo: "Sem violação", texto: "Fala do produto com o nome e as promessas do anúncio. Nada de “botox”, “milagre” ou “cirurgia”, e sem desconto ou promoção que não estejam na loja." },
+          ],
+        },
+      },
+
+      // 06 · ROTEIROS
+      roteiros: {
+        intro: "Um roteiro base para a Semana Black, com duas aberturas. É base, não texto para decorar. Termina com o desconto de Black falado e o carrinho laranja.",
+        semanas: [
+          {
+            rotulo: "Semana Black · 20 a 27/11",
+            titulo: "O que eu não deixaria passar nessa Black",
+            aberturas: [
+              "Se você ficou na dúvida o mês inteiro, esse é o sinal.",
+              "Última chance da Black, e eu vou te falar o que eu levaria.",
+            ],
+            fala: "Se eu fosse escolher só uma coisa nessa Black, seria o [produto]. Olha [aplica e mostra o resultado, de preferência em outra pessoa]. A Black vai até sexta, dia 27, e ele está com [X]% de desconto, aqui no carrinho laranja. Depois disso, só ano que vem.",
+            mostrar: "O produto aplicado de verdade, o resultado nos primeiros segundos e o desconto escrito na tela.",
+            porque: "Fala com quem ficou em dúvida e dá um prazo concreto (27/11). Serve para qualquer produto, já que no Desafio 3 todos contam.",
+          },
+        ],
+      },
+
+      // 07 · ACOMPANHAMENTO · painel interno, fica fora da página pública.
+      acompanhamento: null,
     },
   ],
 };
