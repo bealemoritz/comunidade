@@ -494,7 +494,6 @@ BLACK_FRIDAY.frentes.embaixadoras = {
             itens: [
               { id: "d3-1120-m15", resp: ["Thau"], hora: "9h", texto: "**M15** no grupo de avisos: resultado do Mês Black." },
               { id: "d3-1120-m14", resp: ["Thau"], hora: "13h", texto: "Sai o Desafio 3: **arte do desafio + mensagem M16 + vídeo de mini treinamento**, no grupo de avisos (FASE 3 DA BLACK | DESAFIO 3 LIBERADO)." },
-              { id: "d3-1120-roteiro", resp: ["Thau"], hora: "logo depois", texto: "Mandar o roteiro do reel da semana no grupo de avisos." },
               { id: "d3-1120-ferramenta", resp: ["Bea"], texto: "Organizar a ferramenta de disparo com a **M17** (boas-vindas), para todas da lista." },
               { id: "d3-1120-m15b", resp: ["Thau"], hora: "depois das 13h", texto: "Enviar a **M17** 1:1 pela ferramenta de disparo." },
             ],
@@ -502,6 +501,7 @@ BLACK_FRIDAY.frentes.embaixadoras = {
           {
             data: "2026-11-23", titulo: "Segunda, 23/11", tema: "começa a Black Week",
             itens: [
+              { id: "d3-1120-roteiro", resp: ["Thau"], hora: "10h", texto: "Mandar o roteiro do reel da semana no grupo de avisos, logo antes da **M19**." },
               { id: "d3-1123-m17", resp: ["Thau"], hora: "10h", texto: "**M19** no grupo de avisos: começou a Black Week." },
               { id: "d3-1123-e5", resp: ["Thau"], texto: "Enquete **E5**." },
               { id: "d3-1123-parcial", resp: ["Bea"], texto: "Parcial na Inbazz: quem já tem reel, quantos dias de story e quantos pedidos. Conferir se tem reel com menção na legenda em vez de marcação, e avisar no privado." },

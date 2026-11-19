@@ -489,7 +489,6 @@ BLACK_FRIDAY.frentes.afiliadas = {
             data: "2026-11-20", titulo: "Sexta, 20/11", tema: "abre o Desafio 3",
             itens: [
               { id: "ad3-1120-m15", resp: ["Letícia"], hora: "13h", texto: "Sai o Desafio 3: **arte do desafio + mensagem M15 + vídeo de mini treinamento**, no grupo de avisos (FASE 3 DA BLACK | DESAFIO 3 LIBERADO)." },
-              { id: "ad3-1120-roteiro", resp: ["Letícia"], hora: "logo depois", texto: "Mandar o roteiro da Semana Black no grupo de avisos." },
               { id: "ad3-1120-m16", resp: ["Letícia"], hora: "depois das 13h", texto: "Enviar a **M16** (boas-vindas) 1:1 pela ferramenta de disparo." },
             ],
           },
@@ -497,6 +496,7 @@ BLACK_FRIDAY.frentes.afiliadas = {
             data: "2026-11-23", titulo: "Segunda, 23/11", tema: "começa a Black Week · resultado do Mês Black",
             itens: [
               { id: "ad3-1123-final", resp: ["Bea"], hora: "manhã", texto: "Puxar o relatório final do Mês Black (vendas até 19/11, de vídeos postados entre 01 e 19/11, sem reembolsos), separar o Vídeo de Ouro da semana 3 e montar a **M18** com os nomes." },
+              { id: "ad3-1120-roteiro", resp: ["Letícia"], hora: "10h", texto: "Mandar o roteiro da Semana Black no grupo de avisos, logo antes da **M17**." },
               { id: "ad3-1123-m17", resp: ["Letícia"], hora: "10h", texto: "**M17** no grupo de avisos: começou a Black Week." },
               { id: "ad3-1123-m18", resp: ["Letícia"], hora: "15h", texto: "**M18** no grupo de avisos: resultado do Mês Black e Vídeo de Ouro da semana 3." },
               { id: "ad3-1123-e5", resp: ["Letícia"], texto: "Enquete **E5** no grupo de bate-papo." },
