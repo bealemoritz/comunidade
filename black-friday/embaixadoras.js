@@ -500,12 +500,6 @@ BLACK_FRIDAY.frentes.embaixadoras = {
             ],
           },
           {
-            data: "2026-11-22", titulo: "Domingo, 22/11", tema: "último dia da Black November",
-            itens: [
-              { id: "d3-1122-m16", resp: ["Thau"], hora: "10h", texto: "**M18** no grupo de avisos: último dia da Black November e lembrete da marcação." },
-            ],
-          },
-          {
             data: "2026-11-23", titulo: "Segunda, 23/11", tema: "começa a Black Week",
             itens: [
               { id: "d3-1123-m17", resp: ["Thau"], hora: "10h", texto: "**M19** no grupo de avisos: começou a Black Week." },
