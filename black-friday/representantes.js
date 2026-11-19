@@ -53,7 +53,7 @@ BLACK_FRIDAY.frentes.representantes = {
       nome: "Mês Black",
       fase: 1,
       resultadoTitulo: "Relatório parcial",
-      resultado: "Parcial com dados da Inbazz até 16/11 (o desafio vai até 19/11): quem já bateu cada meta, quem está perto da próxima, o Relâmpago 11.11, quem destravou e a corrida dos prêmios finais no [relatório parcial do Desafio 2 · representantes](https://bealemoritz.github.io/desafio1-black/desafio2/representantes/).",
+      resultado: "Parcial com dados da Inbazz até hoje, 19/11, último dia do desafio: quem já bateu cada meta, quem está perto da próxima, o Relâmpago 11.11, quem destravou e a corrida dos prêmios finais no [relatório parcial do Desafio 2 · representantes](https://bealemoritz.github.io/desafio1-black/desafio2/representantes/).",
 
       // 01 · REGRAS E PRÊMIOS
       regras: {
