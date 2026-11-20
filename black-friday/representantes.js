@@ -52,8 +52,8 @@ BLACK_FRIDAY.frentes.representantes = {
       id: "d2",
       nome: "Mês Black",
       fase: 1,
-      resultadoTitulo: "Relatório parcial",
-      resultado: "Parcial com dados da Inbazz até hoje, 19/11, último dia do desafio: quem já bateu cada meta, quem está perto da próxima, o Relâmpago 11.11, quem destravou e a corrida dos prêmios finais no [relatório parcial do Desafio 2 · representantes](https://bealemoritz.github.io/desafio1-black/desafio2/representantes/).",
+      resumo: "encerrado",
+      resultado: "Encerrado em 19/11. 20 representantes bateram meta e 29 venderam no Mês Black; 10 destravaram. Quem bateu cada meta, o Relâmpago 11.11, o Destrave e a corrida dos prêmios finais no [relatório do Desafio 2 · representantes](https://bealemoritz.github.io/desafio1-black/desafio2/representantes/).",
 
       // 01 · REGRAS E PRÊMIOS
       regras: {
