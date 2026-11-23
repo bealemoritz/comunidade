@@ -52,7 +52,7 @@ BLACK_FRIDAY.frentes.afiliadas = {
       nome: "Mês Black",
       fase: 1,
       resultadoTitulo: "Resultado final",
-      resultado: "Resultado final com os dados do TikTok Shop depois do fim do desafio (vendas de 01/11 até 19/11, 23h59, de vídeos postados no período e lives): quem recebe em cada meta, quem bateu meta sem os 6 vídeos, o Relâmpago 11.11 e o Vídeo de Ouro de cada semana no [relatório final do Desafio 2 · afiliadas](https://bealemoritz.github.io/desafio2-afiliadas/).",
+      resultado: "Resultado final com os dados do TikTok Shop depois do fim do desafio (vendas de 01/11 até 19/11, 23h59, de vídeos postados no período e lives): quem recebe em cada meta, quem bateu meta sem os 6 vídeos, o Relâmpago 11.11 e o Vídeo de Ouro de cada semana no [relatório final do Desafio 2 · afiliadas](https://bealemoritz.github.io/desafio2-afiliadas/).\n\n**R$ 1.500:** @juju.shoop, @rubiangeloficial\n**R$ 1.200:** @lolaindica3, @marioficialshop\n**R$ 800:** @anapaulamalinski, @andreia.vantroba, @thaismaluly\n**R$ 200:** @anapaulalopesterra, @dbnindica, @jessicanunesnogueira, @juhindicaoficial, @lilishop1977, @priscila.waideman, @raissa.bomtempo\n**R$ 70:** @achadosdasuh0, @fernandaconrado6, @kalina.sampaio, @neusashop, @segredosdanathy\n**Relâmpago 11.11 (R$ 200 cada):** @jessicanunesnogueira, @juju.shoop, @marioficialshop, @rubiangeloficial, @thaismaluly\n\nPix em 10/12.",
 
       // 01 · REGRAS E PRÊMIOS
       regras: {
