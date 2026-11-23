@@ -51,8 +51,8 @@ BLACK_FRIDAY.frentes.afiliadas = {
       id: "d2",
       nome: "Mês Black",
       fase: 1,
-      resultadoTitulo: "Relatório parcial",
-      resultado: "Parcial com dados do TikTok Shop até 17/11: quem já bateu cada meta, quem está perto e o Relâmpago 11.11 no [relatório parcial do Desafio 2 · afiliadas](https://bealemoritz.github.io/desafio2-afiliadas/). O resultado final sai na segunda, 23/11, porque o dado de venda do TikTok atrasa até 2 dias.",
+      resultadoTitulo: "Resultado final",
+      resultado: "Resultado final com os dados do TikTok Shop depois do fim do desafio (vendas de 01/11 até 19/11, 23h59, de vídeos postados no período e lives): quem recebe em cada meta, quem bateu meta sem os 6 vídeos, o Relâmpago 11.11 e o Vídeo de Ouro de cada semana no [relatório final do Desafio 2 · afiliadas](https://bealemoritz.github.io/desafio2-afiliadas/).",
 
       // 01 · REGRAS E PRÊMIOS
       regras: {
